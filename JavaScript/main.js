@@ -15,7 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-'use strict';
+'use strict'; // IMPLEMENT: function formof use strict
 
 var green = ['rgba(49, 175, 61, 1)', 'rgba(72, 186, 83, 0.8)'],
     orange = ['rgba(237, 177, 26, 1)', 'rgba(244, 192, 36, 0.8)'],
