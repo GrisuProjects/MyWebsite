@@ -23,6 +23,7 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
   position: relative;
   font-weight: 300;
   z-index: 100;
+  margin: 0;
 }
 
 body {
@@ -31,7 +32,6 @@ body {
   font-size: 0.4cm;
   background-color: /*#F5F5F5*/ #4CAF50;
   color: #212121 /*rgb(64, 66, 68)*/;
-  margin: 0;
   padding: 0;
   animation-name: animatebottom;
   animation-duration: 0.5s;
@@ -60,7 +60,6 @@ a {
 
 time {font-weight: 500;}
 p {
-  margin: 0;/* Because the JS .clientHeight does not condsider margin so replace it with padding*/
   padding: 1em 0;
   line-height: 1.5em;
 }
@@ -83,10 +82,8 @@ header {
 header p {
   width: 100%;
   padding: 5% 0.1em;
-  margin: 0;
 }
 header h1 {
-  margin: 0;
   padding: 0.5em 0 0.2em;
 }
 header time p {
@@ -98,7 +95,6 @@ bdi {
   display: block;
 }
 h2 {
-  margin: 0;  /* remove margin because .bgcolor does not cover margins*/
   padding: 1em 0.5em; /* add padding instead*/
   font-weight: 400;
 }
@@ -119,12 +115,12 @@ a.link_btn:hover {
 a.link_area {
   width: 100%;
   padding: 1em 0;
-  margin: 0 0 0 0;
   text-align: center;
   border-top: 2px solid rgba(0, 0, 0, 0.25);
 }
 #projects a.link_area {
   color: whitesmoke;
+  margin: 0.2em 0;
 }
 
 .container {
@@ -144,7 +140,6 @@ main {
 }
 #projects h3 {
   padding: 1.5em 0;
-  margin: 0;
   cursor: pointer;
   text-align: center;
   color: whitesmoke;
@@ -182,17 +177,11 @@ footer a {
   text-decoration: underline;
 }
 footer div {
-  border-top: 1px solid rgba(0, 0, 0, 0.4);
-  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   padding: 1em;
 }
-footer div:first-child {
-  border: none;
-}
-
-#logo {
-}
-#logo img {
+#copy {
+  font-family: 'Open Sans';
 }
 /*============================================================================*/
 @media screen and (orientation: portrait) {
@@ -250,9 +239,6 @@ footer div:first-child {
     }
     h1 {
       font-size: 2.5em;
-    }
-    footer div {
-      padding: 0;
     }
   }
   @media screen and (min-width: 21cm) {
