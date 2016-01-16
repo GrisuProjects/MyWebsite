@@ -95,7 +95,7 @@ bdi {
   display: block;
 }
 h2 {
-  padding: 1em 0.5em; /* add padding instead*/
+  padding: 1em 0.5em;
   font-weight: 400;
 }
 
@@ -164,7 +164,6 @@ main {
   visibility: hidden;
 }
 footer {
-  text-align: center;
   color: whitesmoke;
   position: fixed;
   bottom: 0;
@@ -177,10 +176,19 @@ footer a {
   text-decoration: underline;
 }
 footer div {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   padding: 1em;
 }
+footer div:last-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+footer h2 {
+  padding: 0 0.5em 1em;
+}
+footer pre {
+  line-height: 1.5em;
+}
 #copy {
+  text-align: center;
   font-family: 'Open Sans';
 }
 /*============================================================================*/
@@ -264,9 +272,12 @@ footer div {
     .section {
       padding: 0 3em;
     }
-    footer div {
-      display: inline-block;
+    footer{
+      padding: 0 20%;
+    }
+    footer div:not(#copy) {
       width: 49%;
+      display: inline-block;
     }
   }
 
