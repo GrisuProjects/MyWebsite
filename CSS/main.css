@@ -47,7 +47,7 @@ a, footer {
 
 .bgimg {
   background-attachment: fixed;
-  background-image: url(waterfall.jpg);
+  background-image: url(waterfall.png);
   background-size: cover;
   background-position: center;
 }
