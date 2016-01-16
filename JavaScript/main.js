@@ -1,21 +1,22 @@
 /*
-Main JavaScript file for my website.
+This file is part of my website.
+
 Copyright (C) 2016  Christian Kaindl
 
-This program is free software: you can redistribute it and/or modify
+This website is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-This program is distributed in the hope that it will be useful,
+This website is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
-'use strict'; // IMPLEMENT: function formof use strict
+'use strict'; // IMPLEMENT: function form of use strict
 
 var green = ['rgba(49, 175, 61, 1)', 'rgba(72, 186, 83, 0.8)'],
     orange = ['rgba(237, 177, 26, 1)', 'rgba(244, 192, 36, 0.8)'],
