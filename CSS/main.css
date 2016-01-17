@@ -57,17 +57,13 @@ a {
   color: darkslategrey;
   display: inline-block;
 }
-
-time {font-weight: 500;}
+h2 {
+  padding: 1em 0.5em;
+  font-weight: 400;
+}
 p {
   padding: 1em 0;
   line-height: 1.5em;
-}
-
-time {
-  display: block;
-  overflow: hidden;
-  height: 0; /*It gets its height with JavaScript*/
 }
 
 header {
@@ -86,17 +82,15 @@ header p {
 header h1 {
   padding: 0.5em 0 0.2em;
 }
-header time p {
-  padding: 0.2em;
+header time {
+  display: block;
+  font-weight: 300;
+  height: 0; /*It gets its height with JavaScript*/
 }
-bdi {
+header section {
   color: whitesmoke;
   background-color: forestgreen;
   display: block;
-}
-h2 {
-  padding: 1em 0.5em;
-  font-weight: 400;
 }
 
 a.link_btn {
@@ -181,15 +175,12 @@ footer a {
   text-decoration: underline;
 }
 footer section {
-  padding: 1em;
+  padding: 0 1em 1em;
   text-align: left;
 }
 footer div#copy {
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   font-family: 'Open Sans';
-}
-footer h2 {
-  padding: 0 0.5em 1em;
 }
 footer p {
   padding: 0;

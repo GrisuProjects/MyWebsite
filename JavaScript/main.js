@@ -71,7 +71,7 @@ function dateTime() {
         hour = new Date().getHours();
         min = new Date().getMinutes();
         sec = new Date().getSeconds();
-        document.getElementsByTagName('time')[0].getElementsByTagName('p')[0].innerHTML = ('0' + hour).slice(-2) + ':' + ('0' + min).slice(-2) + ':' + ('0' + sec).slice(-2);
+        document.getElementsByTagName('time')[0].innerHTML = ('0' + hour).slice(-2) + ':' + ('0' + min).slice(-2) + ':' + ('0' + sec).slice(-2);
     }, 1000);
     setTimeout(function () {
         document.getElementsByTagName('time')[0].style.height = '2em';
