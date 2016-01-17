@@ -277,6 +277,7 @@ footer p {
       padding: 1em 2em;
       border: 1px solid transparent;
       border-radius: 0.3em;
+      margin: 0 1em 1em;
     }
     a.link_area:hover {
       border: 1px solid rgba(0, 0, 0, 0.3)
@@ -299,9 +300,9 @@ footer p {
     }
 
     .container {
-      padding: 1em 33%;
+      padding: 1em 33% 0;
     }
-    
+
     #projects {
       padding: 2em 28%;
     }
