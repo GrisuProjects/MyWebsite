@@ -24,6 +24,7 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
   font-weight: 300;
   z-index: 100;
   margin: 0;
+  color: inherit;
 }
 
 body {
@@ -41,10 +42,6 @@ body {
   to{ bottom:0; opacity:1 }
 }
 
-a, footer {
-  font-family: 'HankenBook';
-}
-
 .bgimg {
   background-attachment: fixed;
   background-image: url(waterfall_1440p.png);
@@ -52,11 +49,32 @@ a, footer {
   background-position: center;
 }
 
+a, footer {
+  font-family: 'HankenBook';
+}
 a {
   text-decoration: none;
-  color: darkslategrey;
   display: inline-block;
 }
+a.link_btn {
+  text-decoration: none;
+  background-color: forestgreen;
+  color: whitesmoke;
+  padding: 1em;
+  border-radius: 0.2em;
+  border: 2px solid green;
+}
+a.link_btn:hover {
+  background-color: whitesmoke;
+  color: forestgreen;
+}
+a.link_area {
+  width: 100%;
+  padding: 1em 0;
+  text-align: center;
+  border-top: 2px solid rgba(0, 0, 0, 0.25);
+}
+
 h2 {
   padding: 1em 0.5em;
   font-weight: 400;
@@ -90,44 +108,23 @@ header time {
 header section {
   color: whitesmoke;
   background-color: forestgreen;
-  display: block;
 }
 
-a.link_btn {
-  text-decoration: none;
-  background-color: forestgreen;
-  color: whitesmoke;
-  padding: 1em;
-  border-radius: 0.2em;
-  border: 2px solid green;
+main {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3);
 }
-a.link_btn:hover {
-  background-color: whitesmoke;
-  color: forestgreen;
-}
-
-a.link_area {
-  width: 100%;
-  padding: 1em 0;
-  text-align: center;
-  border-top: 2px solid rgba(0, 0, 0, 0.25);
-}
-#projects a.link_area {
-  color: whitesmoke;
-  margin: 0.2em 0;
-}
-
 .container {
   padding: 0em 1em;
 }
 .container p {
   text-align: justify;
 }
-main {
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3);
-}
 
+#projects {
+  padding-bottom: 2em;
+  color: whitesmoke;
+}
 #projects p {
   text-align:justify;
   font-size: 90%;
@@ -136,21 +133,15 @@ main {
   padding: 1.5em 0;
   cursor: pointer;
   text-align: center;
-  color: whitesmoke;
   font-size: 110%;
 }
-#projects h2 {color: whitesmoke;}
-#projects {
-  padding-bottom: 2em;
-}
-.section {
+#projects .section {
   padding: 0 1.5em;
 }
-.grow {
+#projects .grow {
   height: 0;
   overflow: hidden;
   width: 100%;
-  color: whitesmoke;
 }
 
 #footer-size {
@@ -180,7 +171,7 @@ footer section {
 }
 footer div#copy {
   border-top: 1px solid rgba(0, 0, 0, 0.4);
-  font-family: 'Open Sans';
+  font-family: 'sans-serif';
 }
 footer p {
   padding: 0;
@@ -192,26 +183,26 @@ footer p {
       font-size: 0.5cm;
     }
   }
-  @media screen and (min-width: 14cm) {
-    body{
 
-    }
-    .container {
-      padding: 0 12%;
-    }
-    #projects {
-      padding: 2em 12%;
-    }
-    .section {
-      padding: 0 2em;
-      border-radius: 0.3em;
-    }
+  @media screen and (min-width: 14cm) {
     .quote {
       display: block;
       background-color: rgba(49, 175, 61, 1);
       color: whitesmoke;
       padding: 2em;
       margin: 1em 0;
+    }
+
+    .container {
+      padding: 0 12%;
+    }
+
+    #projects {
+      padding: 2em 12%;
+    }
+    .section {
+      padding: 0 2em;
+      border-radius: 0.3em;
     }
   }
 }
@@ -222,13 +213,20 @@ footer p {
       font-size: 0.35cm;
     }
   }
+
   @media screen and (min-width: 14cm) {
     body{
       font-size: 0.39cm;
     }
-    .container{
-      padding: 1em 12%;
+
+    header h1 {
+      font-size: 2.5em;
     }
+
+    .container{
+      padding: 1em 12% 0;
+    }
+
     #projects{
       padding: 2em 7%;
     }
@@ -239,29 +237,25 @@ footer p {
     .section p {
       line-height: 1.2em;
     }
-    h1 {
-      font-size: 2.5em;
-    }
   }
+
   @media screen and (min-width: 21cm) {
-    .quote {
+    header h1 {
+      font-size: 4em;
+    }
+    header .quote {
       display: block;
       background-color: rgba(49, 175, 61, 1);
       color: whitesmoke;
       padding: 2em;
       margin: 1em 0;
     }
-    h1 {
-      font-size: 4em;
-    }
-    header p, time, q {
-      font-size: 1.3em;
-    }
+
     #projects {
       padding: 2em 16%;
     }
     .container {
-      padding: 1em 20%;
+      padding: 1em 20% 0;
     }
     .section {
       padding: 0 3em;
@@ -272,9 +266,11 @@ footer p {
     body {
       font-size: 0.55cm;
     }
+
     .section {
       padding: 0 3em 1em;
     }
+
     a.link_area {
       width: auto;
       text-align: left;
@@ -285,6 +281,7 @@ footer p {
     a.link_area:hover {
       border: 1px solid rgba(0, 0, 0, 0.3)
     }
+
     footer{
       padding: 0 12%;
     }
@@ -300,11 +297,13 @@ footer p {
     body:not(header){
       font-size: 0.6m;
     }
-    #projects {
-      padding: 2em 28%;
-    }
+
     .container {
       padding: 1em 33%;
+    }
+    
+    #projects {
+      padding: 2em 28%;
     }
   }
 }

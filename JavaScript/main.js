@@ -90,8 +90,8 @@ var active = 2;
 // function for great view in #projects when clicked
 function greatView(clicked) {
 
-    var sectionHead = document.getElementsByClassName('sectionHeading'),
-        section = document.getElementsByClassName('section'),
+    var section = document.getElementsByClassName('section'),
+        sectionHead = document.getElementsByClassName('sectionHeading'),
         grow = document.getElementsByClassName('grow');
 
     // only animate when an other section is clicked
