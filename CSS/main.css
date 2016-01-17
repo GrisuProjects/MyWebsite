@@ -173,7 +173,7 @@ footer {
   font-size: 0.85em;
   text-align: center;
 }
-footer div:not(#copy) {
+footer div:not(#copy), footer section {
   display: inline-block;
 }
 footer a {
@@ -191,8 +191,8 @@ footer div#copy {
 footer h2 {
   padding: 0 0.5em 1em;
 }
-footer pre {
-  line-height: 1.5em;
+footer p {
+  padding: 0;
 }
 /*============================================================================*/
 @media screen and (orientation: portrait) {
@@ -250,12 +250,6 @@ footer pre {
     }
     h1 {
       font-size: 2.5em;
-    }
-    footer div:not(#copy) {
-      display: inline-block;
-    }
-    footer section {
-      display: inline-block;
     }
   }
   @media screen and (min-width: 21cm) {
