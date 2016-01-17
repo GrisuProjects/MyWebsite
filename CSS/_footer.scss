@@ -1,0 +1,33 @@
+#footer-size {
+  background-color: transparent;
+  visibility: hidden;
+}
+footer {
+  color: whitesmoke;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: forestgreen;
+  z-index: 50;
+  font-size: 0.85em;
+  text-align: center;
+
+  div:not(#copy),section {
+    display: inline-block;
+  }
+  a {
+    color: whitesmoke;
+    text-decoration: underline;
+  }
+  section {
+    padding: 0 1em 1em;
+    text-align: left;
+  }
+  div#copy {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    font-family: 'sans-serif';
+  }
+  p {
+    padding: 0;
+  }
+}

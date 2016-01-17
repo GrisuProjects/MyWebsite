@@ -1,0 +1,35 @@
+main {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3);
+
+  .container {
+    padding: 0em 1em;
+
+    p {
+      text-align: justify;
+    }
+  }
+  #projects {
+    padding-bottom: 2em;
+    color: whitesmoke;
+
+    p {
+      text-align:justify;
+      font-size: 90%;
+    }
+    h3 {
+      padding: 1.5em 0;
+      cursor: pointer;
+      text-align: center;
+      font-size: 110%;
+    }
+    .section {
+      padding: 0 1.5em;
+    }
+    .grow {
+      height: 0;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+}
