@@ -103,9 +103,9 @@ header {
 main {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3); }
-  main .container {
+  main div .container {
     padding: 0em 1em; }
-    main .container p {
+    main div .container p {
       text-align: justify; }
   main #projects {
     padding-bottom: 2em;
@@ -172,7 +172,7 @@ footer {
     #projects .section {
       padding: 0 2em;
       border-radius: 0.3em; } }
-/*============================================================================*/
+/*===========================================================================*/
 @media screen and (orientation: landscape) and (max-width: 14cm) {
   body {
     font-size: 0.35cm; } }
@@ -196,12 +196,12 @@ footer {
 @media screen and (orientation: landscape) and (min-width: 21cm) {
   header h1 {
     font-size: 4em; }
-    header h1 p.quote {
-      display: block;
-      background-color: #31af3d;
-      color: whitesmoke;
-      padding: 2em;
-      margin: 1em 0; }
+  header .quote {
+    display: block;
+    background-color: #31af3d;
+    color: whitesmoke;
+    padding: 2em;
+    margin: 1em 0; }
 
   #projects {
     padding: 2em 16%; }

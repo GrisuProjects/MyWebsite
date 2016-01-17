@@ -1,0 +1,30 @@
+@media screen and (orientation: portrait) {
+  @media screen and (min-width: 10cm) {
+    body {
+      font-size: 0.5cm;
+    }
+  }
+
+  @media screen and (min-width: 14cm) {
+    .quote {
+      display: block;
+      background-color: rgba(49, 175, 61, 1);
+      color: whitesmoke;
+      padding: 2em;
+      margin: 1em 0;
+    }
+
+    .container {
+      padding: 0 12%;
+    }
+
+    #projects {
+      padding: 2em 12%;
+
+      .section {
+        padding: 0 2em;
+        border-radius: 0.3em;
+      }
+    }
+  }
+}
