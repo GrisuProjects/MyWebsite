@@ -171,26 +171,28 @@ footer {
   background-color: forestgreen;
   z-index: 50;
   font-size: 0.85em;
+  text-align: center;
+}
+footer div:not(#copy) {
+  display: inline-block;
 }
 footer a {
   color: whitesmoke;
   text-decoration: underline;
 }
-footer div {
+footer section {
   padding: 1em;
+  text-align: left;
 }
-footer div:last-child {
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
+footer div#copy {
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  font-family: 'Open Sans';
 }
 footer h2 {
   padding: 0 0.5em 1em;
 }
 footer pre {
   line-height: 1.5em;
-}
-#copy {
-  text-align: center;
-  font-family: 'Open Sans';
 }
 /*============================================================================*/
 @media screen and (orientation: portrait) {
@@ -250,7 +252,9 @@ footer pre {
       font-size: 2.5em;
     }
     footer div:not(#copy) {
-      width: 49%;
+      display: inline-block;
+    }
+    footer section {
       display: inline-block;
     }
   }
@@ -297,7 +301,7 @@ footer pre {
       border: 1px solid rgba(0, 0, 0, 0.3)
     }
     footer{
-      padding: 0 20%;
+      padding: 0 12%;
     }
   }
 
