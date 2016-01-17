@@ -84,33 +84,8 @@ p {
   padding: 1em 0;
   line-height: 1.5em;
 }
-
-header {
-  padding: 0.1em 0;
-  text-align: center;
-  font-size: 1.3em;
-  background-color: whitesmoke;
-  border-bottom: 2px solid green;
-  z-index: 60;
-  color: green;
-
-  p {
-    width: 100%;
-    padding: 5% 0.1em;
-  }
-  h1 {
-    padding: 0.5em 0 0.2em;
-  }
-  time {
-    display: block;
-    font-weight: 300;
-    height: 0; /*It gets its height with JavaScript*/
-  }
-  section {
-    color: whitesmoke;
-    background-color: forestgreen;
-  }
-}
+/*----------------------------------------------------------------------------*/
+@import "header";
 
 @import "main";
 
@@ -118,5 +93,5 @@ header {
 
 /*============================================================================*/
 @import "mediaPortrait";
-/*===========================================================================*/
+/*============================================================================*/
 @import "mediaLandscape";
