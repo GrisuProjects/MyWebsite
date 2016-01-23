@@ -76,13 +76,17 @@ a {
   }
 
 
-h2 {
+h2, h3, h4 {
   padding: 1em 0.5em;
   font-weight: 400;
 }
 p {
   padding: 1em 0;
-  line-height: 1.5em;
+  line-height: 1.35em;
+}
+
+pre {
+  overflow: auto;
 }
 /*----------------------------------------------------------------------------*/
 @import "header";
