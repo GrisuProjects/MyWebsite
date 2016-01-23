@@ -1,0 +1,68 @@
+
+
+
+This guide will bring you through all my coding standards and my modularity system. It wants to help anybody who wants to distribute and/or learn from my creations and is part of every repository I make.
+It will teach you the idea behind things I made as short as possible (Iam am sure you wanna code as fast as possible :). So let's start right in:
+
+THE SYNTHAX
+
+  Short indroduction into my synthax
+
+  * No leading spaces
+  * Use blank lines to indicate blocks of related code
+
+  CSS/SCSS
+
+    * Use spaces as indentations, not tabs
+    * Use two spaces for indentation
+    * Make spaces before {} and after :
+    * Use enough lines, don't squeeze too many things in one line
+      - Example
+
+        body {
+          font-size: 100%;
+        }
+
+
+  HTML
+
+    * Use spaces as indentations, not tabs
+    * Use two spaces for indentation
+    * After large related blocks of code make an empty line
+    * Use enough lines, don't squeeze too many things in one line
+      - Example
+
+      <p>
+        Some text.
+      </p>
+
+
+  JavaScript
+
+    * Use spaces as indentations, not tabs
+    * Use four spaces for indentation
+    * For all rules submit your file to jslint.com or look at my JS file
+      - Example
+
+
+
+  THE STRUCTURE
+
+    There are some rules I came up with that I use to make my code as readable and maintainable as possible.
+
+    * There is always a copyright notice on top of each file.
+
+    CSS/SCSS
+
+      * The code is divided into sections to make it better to read and understand
+        - There are 4 major ones
+
+          ) General tag declarations (without any classes or ids)
+            - like body, h2, a, ...
+            - NOT: .class, #id, .class h2, ...
+
+          ) header section
+          ) main section
+          ) footer section
+
+        The last three of the sections mentioned above are separated in the inex.scss file with the @import rule to make it more readable.

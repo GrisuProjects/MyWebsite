@@ -55,8 +55,8 @@ a, footer {
 a {
   text-decoration: none;
   display: inline-block;
-
-  .link_btn {
+}
+  a.link_btn {
     text-decoration: none;
     background-color: forestgreen;
     color: whitesmoke;
@@ -64,17 +64,17 @@ a {
     border-radius: 0.2em;
     border: 2px solid green;
   }
-  .link_btn:hover {
+  a.link_btn:hover {
     background-color: whitesmoke;
     color: forestgreen;
   }
-  .link_area {
+  a.link_area {
     width: 100%;
     padding: 1em 0;
     text-align: center;
     border-top: 2px solid rgba(0, 0, 0, 0.25);
   }
-}
+
 
 h2 {
   padding: 1em 0.5em;
