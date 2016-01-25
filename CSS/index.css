@@ -211,8 +211,9 @@ footer {
 
   #projects {
     padding: 2em 16%; }
-    #projects .section {
-      padding: 0 3em; }
+
+  .section {
+    padding: 0 3em; }
 
   .container {
     padding: 1em 20% 0; } }
@@ -241,7 +242,7 @@ footer {
     padding: 2em 21%; } }
 @media screen and (orientation: landscape) and (min-width: 42cm) {
   body:not(header) {
-    font-size: 0.6m; }
+    font-size: 0.6cm; }
 
   .container {
     padding: 1em 22% 0; }
