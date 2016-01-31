@@ -19,79 +19,77 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 
 
 This guide will bring you through all my coding standards and my modularity system. It wants to help anybody who wants to distribute and/or learn from my creations and is part of every repository I make. On the bottom of each page there is a reference in which I will explain all resources I have used.
-It will teach you the idea behind things I made as short as possible. Improvements are always welcome at https://github.com/GrisuProjects/MyWebsite
+It will teach you the idea behind things I made as short as possible. Improvements are always welcome at [my GitHub page.](https://github.com/GrisuProjects/MyWebsite)
 I am am sure you wanna code as fast as possible so let's start right in:
 
-THE SYNTHAX
+# THE SYNTHAX
 
   Short indroduction into my synthax.
 
-  GENERAL
+  ## GENERAL
 
   * No leading spaces
   * Use blank lines to indicate blocks of related code
   * Use spaces as indentations, not tabs
 
-  CSS/SCSS
+  ## CSS/SCSS
 
     * Use two spaces for indentation
     * Make spaces before {} and after :
     * Use enough lines, don't squeeze too many things in one line
       - Example
-
+        '''css
         body {
           font-size: 100%;
         }
+        '''
 
 
-  HTML
+  ## HTML
 
     * Use two spaces for indentation
     * After large related blocks of code make an empty line
     * Use enough lines, don't squeeze too many things in one line
       - Example
-
+      '''HTML
       <p>
         Some text.
       </p>
+      '''
 
-
-  JavaScript
+  ## JavaScript
 
     * Use four spaces for indentation
     * For all rules submit your file to jslint.com or look at my JS file
-      - Example
 
 
+# THE STRUCTURE
 
-  THE STRUCTURE
+  Short introduction into my file rules.
 
-    Short introduction into my file rules.
-
-    GENERAL
+  ## GENERAL
 
       * There is always a copyright notice on top of each file.
 
 
-    CSS/SCSS
+  ## CSS/SCSS
 
-      * The code is divided into sections for better readability
-        - There are 4 major ones
+    * The code is divided into sections for better readability
+      - There are 4 major ones
+        1. General tag declarations (not section specific)
+          - like 'body', 'h2', 'a', ...
+          - NOT: '.class', '#id', '.class h2', ...
 
-          ) General tag declarations (not section specific)
-            - like body, h2, a, ...
-            - NOT: .class, #id, .class h2, ...
+        2. header section
+        3. main section
+        4. footer section
 
-          ) header section
-          ) main section
-          ) footer section
+      Except the first section mentioned above all other sections are outsourced from the index.scss file for better readability.
 
-        Except the first section mentioned above all other sections are outsourced from the index.scss file for better readability.
-
-      * More sections are mediaPortrait and mediaLandscape
-        - These are divided with a line of this : /*=======[...]=======*/
+    * More sections are mediaPortrait and mediaLandscape
+      - These are divided with a line of this : '/*=======[...]=======*/''
 
 
-    HTML
+  ## HTML
 
-      * Divide related blocks of code (like the CSS/SCSS sections) by blank lines
+    * Divide related blocks of code (like the CSS/SCSS sections) by blank lines
