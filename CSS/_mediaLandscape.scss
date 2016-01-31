@@ -16,18 +16,20 @@
       }
     }
 
-    .container {
-      padding: 1em 12% 0;
-    }
-    #projects {
-      padding: 2em 7%;
-
-      .section {
-        padding: 0 2em;
-        border-radius: 0.3em;
+    main {
+      .container {
+        padding: 1em 12% 0;
       }
-      .section p {
-        line-height: 1.2em;
+      #projects {
+        padding: 2em 7%;
+
+        .section {
+          padding: 0 2em;
+          border-radius: 0.3em;
+        }
+        .section p {
+          line-height: 1.2em;
+        }
       }
     }
   }
@@ -46,14 +48,16 @@
       }
     }
 
-    .container {
-      padding: 1em 20% 0;
-    }
-    #projects {
-      padding: 2em 16%;
+    main {
+      .container {
+        padding: 1em 20% 0;
+      }
+      #projects {
+        padding: 2em 16%;
 
-      .section {
-        padding: 0 3em;
+        .section {
+          padding: 0 3em;
+        }
       }
     }
 
@@ -69,8 +73,6 @@
 
       div section {
         display: inline-block;
-      }
-      div section:first-child {
         border: none;
       }
     }
@@ -93,13 +95,13 @@
       border: 1px solid rgba(0, 0, 0, 0.3)
     }
 
-    #projects .section {
-      padding: 0 3em 1em;
+    main #projects .section {
+      padding: 0 3em;
     }
   }
 
   @media screen and (min-width: 35cm){
-    #projects {
+    main #projects {
       padding: 2em 21%;
     }
   }
@@ -109,11 +111,13 @@
       font-size: 0.6cm;
     }
 
-    .container {
-      padding: 1em 22% 0;
-    }
-    #projects {
-      padding: 2em 20%;
+    main {
+      .container {
+        padding: 1em 22% 0;
+      }
+      #projects {
+        padding: 2em 20%;
+      }
     }
   }
 }

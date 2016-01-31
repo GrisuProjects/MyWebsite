@@ -107,7 +107,7 @@ function greatView(clicked) {
         /*make clicked section to active*/
         setTimeout(function () {
             sectionHead[clicked].style.fontSize = '180%';
-            sectionHead[clicked].style.padding = '0.7em 0 0.3em';
+            sectionHead[clicked].style.padding = '0.7em 0 0.5em';
             section[clicked].style.boxShadow = '0 0 10px 0px rgba(0, 0, 0, 0.25)';
 
             // set colors
