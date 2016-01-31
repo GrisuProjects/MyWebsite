@@ -1,21 +1,21 @@
-/*
-This file is part of my website.
 
-Copyright (C) 2016  Christian Kaindl
+> This file is part of my website.
 
-This website is free software: you can redistribute it and/or modify
+> Copyright (C) 2016  Christian Kaindl
+
+> This website is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-This website is distributed in the hope that it will be useful,
+> This website is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
+> You should have received a copy of the GNU General Public License
 along with this website.  If not, see <http://www.gnu.org/licenses/>.
-*/
+
 
 
 This guide will bring you through all my coding standards and my modularity system. It wants to help anybody who wants to distribute and/or learn from my creations and is part of every repository I make. On the bottom of each page there is a reference in which I will explain all resources I have used.
@@ -26,38 +26,38 @@ I am am sure you wanna code as fast as possible so let's start right in:
 
   Short indroduction into my synthax.
 
-  ## GENERAL
+ ## GENERAL
 
   * No leading spaces
   * Use blank lines to indicate blocks of related code
   * Use spaces as indentations, not tabs
 
-  ## CSS/SCSS
+ ## CSS/SCSS
 
     * Use two spaces for indentation
     * Make spaces before {} and after :
     * Use enough lines, don't squeeze too many things in one line
       - Example
-        '''css
+        ```css
         body {
           font-size: 100%;
         }
-        '''
+        ```
 
 
-  ## HTML
+ ## HTML
 
     * Use two spaces for indentation
     * After large related blocks of code make an empty line
     * Use enough lines, don't squeeze too many things in one line
       - Example
-      '''HTML
+      ```HTML
       <p>
         Some text.
       </p>
-      '''
+      ```
 
-  ## JavaScript
+ ## JavaScript
 
     * Use four spaces for indentation
     * For all rules submit your file to jslint.com or look at my JS file
@@ -77,8 +77,8 @@ I am am sure you wanna code as fast as possible so let's start right in:
     * The code is divided into sections for better readability
       - There are 4 major ones
         1. General tag declarations (not section specific)
-          - like 'body', 'h2', 'a', ...
-          - NOT: '.class', '#id', '.class h2', ...
+          - like `body`, `h2`, `a`, ...
+          - NOT: `.class`, `#id`, `.class h2`, ...
 
         2. header section
         3. main section
@@ -87,7 +87,7 @@ I am am sure you wanna code as fast as possible so let's start right in:
       Except the first section mentioned above all other sections are outsourced from the index.scss file for better readability.
 
     * More sections are mediaPortrait and mediaLandscape
-      - These are divided with a line of this : '/*=======[...]=======*/''
+      - These are divided with a line of this : `/*=======[...]=======*/`
 
 
   ## HTML
