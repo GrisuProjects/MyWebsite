@@ -83,7 +83,6 @@ p {
 
 /*----------------------------------------------------------------------------*/
 header {
-  padding: 0.1em 0;
   text-align: center;
   font-size: 1.3em;
   background-color: whitesmoke;
@@ -107,9 +106,9 @@ header {
 main {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3); }
-  main div .container {
+  main .container {
     padding: 0em 1em; }
-    main div .container p {
+    main .container p {
       text-align: justify; }
   main #projects {
     padding-bottom: 2em;
@@ -131,8 +130,37 @@ main {
 
 #footer-size {
   background-color: transparent;
-  visibility: hidden; }
+  display: none; }
 
+footer {
+  color: whitesmoke;
+  background-color: forestgreen;
+  font-size: 0.85em;
+  text-align: center;
+  z-index: 50; }
+  footer div.inline-block-center {
+    display: inline-block; }
+  footer a {
+    color: whitesmoke;
+    text-decoration: underline;
+    text-align: left; }
+  footer div section {
+    padding: 0 1em 1em;
+    text-align: left; }
+  footer div section:first-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
+  footer div#copy {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    font-family: 'sans-serif';
+    text-align: center; }
+  footer p {
+    padding: 0; }
+
+/*
+#footer-size {
+  background-color: transparent;
+  visibility: hidden;
+}
 footer {
   color: whitesmoke;
   position: fixed;
@@ -141,21 +169,31 @@ footer {
   background-color: forestgreen;
   z-index: 50;
   font-size: 0.85em;
-  text-align: center; }
-  footer div:not(#copy) {
-    display: inline-block; }
-  footer a {
-    color: whitesmoke;
-    text-decoration: underline; }
-  footer section {
-    padding: 0 1em 1em;
-    text-align: left; }
-  footer div#copy {
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
-    font-family: 'sans-serif'; }
-  footer p {
-    padding: 0; }
+  text-align: center;
 
+  div.inline-block-center{
+    display: inline-block; // for this to work the parent element has to set text-align to center
+  }
+  a {
+    color: whitesmoke;
+    text-decoration: underline;
+    text-align: left;
+  }
+  div section {
+    padding: 0 1em 1em;
+    text-align: left;
+
+  }
+  div#copy {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    font-family: 'sans-serif';
+    text-align: center;
+  }
+  p {
+    padding: 0;
+  }
+}
+*/
 /*============================================================================*/
 @media screen and (orientation: portrait) and (min-width: 10cm) {
   body {
@@ -231,8 +269,15 @@ footer {
   #projects .section {
     padding: 0 3em 1em; }
 
+  #footer-size {
+    display: block;
+    visibility: hidden; }
+
   footer {
-    padding: 0 12%; } }
+    padding: 0 12%;
+    position: fixed;
+    bottom: 0;
+    width: 100%; } }
 @media screen and (orientation: landscape) and (min-width: 35cm) {
   #projects {
     padding: 2em 21%; } }
