@@ -39,9 +39,9 @@ Short indroduction into my synthax.
 * Use enough lines, don't squeeze too many things in one line
   - Example
 
-    `body {
-    `  font-size: 100%;
-    `}
+    `body {`
+    `  font-size: 100%;`
+    `}`
 
 
 
@@ -51,11 +51,11 @@ Short indroduction into my synthax.
 * After large related blocks of code make an empty line
 * Use enough lines, don't squeeze too many things in one line
   - Example
-    ```HTML
-    <p>
-      Some text.
-    </p>
-    ```
+
+    `<p>`
+    `  Some text.`
+    `</p>`
+    
 
 ### JavaScript
 
@@ -76,13 +76,13 @@ Short introduction into my file rules.
 * The code is divided into sections for better readability
   - There are 4 major ones
 
-    \1. General tag declarations (not section specific)
-      - like `body`, `h2`, `a`, ...
-      - NOT: `.class`, `#id`, `.class h2`, ...
+1. General tag declarations (not section specific)
+  - like `body`, `h2`, `a`, ...
+  - NOT: `.class`, `#id`, `.class h2`, ...
 
-    \2. header section
-    \3. main section
-    \4. footer section
+2. header section
+3. main section
+4. footer section
 
   Except the first section mentioned above all other sections are outsourced from the index.scss file for better readability.
 
