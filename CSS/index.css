@@ -156,44 +156,6 @@ footer {
   footer p {
     padding: 0; }
 
-/*
-#footer-size {
-  background-color: transparent;
-  visibility: hidden;
-}
-footer {
-  color: whitesmoke;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: forestgreen;
-  z-index: 50;
-  font-size: 0.85em;
-  text-align: center;
-
-  div.inline-block-center{
-    display: inline-block; // for this to work the parent element has to set text-align to center
-  }
-  a {
-    color: whitesmoke;
-    text-decoration: underline;
-    text-align: left;
-  }
-  div section {
-    padding: 0 1em 1em;
-    text-align: left;
-
-  }
-  div#copy {
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
-    font-family: 'sans-serif';
-    text-align: center;
-  }
-  p {
-    padding: 0;
-  }
-}
-*/
 /*============================================================================*/
 @media screen and (orientation: portrait) and (min-width: 10cm) {
   body {
@@ -224,7 +186,8 @@ footer {
 
   header h1 {
     font-size: 2.5em; }
-  header .container {
+
+  .container {
     padding: 1em 12% 0; }
 
   #projects {
@@ -244,13 +207,27 @@ footer {
     padding: 2em;
     margin: 1em 0; }
 
+  .container {
+    padding: 1em 20% 0; }
+
   #projects {
     padding: 2em 16%; }
     #projects .section {
       padding: 0 3em; }
 
-  .container {
-    padding: 1em 20% 0; } }
+  #footer-size {
+    display: block;
+    visibility: hidden; }
+
+  footer {
+    padding: 0 12%;
+    position: fixed;
+    bottom: 0;
+    width: 100%; }
+    footer div section {
+      display: inline-block; }
+    footer div section:first-child {
+      border: none; } }
 @media screen and (orientation: landscape) and (min-width: 28cm) {
   body {
     font-size: 0.55cm; }
@@ -267,17 +244,7 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0.3); }
 
   #projects .section {
-    padding: 0 3em 1em; }
-
-  #footer-size {
-    display: block;
-    visibility: hidden; }
-
-  footer {
-    padding: 0 12%;
-    position: fixed;
-    bottom: 0;
-    width: 100%; } }
+    padding: 0 3em 1em; } }
 @media screen and (orientation: landscape) and (min-width: 35cm) {
   #projects {
     padding: 2em 21%; } }

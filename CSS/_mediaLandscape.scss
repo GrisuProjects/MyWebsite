@@ -14,12 +14,11 @@
       h1 {
         font-size: 2.5em;
       }
-
-      .container {
-        padding: 1em 12% 0;
-      }
     }
 
+    .container {
+      padding: 1em 12% 0;
+    }
     #projects {
       padding: 2em 7%;
 
@@ -47,6 +46,9 @@
       }
     }
 
+    .container {
+      padding: 1em 20% 0;
+    }
     #projects {
       padding: 2em 16%;
 
@@ -54,8 +56,23 @@
         padding: 0 3em;
       }
     }
-    .container {
-      padding: 1em 20% 0;
+
+    #footer-size {
+      display: block;
+      visibility: hidden;
+    }
+    footer {
+      padding: 0 12%;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+
+      div section {
+        display: inline-block;
+      }
+      div section:first-child {
+        border: none;
+      }
     }
   }
 
@@ -79,17 +96,6 @@
     #projects .section {
       padding: 0 3em 1em;
     }
-
-    #footer-size {
-      display: block;
-      visibility: hidden;
-    }
-    footer {
-      padding: 0 12%;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
   }
 
   @media screen and (min-width: 35cm){
@@ -106,7 +112,6 @@
     .container {
       padding: 1em 33% 0;
     }
-
     #projects {
       padding: 2em 28%;
     }
