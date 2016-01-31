@@ -1,31 +1,33 @@
-#footer-size {
+#footer-size { // for the desktop version
   background-color: transparent;
-  visibility: hidden;
+  display: none;
 }
 footer {
   color: whitesmoke;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   background-color: forestgreen;
-  z-index: 50;
   font-size: 0.85em;
   text-align: center;
+  z-index: 50;
 
-  div:not(#copy) {
-    display: inline-block;
+  div.inline-block-center{
+    display: inline-block; // for this to work the parent element has to set text-align to center
   }
   a {
     color: whitesmoke;
     text-decoration: underline;
+    text-align: left;
   }
-  section {
+  div section {
     padding: 0 1em 1em;
     text-align: left;
+  }
+  div section:first-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   }
   div#copy {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
     font-family: 'sans-serif';
+    text-align: center;
   }
   p {
     padding: 0;
