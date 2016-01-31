@@ -24,72 +24,71 @@ I am am sure you wanna code as fast as possible so let's start right in:
 
 # THE SYNTHAX
 
-  Short indroduction into my synthax.
+Short indroduction into my synthax.
 
- ## GENERAL
+## GENERAL
 
-  * No leading spaces
-  * Use blank lines to indicate blocks of related code
-  * Use spaces as indentations, not tabs
+* No leading spaces
+* Use blank lines to indicate blocks of related code
+* Use spaces as indentations, not tabs
 
- ## CSS/SCSS
+## CSS/SCSS
 
-    * Use two spaces for indentation
-    * Make spaces before {} and after :
-    * Use enough lines, don't squeeze too many things in one line
-      - Example
-        ```css
-        body {
-          font-size: 100%;
-        }
-        ```
+* Use two spaces for indentation
+* Make spaces before {} and after :
+* Use enough lines, don't squeeze too many things in one line
+  - Example
+    ```css
+    body {
+      font-size: 100%;
+    }
+    ```
 
 
- ## HTML
+## HTML
 
-    * Use two spaces for indentation
-    * After large related blocks of code make an empty line
-    * Use enough lines, don't squeeze too many things in one line
-      - Example
-      ```HTML
-      <p>
-        Some text.
-      </p>
-      ```
+* Use two spaces for indentation
+* After large related blocks of code make an empty line
+* Use enough lines, don't squeeze too many things in one line
+  - Example
+    ```HTML
+    <p>
+      Some text.
+    </p>
+    ```
 
- ## JavaScript
+## JavaScript
 
-    * Use four spaces for indentation
-    * For all rules submit your file to jslint.com or look at my JS file
+* Use four spaces for indentation
+* For all rules submit your file to jslint.com or look at my JS file
 
 
 # THE STRUCTURE
 
-  Short introduction into my file rules.
+Short introduction into my file rules.
 
-  ## GENERAL
+## GENERAL
 
-      * There is always a copyright notice on top of each file.
+* There is always a copyright notice on top of each file.
+
+## CSS/SCSS
+
+* The code is divided into sections for better readability
+  - There are 4 major ones
+    1. General tag declarations (not section specific)
+      - like `body`, `h2`, `a`, ...
+      - NOT: `.class`, `#id`, `.class h2`, ...
+
+    2. header section
+    3. main section
+    4. footer section
+
+  Except the first section mentioned above all other sections are outsourced from the index.scss file for better readability.
+
+* More sections are mediaPortrait and mediaLandscape
+  - These are divided with a line of this : `/*=======[...]=======*/`
 
 
-  ## CSS/SCSS
+## HTML
 
-    * The code is divided into sections for better readability
-      - There are 4 major ones
-        1. General tag declarations (not section specific)
-          - like `body`, `h2`, `a`, ...
-          - NOT: `.class`, `#id`, `.class h2`, ...
-
-        2. header section
-        3. main section
-        4. footer section
-
-      Except the first section mentioned above all other sections are outsourced from the index.scss file for better readability.
-
-    * More sections are mediaPortrait and mediaLandscape
-      - These are divided with a line of this : `/*=======[...]=======*/`
-
-
-  ## HTML
-
-    * Divide related blocks of code (like the CSS/SCSS sections) by blank lines
+* Divide related blocks of code (like the CSS/SCSS sections) by blank lines
