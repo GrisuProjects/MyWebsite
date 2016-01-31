@@ -145,19 +145,15 @@ footer {
     display: inline-block; }
   footer a {
     color: whitesmoke;
-    text-decoration: underline;
-    text-align: left; }
+    text-decoration: underline; }
   footer div section {
     padding: 0 1em 1em;
-    text-align: left; }
-  footer div section:first-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
+  footer div section:last-child {
+    border-bottom: none; }
   footer div#copy {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
-    font-family: 'sans-serif';
-    text-align: center; }
-  footer p {
-    padding: 0; }
+    font-family: 'sans-serif'; }
 
 /*============================================================================*/
 @media screen and (orientation: portrait) and (min-width: 10cm) {
