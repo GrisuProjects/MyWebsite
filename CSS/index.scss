@@ -19,7 +19,7 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 
 /*$primary-color: ;
 $secondary-color: ;
-$acccent-color: ;
+$accent-color: ;
 */
 * {
   box-sizing: border-box;
@@ -28,16 +28,18 @@ $acccent-color: ;
   font-weight: 300;
   z-index: 100;
   margin: 0;
+  padding: 0;
   color: inherit;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 100%;
-  font-size: 0.4cm;
+  font: {
+    family: "Open Sans", sans-serif;
+    size: 100%;
+    size: 0.4cm;}
   background-color: /*#F5F5F5*/ #4CAF50;
   color: #212121 /*rgb(64, 66, 68)*/;
-  padding: 0;
+
   animation-name: animatebottom;
   animation-duration: 0.5s;
 }
@@ -47,10 +49,11 @@ body {
 }
 
 .bgimg {
-  background-attachment: fixed;
-  background-image: url(waterfall_1440p.png);
-  background-size: cover;
-  background-position: center;
+  background: {
+    attachment: fixed;
+    image: url(waterfall_1440p.png);
+    size: cover;
+    position: center;}
 }
 
 a, footer {

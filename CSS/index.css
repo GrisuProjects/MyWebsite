@@ -18,7 +18,7 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
 /*$primary-color: ;
 $secondary-color: ;
-$acccent-color: ;
+$accent-color: ;
 */
 * {
   box-sizing: border-box;
@@ -27,6 +27,7 @@ $acccent-color: ;
   font-weight: 300;
   z-index: 100;
   margin: 0;
+  padding: 0;
   color: inherit; }
 
 body {
@@ -35,7 +36,6 @@ body {
   font-size: 0.4cm;
   background-color: #4CAF50;
   color: #212121;
-  padding: 0;
   animation-name: animatebottom;
   animation-duration: 0.5s; }
 
