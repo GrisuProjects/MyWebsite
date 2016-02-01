@@ -73,7 +73,7 @@ a.link_area {
   text-align: center;
   border-top: 2px solid rgba(0, 0, 0, 0.25); }
 
-h2, h3, h4 {
+h2, h4 {
   padding: 1em 0.5em;
   font-weight: 400; }
 
@@ -103,8 +103,8 @@ header {
     height: 0;
     /*It gets its height with JavaScript*/ }
   header section {
-    color: whitesmoke;
-    background-color: forestgreen; }
+    color: forestgreen;
+    background-color: whitesmoke; }
 
 main {
   background-color: rgba(255, 255, 255, 0.7);
@@ -165,12 +165,11 @@ footer {
     padding: 2em;
     margin: 1em 0; }
 
-  .container {
+  main .container {
     padding: 0 12%; }
-
-  #projects {
+  main #projects {
     padding: 2em 12%; }
-    #projects .section {
+    main #projects .section {
       padding: 0 2em;
       border-radius: 0.3em; } }
 /*============================================================================*/
@@ -184,15 +183,14 @@ footer {
   header h1 {
     font-size: 2.5em; }
 
-  .container {
+  main .container {
     padding: 1em 12% 0; }
-
-  #projects {
+  main #projects {
     padding: 2em 7%; }
-    #projects .section {
+    main #projects .section {
       padding: 0 2em;
       border-radius: 0.3em; }
-    #projects .section p {
+    main #projects .section p {
       line-height: 1.2em; } }
 @media screen and (orientation: landscape) and (min-width: 21cm) {
   header h1 {
@@ -204,12 +202,11 @@ footer {
     padding: 2em;
     margin: 1em 0; }
 
-  .container {
+  main .container {
     padding: 1em 20% 0; }
-
-  #projects {
+  main #projects {
     padding: 2em 16%; }
-    #projects .section {
+    main #projects .section {
       padding: 0 3em; }
 
   #footer-size {
@@ -222,8 +219,7 @@ footer {
     bottom: 0;
     width: 100%; }
     footer div section {
-      display: inline-block; }
-    footer div section:first-child {
+      display: inline-block;
       border: none; } }
 @media screen and (orientation: landscape) and (min-width: 28cm) {
   body {
@@ -240,19 +236,18 @@ footer {
   a.link_area:hover {
     border: 1px solid rgba(0, 0, 0, 0.3); }
 
-  #projects .section {
-    padding: 0 3em 1em; } }
+  main #projects .section {
+    padding: 0 3em; } }
 @media screen and (orientation: landscape) and (min-width: 35cm) {
-  #projects {
+  main #projects {
     padding: 2em 21%; } }
 @media screen and (orientation: landscape) and (min-width: 42cm) {
   body:not(header) {
     font-size: 0.6cm; }
 
-  .container {
+  main .container {
     padding: 1em 22% 0; }
-
-  #projects {
+  main #projects {
     padding: 2em 20%; } }
 
 /*# sourceMappingURL=index.css.map */
