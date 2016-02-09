@@ -16,7 +16,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
-'use strict'; // IMPLEMENT: function form of use strict
+'use strict'; // TODO: function form of 'use strict'
 
 var green = ['rgba(49, 175, 61, 1)', 'rgba(72, 186, 83, 0.8)'],
     orange = ['rgba(237, 177, 26, 1)', 'rgba(244, 192, 36, 0.8)'],
@@ -105,27 +105,26 @@ function greatView(clicked) {
         section[active].style.boxShadow = 'none';
 
         /*make clicked section to active*/
-        setTimeout(function () {
-            sectionHead[clicked].style.fontSize = '180%';
-            sectionHead[clicked].style.padding = '0.7em 0 0.5em';
-            section[clicked].style.boxShadow = '0 0 10px 0px rgba(0, 0, 0, 0.25)';
-
-            // set colors
-            section[clicked].style.backgroundColor = colors[clicked][0];
-            document.getElementById('projects').style.backgroundColor = colors[clicked][1];
-            active = clicked;
-        }, 200);
+          sectionHead[clicked].style.fontSize = '180%';
+          sectionHead[clicked].style.padding = '0.7em 0 0.5em';
+          section[clicked].style.boxShadow = '0 0 10px 0px rgba(0, 0, 0, 0.25)';
+          // set colors
+          section[clicked].style.backgroundColor = colors[clicked][0];
+          document.getElementById('projects').style.backgroundColor = colors[clicked][1];
+          active = clicked;
     }
     // set the proper height
-    setTimeout(function () {
-        var measure = document.querySelector('.measuringWrapper' + clicked);
+        var measure = document.getElementsByClassName("measuringWrapper")[clicked];
         grow[clicked].style.height = measure.clientHeight + 'px';
-    }, 500);
+
     /*http://stackoverflow.com/a/13938747*/
 }
 
 function greatViewResize() {
-    greatView(active); // simulates that the current active section is ckĺicked again
+    setTimeout(function () {
+      var measure = document.getElementsByClassName("measuringWrapper")[active];
+      document.getElementsByClassName('grow')[active].style.height = measure.clientHeight + 'px';
+    }, 400);
 }
 
 window.addEventListener("resize", greatViewResize); // resizes the .section element in #projects

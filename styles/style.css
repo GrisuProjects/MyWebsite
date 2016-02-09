@@ -22,7 +22,6 @@ $accent-color: ;
 */
 * {
   box-sizing: border-box;
-  transition: 300ms;
   position: relative;
   font-weight: 300;
   z-index: 100;
@@ -46,6 +45,9 @@ body {
   to {
     bottom: 0;
     opacity: 1; } }
+footer, #projects, #projects *, time {
+  transition: 300ms; }
+
 .bgimg {
   background-attachment: fixed;
   background-image: url(waterfall_1440p.png);
@@ -254,4 +256,4 @@ footer {
   main #projects {
     padding: 2em 20%; } }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=style.css.map */

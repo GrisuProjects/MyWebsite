@@ -23,7 +23,6 @@ $accent-color: ;
 */
 * {
   box-sizing: border-box;
-  transition: 300ms;
   position: relative;
   font-weight: 300;
   z-index: 100;
@@ -46,6 +45,10 @@ body {
 @keyframes animatebottom {
   from{ bottom:-100px; opacity:0 }
   to{ bottom:0; opacity:1 }
+}
+
+footer, #projects, #projects *, time {
+  transition: 300ms;
 }
 
 .bgimg {
