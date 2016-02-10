@@ -97,9 +97,21 @@ header {
   background-color: forestgreen;
   z-index: 60;
   color: whitesmoke; }
+  header .outer {
+    display: table;
+    height: 85vh;
+    width: 100%; }
+  header .middle {
+    display: table-cell;
+    vertical-align: middle; }
+  header .inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; }
   header p {
     width: 100%;
-    padding: 5% 0.1em; }
+    padding: 5% 0.1em;
+    height: 80%; }
   header h1 {
     padding: 0.5em 0 0.2em; }
   header time {
@@ -163,13 +175,13 @@ footer {
   body {
     font-size: 0.5cm; } }
 @media screen and (orientation: portrait) and (min-width: 14cm) {
-  .quote {
+  /*.quote {
     display: block;
-    background-color: #31af3d;
+    background-color: rgba(49, 175, 61, 1);
     color: whitesmoke;
     padding: 2em;
-    margin: 1em 0; }
-
+    margin: 1em 0;
+  }*/
   main .container {
     padding: 0 12%; }
   main #projects {
