@@ -18,7 +18,7 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
 'use strict'; // TODO: function form of 'use strict'
 
-var green = ['rgba(49, 175, 61, 1)', 'rgba(72, 186, 83, 0.8)'],
+var green = ["forestgreen", 'rgba(49, 175, 61, 1)', 'rgba(72, 186, 83, 0.8)'],
     orange = ['rgba(237, 177, 26, 1)', 'rgba(244, 192, 36, 0.8)'],
     blue = ['rgba(65, 119, 153, 1)', /*'rgba(56, 66, 153, 0.8)'*/'rgba(64, 153, 142, 0.8)'];
 var colors = [green, orange, blue];
@@ -69,8 +69,9 @@ function greatView(clicked) {
           sectionHead[clicked].style.padding = '0.7em 0 0.5em';
           section[clicked].style.boxShadow = '0 0 10px 0px rgba(0, 0, 0, 0.25)';
           // set colors
-          section[clicked].style.backgroundColor = colors[clicked][0];
-          document.getElementById('projects').style.backgroundColor = colors[clicked][1];
+          document.getElementById('projects').style.backgroundColor = colors[clicked][0];
+          section[clicked].style.backgroundColor = colors[clicked][1];
+
           active = clicked;
     }
     // set the proper height

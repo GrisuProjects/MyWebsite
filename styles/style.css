@@ -94,10 +94,10 @@ pre {
 header {
   text-align: center;
   font-size: 1.3em;
-  background-color: whitesmoke;
+  background-color: forestgreen;
   border-bottom: 2px solid green;
   z-index: 60;
-  color: green; }
+  color: whitesmoke; }
   header p {
     width: 100%;
     padding: 5% 0.1em; }
@@ -109,8 +109,8 @@ header {
     height: 0;
     /*It gets its height with JavaScript*/ }
   header section {
-    color: forestgreen;
-    background-color: whitesmoke; }
+    color: whitesmoke;
+    background-color: forestgreen; }
 
 main {
   background-color: rgba(255, 255, 255, 0.7);
@@ -201,8 +201,8 @@ footer {
     font-size: 4em; }
   header .quote {
     display: block;
-    background-color: #31af3d;
-    color: whitesmoke;
+    background-color: whitesmoke;
+    color: #31af3d;
     padding: 2em;
     margin: 1em 0; }
 

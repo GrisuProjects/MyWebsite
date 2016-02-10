@@ -1,10 +1,10 @@
 header {
   text-align: center;
   font-size: 1.3em;
-  background-color: whitesmoke;
+  background-color: forestgreen;
   border-bottom: 2px solid green;
   z-index: 60;
-  color: green;
+  color: whitesmoke;
 
   p {
     width: 100%;
@@ -19,7 +19,7 @@ header {
     height: 0; /*It gets its height with JavaScript*/
   }
   section {
-    color: forestgreen;
-    background-color: whitesmoke;
+    color: whitesmoke;
+    background-color: forestgreen;
   }
 }
