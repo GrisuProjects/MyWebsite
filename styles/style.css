@@ -114,9 +114,8 @@ header {
   header h1 {
     padding: 0.5em 0 0.2em; }
   header p {
-    width: 100%;
     padding: 5% 0.1em;
-    height: 80%; }
+    font-size: 0.8em; }
   header time {
     display: block;
     overflow: hidden;
