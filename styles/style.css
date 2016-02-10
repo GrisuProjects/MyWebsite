@@ -36,7 +36,7 @@ body {
   background-color: #4CAF50;
   color: #212121;
   animation-name: animatebottom;
-  animation-duration: 0.5s; }
+  animation-duration: 0.7s; }
 
 @keyframes animatebottom {
   from {
@@ -108,19 +108,20 @@ header {
     margin-left: auto;
     margin-right: auto;
     width: 100%; }
+  header section {
+    color: whitesmoke;
+    background-color: forestgreen; }
+  header h1 {
+    padding: 0.5em 0 0.2em; }
   header p {
     width: 100%;
     padding: 5% 0.1em;
     height: 80%; }
-  header h1 {
-    padding: 0.5em 0 0.2em; }
   header time {
     display: block;
+    overflow: hidden;
     height: 0;
     /*It gets its height with JavaScript*/ }
-  header section {
-    color: whitesmoke;
-    background-color: forestgreen; }
 
 main {
   background-color: rgba(255, 255, 255, 0.7);

@@ -21,20 +21,21 @@ header {
       margin-right: auto;
       width: 100%;
   }
+  section {
+    color: whitesmoke;
+    background-color: forestgreen;
+  }
+  h1 {
+    padding: 0.5em 0 0.2em;
+  }
   p {
     width: 100%;
     padding: 5% 0.1em;
     height: 80%;
   }
-  h1 {
-    padding: 0.5em 0 0.2em;
-  }
   time {
     display: block;
+    overflow: hidden;
     height: 0; /*It gets its height with JavaScript*/
-  }
-  section {
-    color: whitesmoke;
-    background-color: forestgreen;
   }
 }
