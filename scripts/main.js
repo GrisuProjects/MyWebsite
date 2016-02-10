@@ -70,7 +70,7 @@ function greatView(clicked) {
           section[clicked].style.boxShadow = '2px 0 9px 0px rgba(0, 0, 0, 0.12)';
           // set colors
           document.getElementById('projects').style.backgroundColor = colors[clicked][0];
-          section[clicked].style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+          section[clicked].style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
 
           active = clicked;
     }
