@@ -2,7 +2,6 @@ header {
   text-align: center;
   font-size: 1.3em;
   background-color: forestgreen;
-  border-bottom: 2px solid green;
   z-index: 60;
   color: whitesmoke;
 
@@ -15,7 +14,6 @@ header {
   }
   time {
     display: block;
-    font-weight: 300;
     height: 0; /*It gets its height with JavaScript*/
   }
   section {

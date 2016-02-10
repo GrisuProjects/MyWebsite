@@ -67,7 +67,7 @@ function greatView(clicked) {
         /*make clicked section to active*/
           sectionHead[clicked].style.fontSize = '180%';
           sectionHead[clicked].style.padding = '0.7em 0 0.5em';
-          section[clicked].style.boxShadow = '0 0 10px 0px rgba(0, 0, 0, 0.25)';
+          section[clicked].style.boxShadow = '2px 0 9px 0px rgba(0, 0, 0, 0.12)';
           // set colors
           document.getElementById('projects').style.backgroundColor = colors[clicked][0];
           section[clicked].style.backgroundColor = colors[clicked][1];
