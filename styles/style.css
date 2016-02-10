@@ -45,7 +45,7 @@ body {
   to {
     bottom: 0;
     opacity: 1; } }
-footer, #projects, #projects *, time {
+footer, #projects, #projects *, time, a {
   transition: 300ms; }
 
 .bgimg {
@@ -85,7 +85,7 @@ h2, h4 {
 
 p {
   padding: 1em 0;
-  line-height: 1.35em; }
+  line-height: 1.37em; }
 
 pre {
   overflow: auto; }
@@ -122,20 +122,18 @@ main {
   main #projects {
     padding-bottom: 2em;
     color: whitesmoke; }
-    main #projects p {
-      text-align: justify;
-      font-size: 90%; }
-    main #projects h3 {
-      padding: 1.5em 0;
-      cursor: pointer;
-      text-align: center;
-      font-size: 110%; }
     main #projects .section {
       padding: 0 1.5em; }
-    main #projects .grow {
-      height: 0;
-      overflow: hidden;
-      width: 100%; }
+      main #projects .section .sectionHeading {
+        padding: 1.5em 0;
+        cursor: pointer;
+        text-align: center;
+        font-size: 110%; }
+      main #projects .section .sectionText {
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        line-height: 1.42em; }
 
 #footer-size {
   background-color: transparent;
@@ -196,7 +194,7 @@ footer {
     main #projects .section {
       padding: 0 2em;
       border-radius: 0.3em; }
-    main #projects .section p {
+    main #projects .sectionText {
       line-height: 1.2em; } }
 @media screen and (orientation: landscape) and (min-width: 21cm) {
   header h1 {

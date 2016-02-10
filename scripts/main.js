@@ -23,56 +23,16 @@ var green = ['rgba(49, 175, 61, 1)', 'rgba(72, 186, 83, 0.8)'],
     blue = ['rgba(65, 119, 153, 1)', /*'rgba(56, 66, 153, 0.8)'*/'rgba(64, 153, 142, 0.8)'];
 var colors = [green, orange, blue];
 
-function dateTime() {
-    var d = new Date(), month, hour, min, sec;
+function currentTime() {
 
-    switch (d.getMonth()) {
-    case 0:
-        month = 'January';
-        break;
-    case 1:
-        month = 'February';
-        break;
-    case 2:
-        month = 'March';
-        break;
-    case 3:
-        month = 'April';
-        break;
-    case 4:
-        month = 'May';
-        break;
-    case 5:
-        month = 'June';
-        break;
-    case 6:
-        month = 'July';
-        break;
-    case 7:
-        month = 'August';
-        break;
-    case 8:
-        month = 'September';
-        break;
-    case 9:
-        month = 'October';
-        break;
-    case 10:
-        month = 'November';
-        break;
-    case 11:
-        month = 'December';
-        break;
-    }
-
-    document.getElementsByTagName('h1')[0].innerHTML = month + " " + d.getFullYear();
     // Display current time
-    setInterval(function () { // IMPLEMENT: if statement that hour and minute are only updated if nessecary
-        hour = new Date().getHours();
-        min = new Date().getMinutes();
-        sec = new Date().getSeconds();
+    setInterval(function () { // TODO: if statement that hour and minute are only updated if nessecary
+      var  hour = new Date().getHours(),
+          min = new Date().getMinutes(),
+          sec = new Date().getSeconds();
         document.getElementsByTagName('time')[0].innerHTML = ('0' + hour).slice(-2) + ':' + ('0' + min).slice(-2) + ':' + ('0' + sec).slice(-2);
     }, 1000);
+
     setTimeout(function () {
         document.getElementsByTagName('time')[0].style.height = '2em';
     }, 1000);
@@ -92,7 +52,7 @@ function greatView(clicked) {
 
     var section = document.getElementsByClassName('section'),
         sectionHead = document.getElementsByClassName('sectionHeading'),
-        grow = document.getElementsByClassName('grow');
+        grow = document.getElementsByClassName('sectionText');
 
     // only animate when an other section is clicked
     if (clicked !== active) {
@@ -123,7 +83,7 @@ function greatView(clicked) {
 function greatViewResize() {
     setTimeout(function () {
       var measure = document.getElementsByClassName("measuringWrapper")[active];
-      document.getElementsByClassName('grow')[active].style.height = measure.clientHeight + 'px';
+      document.getElementsByClassName('sectionText')[active].style.height = measure.clientHeight + 'px';
     }, 400);
 }
 

@@ -47,7 +47,7 @@ body {
   to{ bottom:0; opacity:1 }
 }
 
-footer, #projects, #projects *, time {
+footer, #projects, #projects *, time, a {
   transition: 300ms;
 }
 
@@ -92,7 +92,7 @@ h2, h4 {
 }
 p {
   padding: 1em 0;
-  line-height: 1.35em;
+  line-height: 1.37em;
 }
 
 pre {
