@@ -35,17 +35,18 @@
   }
 
   @media screen and (min-width: 21cm) {
-    header {
-      h1 {
-        font-size: 4em;
+    body.container {
+      margin: 0 auto;
+      width: 45%;
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+
+      .container {
+        padding: 1em 7%;
       }
-      /*.quote {
-        display: block;
-        background-color: whitesmoke;
-        color: rgba(49, 175, 61, 1);
-        padding: 2em;
-        margin: 1em 0;
-      }*/
+      footer {
+        left: 27.5%;
+        right: 27.5%;
+      }
     }
 
     main {
@@ -107,7 +108,7 @@
   }
 
   @media screen and (min-width: 42cm){
-    body:not(header){
+    body{
       font-size: 0.6cm;
     }
 

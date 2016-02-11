@@ -16,10 +16,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
-/*$primary-color: ;
-$secondary-color: ;
-$accent-color: ;
-*/
 * {
   box-sizing: border-box;
   position: relative;
@@ -30,13 +26,13 @@ $accent-color: ;
   color: inherit; }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 100%;
-  font-size: 0.4cm;
-  background-color: #4CAF50;
+  background-color: forestgreen;
   color: #212121;
   animation-name: animatebottom;
-  animation-duration: 0.7s; }
+  animation-duration: 0.7s;
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  font-size: 0.4cm; }
 
 @keyframes animatebottom {
   from {
@@ -45,6 +41,9 @@ body {
   to {
     bottom: 0;
     opacity: 1; } }
+body.container .container {
+  padding: 7%; }
+
 footer, #projects, #projects *, time, a {
   transition: 300ms; }
 
@@ -54,6 +53,20 @@ footer, #projects, #projects *, time, a {
   background-size: cover;
   background-position: center; }
 
+.outer {
+  display: table;
+  height: 85vh;
+  width: 100%; }
+
+.middle {
+  display: table-cell;
+  vertical-align: middle; }
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+
 a, footer {
   font-family: 'HankenBook'; }
 
@@ -61,23 +74,11 @@ a {
   text-decoration: none;
   display: inline-block; }
 
-a.link_btn {
-  text-decoration: none;
-  background-color: forestgreen;
-  color: whitesmoke;
-  padding: 1em;
-  border-radius: 0.2em;
-  border: 2px solid green; }
-
-a.link_btn:hover {
-  background-color: whitesmoke;
-  color: forestgreen; }
-
 a.link_area {
   width: 100%;
   padding: 1em 0;
   text-align: center;
-  border-top: 2px solid rgba(0, 0, 0, 0.25); }
+  border-top: 2px solid rgba(0, 0, 0, 0.15); }
 
 h2, h4 {
   padding: 1em 0.5em;
@@ -86,6 +87,9 @@ h2, h4 {
 p {
   padding: 1em 0;
   line-height: 1.37em; }
+
+p, ul {
+  font-size: 0.8em; }
 
 pre {
   overflow: auto; }
@@ -97,25 +101,13 @@ header {
   background-color: forestgreen;
   z-index: 60;
   color: whitesmoke; }
-  header .outer {
-    display: table;
-    height: 85vh;
-    width: 100%; }
-  header .middle {
-    display: table-cell;
-    vertical-align: middle; }
-  header .inner {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%; }
   header section {
     color: whitesmoke;
     background-color: forestgreen; }
   header h1 {
     padding: 0.5em 0 0.2em; }
   header p {
-    padding: 5% 0.1em;
-    font-size: 0.8em; }
+    padding: 5% 0.1em; }
   header time {
     display: block;
     overflow: hidden;
@@ -175,13 +167,6 @@ footer {
   body {
     font-size: 0.5cm; } }
 @media screen and (orientation: portrait) and (min-width: 14cm) {
-  /*.quote {
-    display: block;
-    background-color: rgba(49, 175, 61, 1);
-    color: whitesmoke;
-    padding: 2em;
-    margin: 1em 0;
-  }*/
   main .container {
     padding: 0 12%; }
   main #projects {
@@ -189,7 +174,6 @@ footer {
     main #projects .section {
       padding: 0 2em;
       border-radius: 0.3em; } }
-/*============================================================================*/
 @media screen and (orientation: landscape) and (max-width: 14cm) {
   body {
     font-size: 0.35cm; } }
@@ -210,16 +194,15 @@ footer {
     main #projects .sectionText {
       line-height: 1.2em; } }
 @media screen and (orientation: landscape) and (min-width: 21cm) {
-  header {
-    /*.quote {
-      display: block;
-      background-color: whitesmoke;
-      color: rgba(49, 175, 61, 1);
-      padding: 2em;
-      margin: 1em 0;
-    }*/ }
-    header h1 {
-      font-size: 4em; }
+  body.container {
+    margin: 0 auto;
+    width: 45%;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
+    body.container .container {
+      padding: 1em 7%; }
+    body.container footer {
+      left: 27.5%;
+      right: 27.5%; }
 
   main .container {
     padding: 1em 20% 0; }
@@ -261,7 +244,7 @@ footer {
   main #projects {
     padding: 2em 21%; } }
 @media screen and (orientation: landscape) and (min-width: 42cm) {
-  body:not(header) {
+  body {
     font-size: 0.6cm; }
 
   main .container {

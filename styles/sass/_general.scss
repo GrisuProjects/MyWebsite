@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+  font-weight: 300;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+body {
+  background-color: forestgreen;
+  color: #212121 /*rgb(64, 66, 68)*/;
+
+  animation-name: animatebottom;
+  animation-duration: 0.7s;
+
+  font: {
+    family: "Open Sans", sans-serif;
+    size: 100%;
+    size: 0.4cm;}
+}
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+body.container .container {
+    padding: 7%;
+}
+
+footer, #projects, #projects *, time, a {
+  transition: 300ms;
+}
+
+.bgimg {
+  background: {
+    attachment: fixed;
+    image: url(waterfall_720p.png);
+    size: cover;
+    position: center;}
+}
+
+.outer {
+    display: table;
+    height: 85vh;
+    width: 100%;
+}
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+a, footer {
+  font-family: 'HankenBook';
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+  a.link_area {
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+  }
+
+h2, h4 {
+  padding: 1em 0.5em;
+  font-weight: 400;
+}
+p {
+  padding: 1em 0;
+  line-height: 1.37em;
+}
+p, ul {
+  font-size: 0.8em;
+}
+
+pre {
+  overflow: auto;
+}

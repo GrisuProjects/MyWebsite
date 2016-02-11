@@ -17,95 +17,11 @@ You should have received a copy of the GNU General Public License
 along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-/*$primary-color: ;
-$secondary-color: ;
-$accent-color: ;
-*/
-* {
-  box-sizing: border-box;
-  position: relative;
-  font-weight: 300;
-  z-index: 100;
-  margin: 0;
-  padding: 0;
-  color: inherit;
-}
-
-body {
-  font: {
-    family: "Open Sans", sans-serif;
-    size: 100%;
-    size: 0.4cm;}
-  background-color: /*#F5F5F5*/ #4CAF50;
-  color: #212121 /*rgb(64, 66, 68)*/;
-
-  animation-name: animatebottom;
-  animation-duration: 0.7s;
-}
-@keyframes animatebottom {
-  from{ bottom:-100px; opacity:0 }
-  to{ bottom:0; opacity:1 }
-}
-
-footer, #projects, #projects *, time, a {
-  transition: 300ms;
-}
-
-.bgimg {
-  background: {
-    attachment: fixed;
-    image: url(waterfall_720p.png);
-    size: cover;
-    position: center;}
-}
-
-a, footer {
-  font-family: 'HankenBook';
-}
-a {
-  text-decoration: none;
-  display: inline-block;
-}
-  a.link_btn {
-    text-decoration: none;
-    background-color: forestgreen;
-    color: whitesmoke;
-    padding: 1em;
-    border-radius: 0.2em;
-    border: 2px solid green;
-  }
-  a.link_btn:hover {
-    background-color: whitesmoke;
-    color: forestgreen;
-  }
-  a.link_area {
-    width: 100%;
-    padding: 1em 0;
-    text-align: center;
-    border-top: 2px solid rgba(0, 0, 0, 0.25);
-  }
-
-
-h2, h4 {
-  padding: 1em 0.5em;
-  font-weight: 400;
-}
-p {
-  padding: 1em 0;
-  line-height: 1.37em;
-}
-
-pre {
-  overflow: auto;
-}
+@import "general";
 /*----------------------------------------------------------------------------*/
 @import "header";
-
 @import "main";
-
 @import "footer";
-
 /*============================================================================*/
 @import "mediaPortrait";
-/*============================================================================*/
 @import "mediaLandscape";
