@@ -80,9 +80,10 @@ a.link_area {
   text-align: center;
   border-top: 2px solid rgba(0, 0, 0, 0.15); }
 
-h2, h4 {
+h1, h2, h4 {
   padding: 1em 0.5em;
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: "Raleway", sans-serif; }
 
 p {
   padding: 1em 0;
