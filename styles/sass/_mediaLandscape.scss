@@ -43,10 +43,6 @@
       .container {
         padding: 1em 7%;
       }
-      footer {
-        left: 27.5%;
-        right: 27.5%;
-      }
     }
 
     main {
@@ -76,6 +72,11 @@
         display: inline-block;
         border: none;
       }
+    }
+    body.container footer { // must be handled AFTER the footer above
+      left: 27.5%;
+      right: 27.5%;
+      width: auto;
     }
   }
 

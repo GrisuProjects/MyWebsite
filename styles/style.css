@@ -42,7 +42,7 @@ body {
     bottom: 0;
     opacity: 1; } }
 body.container .container {
-  padding: 7%; }
+  padding: 1em 7%; }
 
 footer, #projects, #projects *, time, a {
   transition: 300ms; }
@@ -55,7 +55,7 @@ footer, #projects, #projects *, time, a {
 
 .outer {
   display: table;
-  height: 85vh;
+  height: 95vh;
   width: 100%; }
 
 .middle {
@@ -200,9 +200,6 @@ footer {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
     body.container .container {
       padding: 1em 7%; }
-    body.container footer {
-      left: 27.5%;
-      right: 27.5%; }
 
   main .container {
     padding: 1em 20% 0; }
@@ -222,7 +219,12 @@ footer {
     width: 100%; }
     footer div section {
       display: inline-block;
-      border: none; } }
+      border: none; }
+
+  body.container footer {
+    left: 27.5%;
+    right: 27.5%;
+    width: auto; } }
 @media screen and (orientation: landscape) and (min-width: 28cm) {
   body {
     font-size: 0.55cm; }

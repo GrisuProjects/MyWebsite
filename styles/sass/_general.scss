@@ -24,8 +24,11 @@ body {
   from{ bottom:-100px; opacity:0 }
   to{ bottom:0; opacity:1 }
 }
-body.container .container {
-    padding: 7%;
+body.container {
+
+  .container{
+    padding: 1em 7%;
+  }
 }
 
 footer, #projects, #projects *, time, a {
@@ -42,7 +45,7 @@ footer, #projects, #projects *, time, a {
 
 .outer {
     display: table;
-    height: 85vh;
+    height: 95vh;
     width: 100%;
 }
 .middle {
