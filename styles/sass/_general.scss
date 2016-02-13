@@ -18,17 +18,11 @@ body {
   font: {
     family: "Open Sans", sans-serif;
     size: 100%;
-    size: 0.4cm;}
+    size: 0.35cm;}
 }
 @keyframes animatebottom {
   from{ bottom:-100px; opacity:0 }
   to{ bottom:0; opacity:1 }
-}
-body.container {
-
-  .container{
-    padding: 1em 7%;
-  }
 }
 
 footer, #projects, #projects *, time, a {
@@ -75,12 +69,12 @@ h1, h2, h4 {
   font-weight: 400;
   font-family: "Raleway", sans-serif;
 }
+h1 {
+  font-size: 2.5em;
+}
 p {
   padding: 1em 0;
   line-height: 1.37em;
-}
-p, ul {
-  font-size: 0.8em;
 }
 
 pre {
