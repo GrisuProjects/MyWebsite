@@ -26,8 +26,8 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
   color: inherit; }
 
 body {
-  background-color: forestgreen;
   color: #212121;
+  background-color: forestgreen;
   animation-name: animatebottom;
   animation-duration: 0.7s;
   font-family: "Open Sans", sans-serif;
@@ -45,9 +45,9 @@ footer, #projects, #projects *, time, a {
   transition: 300ms; }
 
 .bgimg {
-  background-attachment: fixed;
+  background-attachment: fixed !important;
   background-image: url(waterfall_720p.png);
-  background-size: cover;
+  background-size: cover !important;
   background-position: center; }
 
 .outer {
@@ -68,13 +68,13 @@ a, footer {
   font-family: 'HankenBook'; }
 
 a {
-  text-decoration: none;
-  display: inline-block; }
+  display: inline-block;
+  text-decoration: none; }
 
 a.link_area {
   margin: 0 0 1em;
-  border-radius: 0.3em;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  border-radius: 0.3em; }
 
 h1, h2, h4 {
   padding: 1em 0.5em;
@@ -88,40 +88,35 @@ p {
   padding: 1em 0;
   line-height: 1.37em; }
 
-pre {
-  overflow: auto; }
-
 /*----------------------------------------------------------------------------*/
 header {
+  color: whitesmoke;
   text-align: center;
   font-size: 1.32em;
-  background-color: forestgreen;
-  z-index: 60;
-  color: whitesmoke; }
+  z-index: 40; }
   header section {
-    color: whitesmoke;
-    background-color: forestgreen; }
+    color: whitesmoke; }
   header h1 {
     padding: 0.5em 0 0.2em; }
   header p {
     padding: 5% 0.1em; }
   header time {
     display: block;
-    overflow: hidden;
     height: 0;
-    /*It gets its height with JavaScript*/ }
+    /*It gets its height with JavaScript*/
+    overflow: hidden; }
 
 main {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(245, 245, 245, 0.72);
   box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3); }
   main .container {
     padding: 1em 7%; }
     main .container p {
       text-align: justify; }
   main #projects {
+    color: whitesmoke;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
-    padding-bottom: 2em;
-    color: whitesmoke; }
+    padding-bottom: 2em; }
     main #projects h2 {
       padding-bottom: 2em; }
     main #projects .section {
@@ -144,8 +139,8 @@ main {
 footer {
   color: whitesmoke;
   background-color: forestgreen;
-  font-size: 0.85em;
   text-align: center;
+  font-size: 0.85em;
   z-index: 50; }
   footer div.inline-block-center {
     display: inline-block; }
@@ -158,6 +153,12 @@ footer {
   footer div#copy {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
     font-family: 'sans-serif'; }
+
+header {
+  background-color: forestgreen; }
+
+pre {
+  overflow: auto; }
 
 /*============================================================================*/
 @media screen and (orientation: portrait) and (min-height: 14cm) {
@@ -190,8 +191,8 @@ footer {
 @media screen and (orientation: landscape) and (min-width: 21cm) {
   div#container {
     margin: 0 auto;
-    width: 45%;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
+    width: 42%;
+    box-shadow: 0 0 3px 0 rgba(33, 33, 33, 0.5); }
 
   main .container {
     padding: 1em 21% 0; }
@@ -225,9 +226,6 @@ footer {
   main #projects {
     padding: 2em 21%; } }
 @media screen and (orientation: landscape) and (min-width: 42cm) {
-  body {
-    font-size: 0.49cm; }
-
   main .container {
     padding: 1em 28% 0; } }
 

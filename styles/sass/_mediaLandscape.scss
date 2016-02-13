@@ -30,8 +30,8 @@
   @media screen and (min-width: 21cm) {
     div#container {
       margin: 0 auto;
-      width: 45%;
-      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+      width: 42%;
+      box-shadow: 0 0 3px 0 transparentize($primary_text, 0.5);
     }
 
     main {
@@ -83,9 +83,6 @@
   }
 
   @media screen and (min-width: 42cm){
-    body{
-      font-size: 0.49cm;
-    }
 
     main {
       .container {

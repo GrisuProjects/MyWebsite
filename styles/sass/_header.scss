@@ -1,13 +1,11 @@
 header {
+  color: $initialize_color;
   text-align: center;
   font-size: 1.32em;
-  background-color: forestgreen;
-  z-index: 60;
-  color: whitesmoke;
+  z-index: 40;
 
   section {
-    color: whitesmoke;
-    background-color: forestgreen;
+    color: $initialize_color;
   }
   h1 {
     padding: 0.5em 0 0.2em;
@@ -17,7 +15,7 @@ header {
   }
   time {
     display: block;
-    overflow: hidden;
     height: 0; /*It gets its height with JavaScript*/
+    overflow: hidden;
   }
 }

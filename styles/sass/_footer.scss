@@ -3,17 +3,17 @@
   display: none;
 }
 footer {
-  color: whitesmoke;
-  background-color: forestgreen;
-  font-size: 0.85em;
+  color: $initialize_color;
+  background-color: $primary_color;
   text-align: center;
+  font-size: 0.85em;
   z-index: 50;
 
   div.inline-block-center{
     display: inline-block; // for this to work the parent element has to set text-align to center
   }
   a {
-    color: whitesmoke;
+    color: $initialize_color;
     text-decoration: underline;
   }
   div section {
