@@ -1,11 +1,11 @@
 * {
+  color: inherit;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   position: relative;
   font-weight: 300;
   z-index: 100;
-  margin: 0;
-  padding: 0;
-  color: inherit;
 }
 
 body {
@@ -72,6 +72,7 @@ h1, h2, h4 {
 }
 h1 {
   font-size: 2.5em;
+  font-family: "BPreplay", sans-serif;
 }
 p {
   padding: 1em 0;

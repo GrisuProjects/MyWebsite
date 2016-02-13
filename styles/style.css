@@ -17,13 +17,13 @@ You should have received a copy of the GNU General Public License
 along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
 * {
+  color: inherit;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   position: relative;
   font-weight: 300;
-  z-index: 100;
-  margin: 0;
-  padding: 0;
-  color: inherit; }
+  z-index: 100; }
 
 body {
   color: #212121;
@@ -85,7 +85,8 @@ h1, h2, h4 {
   font-family: "Raleway", sans-serif; }
 
 h1 {
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  font-family: "BPreplay", sans-serif; }
 
 p {
   padding: 1em 0;
@@ -102,7 +103,8 @@ header {
   header h1 {
     padding: 0.5em 0 0.2em; }
   header p {
-    padding: 5% 0.1em; }
+    padding: 5% 0.1em;
+    font-style: italic; }
   header time {
     display: block;
     height: 0;
@@ -169,7 +171,7 @@ pre {
 @media screen and (orientation: portrait) and (min-height: 14cm) {
   body {
     font-size: 0.32cm; } }
-@media screen and (orientation: portrait) and (min-width: 21cm) {
+@media screen and (orientation: portrait) and (min-height: 21cm) {
   main .container {
     padding: 0 7%; }
   main #projects {
@@ -177,6 +179,9 @@ pre {
     main #projects .section {
       padding: 0 2em 1em;
       border-radius: 0.3em; } }
+@media screen and (orientation: portrait) and (min-height: 28cm) {
+  body {
+    font-size: 0.39cm; } }
 @media screen and (orientation: landscape) and (min-width: 14cm) {
   body {
     font-size: 0.32cm; }
@@ -218,8 +223,8 @@ pre {
       border: none; }
 
   div#container footer {
-    left: 27.5%;
-    right: 27.5%;
+    left: 29%;
+    right: 29%;
     width: auto; } }
 @media screen and (orientation: landscape) and (min-width: 28cm) {
   body {
