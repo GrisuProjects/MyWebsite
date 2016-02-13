@@ -9,7 +9,7 @@
 }
 
 body {
-  color: $primary_text /*rgb(64, 66, 68)*/;
+  color: $primary_text;
   background-color: $primary_color;
   animation-name: animatebottom;
   animation-duration: 0.7s;
@@ -56,10 +56,13 @@ a {
   display: inline-block;
   text-decoration: none;
 }
-  a.link_area {
-    margin: 0 0 1em;
+  a.link_area, a.link_area:visited {
+    padding: 1em 2em;
     border: 1px solid transparent;
     border-radius: 0.3em;
+  }
+  a.link_area:hover {
+    border: 1px solid transparentize($primary_text, 0.5);
   }
 
 h1, h2, h4 {

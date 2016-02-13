@@ -71,10 +71,13 @@ a {
   display: inline-block;
   text-decoration: none; }
 
-a.link_area {
-  margin: 0 0 1em;
+a.link_area, a.link_area:visited {
+  padding: 1em 2em;
   border: 1px solid transparent;
   border-radius: 0.3em; }
+
+a.link_area:hover {
+  border: 1px solid rgba(33, 33, 33, 0.5); }
 
 h1, h2, h4 {
   padding: 1em 0.5em;
@@ -182,7 +185,7 @@ pre {
     padding: 1em 12%; }
 
   main .container {
-    padding: 1em 18% 0; }
+    padding: 1em 18%; }
   main #projects {
     padding: 2em 12%; }
     main #projects .section {
@@ -197,7 +200,7 @@ pre {
     box-shadow: 0 0 3px 0 rgba(33, 33, 33, 0.5); }
 
   main .container {
-    padding: 1em 21% 0; }
+    padding: 1em 21%; }
   main #projects {
     padding: 2em 18%; }
 
@@ -229,6 +232,6 @@ pre {
     padding: 2em 21%; } }
 @media screen and (orientation: landscape) and (min-width: 42cm) {
   main .container {
-    padding: 1em 28% 0; } }
+    padding: 1em 28%; } }
 
 /*# sourceMappingURL=style.css.map */
