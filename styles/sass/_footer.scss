@@ -6,7 +6,6 @@ footer {
   color: $initialize_color;
   background-color: $primary_color;
   text-align: center;
-  font-size: 0.85em;
   z-index: 50;
 
   div.inline-block-center{
@@ -23,6 +22,5 @@ footer {
   div#copy {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
     font-family: 'sans-serif';
-    font-size: 1.2em;
   }
 }

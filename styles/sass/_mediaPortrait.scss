@@ -8,6 +8,12 @@
         padding: 1em 12%;
       }
     }
+
+    main {
+      .container {
+        padding: 1em 12%;
+      }
+    }
   }
 
   @media screen and (min-height: 21cm) {
@@ -15,17 +21,10 @@
         font-size: 0.42cm;
     }
 
-    main {
-      .container {
-        padding: 0 7%;
-      }
-
-      #projects {
-        padding: 2em 12%;
-        .section {
-          padding: 0 2em 1em;
-          border-radius: 0.3em;
-        }
+    main #projects {
+      padding: 2em 12%;
+      .section {
+        border-radius: 0.3em;
       }
     }
   }
