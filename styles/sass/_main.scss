@@ -1,8 +1,7 @@
 main {
   background-color: transparentize($initialize_color, 0.28);
   box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3);
-
-    .container {
+  .container {
     padding: 1em 7%;
 
     p {
@@ -13,12 +12,12 @@ main {
     color: $initialize_color; // The background-colors are set in the js
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
     padding-bottom: 2em;
-
     h2 {
       padding-bottom: 2em;
     }
     .section {
       padding: 0 1.5em 1em;
+      text-align: justify;
 
       .sectionHeading {
         padding: 1.5em 0;

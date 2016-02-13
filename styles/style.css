@@ -17,13 +17,13 @@ You should have received a copy of the GNU General Public License
 along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
 * {
+  color: inherit;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   position: relative;
   font-weight: 300;
-  z-index: 100;
-  margin: 0;
-  padding: 0;
-  color: inherit; }
+  z-index: 100; }
 
 body {
   color: #212121;
@@ -32,7 +32,7 @@ body {
   animation-duration: 0.7s;
   font-family: "Open Sans", sans-serif;
   font-size: 100%;
-  font-size: 0.35cm; }
+  font-size: 0.28cm; }
 
 @keyframes animatebottom {
   from {
@@ -71,10 +71,13 @@ a {
   display: inline-block;
   text-decoration: none; }
 
-a.link_area {
-  margin: 0 0 1em;
+a.link_area, a.link_area:visited {
+  padding: 1em 2em;
   border: 1px solid transparent;
   border-radius: 0.3em; }
+
+a.link_area:hover {
+  border: 1px solid rgba(33, 33, 33, 0.5); }
 
 h1, h2, h4 {
   padding: 1em 0.5em;
@@ -82,7 +85,8 @@ h1, h2, h4 {
   font-family: "Raleway", sans-serif; }
 
 h1 {
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  font-family: "BPreplay", sans-serif; }
 
 p {
   padding: 1em 0;
@@ -99,7 +103,8 @@ header {
   header h1 {
     padding: 0.5em 0 0.2em; }
   header p {
-    padding: 5% 0.1em; }
+    padding: 5% 0.1em;
+    font-style: italic; }
   header time {
     display: block;
     height: 0;
@@ -120,7 +125,8 @@ main {
     main #projects h2 {
       padding-bottom: 2em; }
     main #projects .section {
-      padding: 0 1.5em 1em; }
+      padding: 0 1.5em 1em;
+      text-align: justify; }
       main #projects .section .sectionHeading {
         padding: 1.5em 0;
         cursor: pointer;
@@ -152,7 +158,8 @@ footer {
     display: inline-block; }
   footer div#copy {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
-    font-family: 'sans-serif'; }
+    font-family: 'sans-serif';
+    font-size: 1.2em; }
 
 header {
   background-color: forestgreen; }
@@ -163,8 +170,8 @@ pre {
 /*============================================================================*/
 @media screen and (orientation: portrait) and (min-height: 14cm) {
   body {
-    font-size: 0.42cm; } }
-@media screen and (orientation: portrait) and (min-width: 21cm) {
+    font-size: 0.32cm; } }
+@media screen and (orientation: portrait) and (min-height: 21cm) {
   main .container {
     padding: 0 7%; }
   main #projects {
@@ -172,15 +179,18 @@ pre {
     main #projects .section {
       padding: 0 2em 1em;
       border-radius: 0.3em; } }
+@media screen and (orientation: portrait) and (min-height: 28cm) {
+  body {
+    font-size: 0.39cm; } }
 @media screen and (orientation: landscape) and (min-width: 14cm) {
   body {
-    font-size: 0.42cm; }
+    font-size: 0.32cm; }
 
   div#container .container {
     padding: 1em 12%; }
 
   main .container {
-    padding: 1em 18% 0; }
+    padding: 1em 18%; }
   main #projects {
     padding: 2em 12%; }
     main #projects .section {
@@ -195,7 +205,7 @@ pre {
     box-shadow: 0 0 3px 0 rgba(33, 33, 33, 0.5); }
 
   main .container {
-    padding: 1em 21% 0; }
+    padding: 1em 21%; }
   main #projects {
     padding: 2em 18%; }
 
@@ -213,10 +223,13 @@ pre {
       border: none; }
 
   div#container footer {
-    left: 27.5%;
-    right: 27.5%;
+    left: 29%;
+    right: 29%;
     width: auto; } }
 @media screen and (orientation: landscape) and (min-width: 28cm) {
+  body {
+    font-size: 0.39cm; }
+
   main #projects .section {
     padding: 0 3em 1em; } }
 @media screen and (orientation: landscape) and (min-width: 35cm) {
@@ -224,6 +237,6 @@ pre {
     padding: 2em 21%; } }
 @media screen and (orientation: landscape) and (min-width: 42cm) {
   main .container {
-    padding: 1em 28% 0; } }
+    padding: 1em 28%; } }
 
 /*# sourceMappingURL=style.css.map */
