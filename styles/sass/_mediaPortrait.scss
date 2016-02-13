@@ -1,21 +1,21 @@
 @media screen and (orientation: portrait) {
-  @media screen and (min-width: 10cm) {
+  @media screen and (min-height: 14cm) { // Use the same display side as in _mediaLandscape
     body {
-      font-size: 0.5cm;
+      font-size: 0.35cm;
     }
   }
 
-  @media screen and (min-width: 14cm) {
+  @media screen and (min-width: 21cm) {
     main {
       .container {
-        padding: 0 12%;
+        padding: 0 7%;
       }
 
       #projects {
         padding: 2em 12%;
 
         .section {
-          padding: 0 2em;
+          padding: 0 2em 1em;
           border-radius: 0.3em;
         }
       }
