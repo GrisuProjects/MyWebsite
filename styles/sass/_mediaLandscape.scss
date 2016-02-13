@@ -53,7 +53,7 @@
         padding: 2em 16%;
 
         .section {
-          padding: 0 3em;
+          padding: 0 3em 1em;
         }
       }
     }
@@ -83,18 +83,6 @@
   @media screen and (min-width: 28cm) {
     body {
       font-size: 0.55cm;
-    }
-
-    a.link_area {
-      width: auto;
-      text-align: left;
-      padding: 1em 2em;
-      border: 1px solid transparent;
-      border-radius: 0.3em;
-      margin: 0 1em 1em;
-    }
-    a.link_area:hover {
-      border: 1px solid rgba(0, 0, 0, 0.3)
     }
 
     main #projects .section {

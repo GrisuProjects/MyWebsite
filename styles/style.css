@@ -75,10 +75,13 @@ a {
   display: inline-block; }
 
 a.link_area {
-  width: 100%;
-  padding: 1em 0;
-  text-align: center;
-  border-top: 2px solid rgba(0, 0, 0, 0.15); }
+  margin: 0 0 1em;
+  border-radius: 0.3em;
+  border: 1px solid transparent; }
+
+a.link_area:hover {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 1em 2em; }
 
 h1, h2, h4 {
   padding: 1em 0.5em;
@@ -129,7 +132,7 @@ main {
     main #projects h2 {
       padding-bottom: 2em; }
     main #projects .section {
-      padding: 0 1.5em; }
+      padding: 0 1.5em 1em; }
       main #projects .section .sectionHeading {
         padding: 1.5em 0;
         cursor: pointer;
@@ -137,9 +140,9 @@ main {
         font-size: 110%; }
       main #projects .section .sectionText {
         height: 0;
-        overflow: hidden;
         width: 100%;
-        line-height: 1.42em; }
+        line-height: 1.42em;
+        overflow: hidden; }
 
 #footer-size {
   background-color: transparent;
@@ -207,7 +210,7 @@ footer {
   main #projects {
     padding: 2em 16%; }
     main #projects .section {
-      padding: 0 3em; }
+      padding: 0 3em 1em; }
 
   #footer-size {
     display: block;
@@ -229,17 +232,6 @@ footer {
 @media screen and (orientation: landscape) and (min-width: 28cm) {
   body {
     font-size: 0.55cm; }
-
-  a.link_area {
-    width: auto;
-    text-align: left;
-    padding: 1em 2em;
-    border: 1px solid transparent;
-    border-radius: 0.3em;
-    margin: 0 1em 1em; }
-
-  a.link_area:hover {
-    border: 1px solid rgba(0, 0, 0, 0.3); }
 
   main #projects .section {
     padding: 0 3em; } }
