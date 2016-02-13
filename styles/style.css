@@ -161,6 +161,9 @@ footer {
     font-family: 'sans-serif';
     font-size: 1.2em; }
 
+div#container .container {
+  padding: 1em 7%; }
+
 header {
   background-color: forestgreen; }
 
@@ -170,8 +173,14 @@ pre {
 /*============================================================================*/
 @media screen and (orientation: portrait) and (min-height: 14cm) {
   body {
-    font-size: 0.32cm; } }
+    font-size: 0.36cm; }
+
+  div#container .container {
+    padding: 1em 12%; } }
 @media screen and (orientation: portrait) and (min-height: 21cm) {
+  body {
+    font-size: 0.42cm; }
+
   main .container {
     padding: 0 7%; }
   main #projects {
@@ -181,10 +190,10 @@ pre {
       border-radius: 0.3em; } }
 @media screen and (orientation: portrait) and (min-height: 28cm) {
   body {
-    font-size: 0.39cm; } }
+    font-size: 0.45cm; } }
 @media screen and (orientation: landscape) and (min-width: 14cm) {
   body {
-    font-size: 0.32cm; }
+    font-size: 0.36cm; }
 
   div#container .container {
     padding: 1em 12%; }
@@ -201,7 +210,7 @@ pre {
 @media screen and (orientation: landscape) and (min-width: 21cm) {
   div#container {
     margin: 0 auto;
-    width: 42%;
+    width: 64%;
     box-shadow: 0 0 3px 0 rgba(33, 33, 33, 0.5); }
 
   main .container {
@@ -223,16 +232,23 @@ pre {
       border: none; }
 
   div#container footer {
-    left: 29%;
-    right: 29%;
+    padding: 0;
+    left: 18%;
+    right: 18%;
     width: auto; } }
 @media screen and (orientation: landscape) and (min-width: 28cm) {
   body {
-    font-size: 0.39cm; }
+    font-size: 0.45cm; }
 
   main #projects .section {
     padding: 0 3em 1em; } }
 @media screen and (orientation: landscape) and (min-width: 35cm) {
+  div#container {
+    width: 42%; }
+    div#container footer {
+      left: 29%;
+      right: 29%; }
+
   main #projects {
     padding: 2em 21%; } }
 @media screen and (orientation: landscape) and (min-width: 42cm) {

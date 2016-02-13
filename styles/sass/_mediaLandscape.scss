@@ -2,7 +2,7 @@
 
   @media screen and (min-width: 14cm) {
     body{
-      font-size: 0.32cm;
+      font-size: 0.36cm;
     }
     div#container {  // For all subsites
       .container {
@@ -30,7 +30,7 @@
   @media screen and (min-width: 21cm) {
     div#container {
       margin: 0 auto;
-      width: 42%;
+      width: 64%;
       box-shadow: 0 0 3px 0 transparentize($primary_text, 0.5);
     }
 
@@ -60,15 +60,16 @@
       }
     }
     div#container footer { // must be handled AFTER the footer above
-      left: 29%;
-      right: 29%;
+      padding: 0;
+      left: 18%;
+      right: 18%;
       width: auto;
     }
   }
 
   @media screen and (min-width: 28cm) {
     body {
-      font-size: 0.39cm;
+      font-size: 0.45cm;
     }
 
     main #projects .section {
@@ -77,6 +78,14 @@
   }
 
   @media screen and (min-width: 35cm){
+    div#container {
+      width: 42%;
+      footer {
+        left: 29%;
+        right: 29%;
+      }
+    }
+
     main #projects {
       padding: 2em 21%;
     }

@@ -1,11 +1,20 @@
 @media screen and (orientation: portrait) {
   @media screen and (min-height: 14cm) { // Use the same display-side-length as in _mediaLandscape
     body {
-      font-size: 0.32cm;
+      font-size: 0.36cm;
+    }
+    div#container {  // For all subsites
+      .container {
+        padding: 1em 12%;
+      }
     }
   }
 
   @media screen and (min-height: 21cm) {
+    body {
+        font-size: 0.42cm;
+    }
+
     main {
       .container {
         padding: 0 7%;
@@ -23,7 +32,7 @@
 
   @media screen and (min-height: 28cm) {
     body {
-      font-size: 0.39cm;
+      font-size: 0.45cm;
     }
   }
 }
