@@ -2,7 +2,7 @@
 
   @media screen and (min-width: 14cm) {
     body{
-      font-size: 0.35cm;
+      font-size: 0.42cm;
     }
     div#container {  // For all subsites
       .container {
@@ -67,10 +67,6 @@
   }
 
   @media screen and (min-width: 28cm) {
-    body {
-      font-size: 0.42cm;
-    }
-
     main #projects .section {
       padding: 0 3em 1em;
     }
@@ -83,7 +79,6 @@
   }
 
   @media screen and (min-width: 42cm){
-
     main {
       .container {
         padding: 1em 28% 0;

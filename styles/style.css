@@ -163,7 +163,7 @@ pre {
 /*============================================================================*/
 @media screen and (orientation: portrait) and (min-height: 14cm) {
   body {
-    font-size: 0.35cm; } }
+    font-size: 0.42cm; } }
 @media screen and (orientation: portrait) and (min-width: 21cm) {
   main .container {
     padding: 0 7%; }
@@ -174,7 +174,7 @@ pre {
       border-radius: 0.3em; } }
 @media screen and (orientation: landscape) and (min-width: 14cm) {
   body {
-    font-size: 0.35cm; }
+    font-size: 0.42cm; }
 
   div#container .container {
     padding: 1em 12%; }
@@ -217,9 +217,6 @@ pre {
     right: 27.5%;
     width: auto; } }
 @media screen and (orientation: landscape) and (min-width: 28cm) {
-  body {
-    font-size: 0.42cm; }
-
   main #projects .section {
     padding: 0 3em 1em; } }
 @media screen and (orientation: landscape) and (min-width: 35cm) {
