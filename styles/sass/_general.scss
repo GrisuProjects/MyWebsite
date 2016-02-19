@@ -71,11 +71,11 @@ a {
 h2, h3, h4 {
   padding: 1em 0.4em 0.4em;
 }
-h2, h3, h4, footer, a {
-  @include font($Raleway, 400);
+h2, h3, h4{
+  @include font($Raleway, 500);
 }
 p {
-  @include font($BloggerSans);
+  @include font($BloggerSans,$font-size: "1.2em");
 }
 p {
   padding: 1em 0;

@@ -79,15 +79,15 @@ a.link_area:hover {
 h2, h3, h4 {
   padding: 1em 0.4em 0.4em; }
 
-h2, h3, h4, footer, a {
+h2, h3, h4 {
   font-family: "Raleway", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: "initialize"; }
 
 p {
   font-family: "Blogger Sans", sans-serif;
   font-weight: 300;
-  font-size: "initialize"; }
+  font-size: "1.2em"; }
 
 p {
   padding: 1em 0;
@@ -101,7 +101,7 @@ header {
   z-index: 40; }
   header section {
     color: whitesmoke;
-    font-family: "Blogger Sans", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 300;
     font-size: "initialize"; }
   header h1 {
