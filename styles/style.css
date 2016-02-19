@@ -77,7 +77,7 @@ a.link_area:hover {
   border: 1px solid rgba(33, 33, 33, 0.5); }
 
 h2, h3, h4 {
-  padding: 1em 0 0.4em 0.4em; }
+  padding: 1em 0.4em 0.4em; }
 
 h2, h3, h4, footer, a {
   font-family: "Railway", sans-serif;
@@ -223,6 +223,8 @@ pre {
     padding: 1em 21%; }
   main #projects {
     padding: 2em 18%; }
+    main #projects .section {
+      padding: 0 12% 1em; }
 
   #footer-size {
     display: block;
@@ -247,7 +249,7 @@ pre {
     font-size: 0.45cm; }
 
   main #projects .section {
-    padding: 0 3em 1em; } }
+    padding: 0 15% 1em; } }
 @media screen and (orientation: landscape) and (min-width: 35cm) {
   div#container {
     width: 42%; }
