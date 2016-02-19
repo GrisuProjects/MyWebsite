@@ -1,3 +1,9 @@
+@mixin font($font-family: sans-serif, $font-weight: 300, $font-size: "init") {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+}
+
 * {
   color: inherit;
   margin: 0;
@@ -14,7 +20,7 @@ body {
   animation-name: animatebottom;
   animation-duration: 0.7s;
   font: {
-    family: "Open Sans", sans-serif;
+    family: sans-serif;
     size: 100%;
     size: 0.28cm;}
 }
@@ -49,9 +55,6 @@ footer, #projects, #projects *, time, a {
     margin-right: auto;
     width: 100%;
 }
-a, footer {
-  font-family: 'HankenBook';
-}
 a {
   display: inline-block;
   text-decoration: none;
@@ -65,14 +68,14 @@ a {
     border: 1px solid transparentize($primary_text, 0.5);
   }
 
-h1, h2, h4 {
-  padding: 1em 0.5em;
-  font-weight: 400;
-  font-family: "Raleway", sans-serif;
+h2, h3, h4 {
+  padding: 1em 0 0.4em 0.4em;
 }
-h1 {
-  font-size: 2.5em;
-  font-family: "BPreplay", sans-serif;
+h2, h3, h4, footer, a {
+  @include font($Railway, 400);
+}
+p {
+  @include font($BloggerSans);
 }
 p {
   padding: 1em 0;

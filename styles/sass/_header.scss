@@ -6,9 +6,12 @@ header {
 
   section {
     color: $initialize_color;
+    @include font($BloggerSans);
   }
   h1 {
+    @include font($BloggerSans, 400);
     padding: 0.5em 0 0.2em;
+    font-size: 2.5em;
   }
   p {
     padding: 5% 0.1em;
