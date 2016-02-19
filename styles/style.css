@@ -32,7 +32,7 @@ body {
   animation-duration: 0.7s;
   font-family: sans-serif;
   font-size: 100%;
-  font-size: 0.28cm; }
+  font-size: 0.32cm; }
 
 @keyframes animatebottom {
   from {
@@ -80,14 +80,14 @@ h2, h3, h4 {
   padding: 1em 0.4em 0.4em; }
 
 h2, h3, h4, footer, a {
-  font-family: "Railway", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: "init"; }
+  font-size: "initialize"; }
 
 p {
   font-family: "Blogger Sans", sans-serif;
   font-weight: 300;
-  font-size: "init"; }
+  font-size: "initialize"; }
 
 p {
   padding: 1em 0;
@@ -103,11 +103,11 @@ header {
     color: whitesmoke;
     font-family: "Blogger Sans", sans-serif;
     font-weight: 300;
-    font-size: "init"; }
+    font-size: "initialize"; }
   header h1 {
     font-family: "Blogger Sans", sans-serif;
     font-weight: 400;
-    font-size: "init";
+    font-size: "initialize";
     padding: 0.5em 0 0.2em;
     font-size: 2.5em; }
   header p {
@@ -179,7 +179,7 @@ pre {
 /*============================================================================*/
 @media screen and (orientation: portrait) and (min-height: 14cm) {
   body {
-    font-size: 0.36cm; }
+    font-size: 0.42cm; }
 
   div#container .container {
     padding: 1em 12%; }
@@ -188,7 +188,7 @@ pre {
     padding: 1em 12%; } }
 @media screen and (orientation: portrait) and (min-height: 21cm) {
   body {
-    font-size: 0.42cm; }
+    font-size: 0.45cm; }
 
   main #projects {
     padding: 2em 12%; }
@@ -196,10 +196,10 @@ pre {
       border-radius: 0.3em; } }
 @media screen and (orientation: portrait) and (min-height: 28cm) {
   body {
-    font-size: 0.45cm; } }
+    font-size: 0.49cm; } }
 @media screen and (orientation: landscape) and (min-width: 14cm) {
   body {
-    font-size: 0.36cm; }
+    font-size: 0.42cm; }
 
   div#container .container {
     padding: 1em 12%; }
@@ -246,7 +246,7 @@ pre {
     width: auto; } }
 @media screen and (orientation: landscape) and (min-width: 28cm) {
   body {
-    font-size: 0.45cm; }
+    font-size: 0.49cm; }
 
   main #projects .section {
     padding: 0 15% 1em; } }
