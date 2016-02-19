@@ -9,14 +9,14 @@ footer {
   z-index: 50;
 
   div.inline-block-center{
-    display: inline-block; // for this to work the parent element has to set text-align to center
+    display: inline-block; // for this to work the parent element has to set text-align: center
   }
   a {
     color: $initialize_color;
     text-decoration: underline;
   }
   div section {
-    padding: 0 1em 1em;
+    padding: 1.2em;
     display: inline-block;
   }
   div#copy {

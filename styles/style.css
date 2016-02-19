@@ -153,7 +153,7 @@ footer {
     color: whitesmoke;
     text-decoration: underline; }
   footer div section {
-    padding: 0 1em 1em;
+    padding: 1.2em;
     display: inline-block; }
   footer div#copy {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
