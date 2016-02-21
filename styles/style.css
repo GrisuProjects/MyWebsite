@@ -66,7 +66,8 @@ footer, #projects, #projects *, time, a {
 
 a {
   display: inline-block;
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: 500; }
 
 a.link_area, a.link_area:visited {
   padding: 1em 2em;
@@ -76,10 +77,13 @@ a.link_area, a.link_area:visited {
 a.link_area:hover {
   border: 1px solid rgba(33, 33, 33, 0.5); }
 
-h2, h3, h4 {
-  padding: 1em 0.4em 0.4em; }
+h1 {
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 400;
+  font-size: "initialize"; }
 
 h2, h3, h4 {
+  padding: 1em 0.4em 0.4em;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: "initialize"; }
@@ -99,12 +103,7 @@ header {
     font-family: "Raleway", sans-serif;
     font-weight: 300;
     font-size: "initialize"; }
-    header section a {
-      font-weight: 500; }
   header h1 {
-    font-family: "Blogger Sans", sans-serif;
-    font-weight: 400;
-    font-size: "initialize";
     padding: 0.5em 0 0.2em;
     font-size: 2.5em; }
   header p {
@@ -156,7 +155,8 @@ footer {
     display: inline-block; }
   footer a {
     color: whitesmoke;
-    text-decoration: underline; }
+    text-decoration: underline;
+    font-weight: 300; }
   footer div section {
     padding: 1.2em;
     display: inline-block; }
@@ -174,7 +174,7 @@ pre {
   overflow: auto; }
 
 /*============================================================================*/
-@media screen and (orientation: portrait) and (min-height: 14cm) {
+@media screen and (orientation: portrait) and (min-width: 9cm) {
   body {
     font-size: 0.42cm; }
 
@@ -183,7 +183,7 @@ pre {
 
   main .container {
     padding: 1em 12%; } }
-@media screen and (orientation: portrait) and (min-height: 21cm) {
+@media screen and (orientation: portrait) and (min-width: 14cm) {
   body {
     font-size: 0.45cm; }
 
@@ -191,7 +191,7 @@ pre {
     padding: 2em 12%; }
     main #projects .section {
       border-radius: 0.3em; } }
-@media screen and (orientation: portrait) and (min-height: 28cm) {
+@media screen and (orientation: portrait) and (min-width: 21cm) {
   body {
     font-size: 0.49cm; } }
 @media screen and (orientation: landscape) and (min-width: 14cm) {

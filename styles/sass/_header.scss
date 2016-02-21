@@ -7,10 +7,6 @@ header {
   section {
     color: $initialize_color;
     @include font($Raleway);
-
-  a {
-    font-weight: 500;
-  }
   }
   h1 {
     padding: 0.5em 0 0.2em;

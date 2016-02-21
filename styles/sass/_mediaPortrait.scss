@@ -1,5 +1,5 @@
 @media screen and (orientation: portrait) {
-  @media screen and (min-height: 14cm) { // Use the same display-side-length as in _mediaLandscape
+  @media screen and (min-width: 9cm) { // Use the same display-side-length as in _mediaLandscape
     body {
       font-size: 0.42cm;
     }
@@ -16,7 +16,7 @@
     }
   }
 
-  @media screen and (min-height: 21cm) {
+  @media screen and (min-width: 14cm) {
     body {
         font-size: 0.45cm;
     }
@@ -29,7 +29,7 @@
     }
   }
 
-  @media screen and (min-height: 28cm) {
+  @media screen and (min-width: 21cm) {
     body {
       font-size: 0.49cm;
     }
