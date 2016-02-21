@@ -18,14 +18,11 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
 'use strict'; // TODO: function form of 'use strict'
 
-var green = ["forestgreen", 'rgba(49, 175, 61, 1)', 'rgba(72, 186, 83, 0.8)'],
-    orange = ['rgba(237, 177, 26, 1)', 'rgba(244, 192, 36, 0.8)'],
-    blue = ['rgba(65, 119, 153, 1)', /*'rgba(56, 66, 153, 0.8)'*/'rgba(64, 153, 142, 0.8)'];
-var colors = [green, orange, blue];
+var colors = ["forestgreen", 'rgba(237, 177, 26, 1)', 'rgba(65, 119, 153, 1)'];
 
-function currentTime() {
+function currentTime() { // TODO: Worker
 
-    // Display current time
+  // Display current time
     var  hour = new Date().getHours(),
         min = new Date().getMinutes(),
         sec = new Date().getSeconds(),
@@ -34,8 +31,6 @@ function currentTime() {
     // Update current Time
     setInterval(function () {
         sec++;
-        if (sec == 56) // Check to prevent from inaccuracy
-          sec = new Date().getSeconds();
 
         if (sec == 60) {
             sec = 0;
@@ -76,21 +71,18 @@ function greatView(clicked) {
     if (clicked !== active) {
         /* make active section back to default*/
         grow[active].style.height = '0';
-
         sectionHead[active].style.fontSize = '110%';
-        sectionHead[active].style.padding = '1em 0';
         section[active].style.backgroundColor = 'transparent';
         section[active].style.boxShadow = 'none';
 
         /*make clicked section to active*/
-          sectionHead[clicked].style.fontSize = '180%';
-          sectionHead[clicked].style.padding = '0.7em 0 0.5em';
-          section[clicked].style.boxShadow = '2px 0 9px 0px rgba(0, 0, 0, 0.12)';
-          // set colors
-          document.getElementById('projects').style.backgroundColor = colors[clicked][0];
-          section[clicked].style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+        sectionHead[clicked].style.fontSize = '180%';
+        section[clicked].style.boxShadow = '2px 0 9px 0px rgba(0, 0, 0, 0.12)';
+        // set colors
+        document.getElementById('projects').style.backgroundColor = colors[clicked];
+        section[clicked].style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
 
-          active = clicked;
+        active = clicked;
     }
     // set the proper height
         var measure = document.getElementsByClassName("measuringWrapper")[clicked];

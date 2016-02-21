@@ -1,7 +1,6 @@
-@mixin font($font-family: sans-serif, $font-weight: 300, $font-size: "initialize") {
+@mixin font($font-family: sans-serif, $font-weight: 300) {
   font-family: $font-family;
   font-weight: $font-weight;
-  font-size: $font-size;
 }
 
 * {
@@ -29,7 +28,7 @@ body {
   to{ bottom:0; opacity:1 }
 }
 
-footer, #projects, #projects *, time, a {
+#footer-size, #projects, #projects *, time, a {
   transition: 300ms;
 }
 
@@ -68,13 +67,18 @@ a {
   a.link_area:hover {
     border: 1px solid transparentize($primary_text, 0.5);
   }
+  a.link_area:active {
+    @extend a.link_area;
+  }
 
 h1 {
-  @include font($BloggerSans, 400);
+  font-weight: 400;
+  font-family: "Blogger Sans", sans-serif;
 }
 h2, h3, h4{
   padding: 1em 0.4em 0.4em;
-  @include font($Raleway, 500);
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
 }
 
 p {

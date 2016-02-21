@@ -41,7 +41,7 @@ body {
   to {
     bottom: 0;
     opacity: 1; } }
-footer, #projects, #projects *, time, a {
+#footer-size, #projects, #projects *, time, a {
   transition: 300ms; }
 
 .bgimg {
@@ -69,7 +69,7 @@ a {
   text-decoration: none;
   font-weight: 500; }
 
-a.link_area, a.link_area:visited {
+a.link_area, a.link_area:active, a.link_area:visited {
   padding: 1em 2em;
   border: 1px solid transparent;
   border-radius: 0.3em; }
@@ -78,15 +78,13 @@ a.link_area:hover {
   border: 1px solid rgba(33, 33, 33, 0.5); }
 
 h1 {
-  font-family: "Blogger Sans", sans-serif;
   font-weight: 400;
-  font-size: "initialize"; }
+  font-family: "Blogger Sans", sans-serif; }
 
 h2, h3, h4 {
   padding: 1em 0.4em 0.4em;
-  font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: "initialize"; }
+  font-family: "Raleway", sans-serif; }
 
 p {
   padding: 1em 0;
@@ -100,9 +98,7 @@ header {
   z-index: 40; }
   header section {
     color: whitesmoke;
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
-    font-size: "initialize"; }
+    font-family: "Raleway", sans-serif; }
   header h1 {
     padding: 0.5em 0 0.2em;
     font-size: 2.5em; }
@@ -112,7 +108,6 @@ header {
   header time {
     display: block;
     height: 0;
-    /*It gets its height with JavaScript*/
     overflow: hidden; }
 
 main {
