@@ -46,7 +46,7 @@ footer, #projects, #projects *, time, a {
 
 .bgimg {
   background-attachment: fixed !important;
-  background-image: url(waterfall_720p.png);
+  background-image: url(waterfall_720p_comp.png);
   background-size: cover !important;
   background-position: center; }
 
