@@ -26,15 +26,33 @@ var colors = [green, orange, blue];
 function currentTime() {
 
     // Display current time
-    setInterval(function () { // TODO: if statement that hour and minute are only updated if nessecary
-      var  hour = new Date().getHours(),
-          min = new Date().getMinutes(),
+    var  hour = new Date().getHours(),
+        min = new Date().getMinutes(),
+        sec = new Date().getSeconds(),
+        time = document.getElementsByTagName('time')[0];
+
+    // Update current Time
+    setInterval(function () {
+        sec++;
+        if (sec == 56) // Check to prevent from inaccuracy
           sec = new Date().getSeconds();
-        document.getElementsByTagName('time')[0].innerHTML = ('0' + hour).slice(-2) + ':' + ('0' + min).slice(-2) + ':' + ('0' + sec).slice(-2);
+
+        if (sec == 60) {
+            sec = 0;
+            min++;
+            if (min == 60) {
+                min = 0;
+                hour++;
+                if (hour == 24) {
+                    hour = 0;
+                }
+            }
+        }
+        time.innerHTML = ('0' + hour).slice(-2) + ':' + ('0' + min).slice(-2) + ':' + ('0' + sec).slice(-2);
     }, 1000);
 
     setTimeout(function () {
-        document.getElementsByTagName('time')[0].style.height = '2em';
+      document.getElementsByTagName('time')[0].style.height = '2em';
     }, 1000);
 }
 // ===============================================================================
