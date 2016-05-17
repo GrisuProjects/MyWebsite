@@ -41,8 +41,8 @@ body {
   to {
     bottom: 0;
     opacity: 1; } }
-#footer-size, #projects, #projects *, time, a {
-  transition: 300ms; }
+#footerSize, #projects, #projects *, time, a.link_area, a.link_area:active {
+  transition: 250ms; }
 
 .bgimg {
   background-attachment: fixed !important;
@@ -72,7 +72,8 @@ a {
 a.link_area, a.link_area:active, a.link_area:visited {
   padding: 1em 2em;
   border: 1px solid transparent;
-  border-radius: 0.3em; }
+  border-radius: 0.3em;
+  text-decoration: underline; }
 
 a.link_area:hover {
   border: 1px solid rgba(33, 33, 33, 0.5); }

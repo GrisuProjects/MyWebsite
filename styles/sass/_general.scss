@@ -28,8 +28,8 @@ body {
   to{ bottom:0; opacity:1 }
 }
 
-#footer-size, #projects, #projects *, time, a {
-  transition: 300ms;
+#footerSize, #projects, #projects *, time, a.link_area {
+  transition: 250ms;
 }
 
 .bgimg {
@@ -63,6 +63,7 @@ a {
     padding: 1em 2em;
     border: 1px solid transparent;
     border-radius: 0.3em;
+    text-decoration: underline;
   }
   a.link_area:hover {
     border: 1px solid transparentize($primary_text, 0.5);

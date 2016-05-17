@@ -41,10 +41,12 @@ function currentTime() { // TODO: Worker
 }
 // ===============================================================================
 function footerSize() {
-    var growDiv = document.getElementById('footer-size'),
-        wrapper = document.querySelector('footer');
+    setTimeout(function() {
+        var growDiv = document.getElementById('footer-size'),
+            wrapper = document.querySelector('footer');
 
-    growDiv.style.height = wrapper.clientHeight + 'px';
+        growDiv.style.height = wrapper.clientHeight + 'px';
+    }, 350);
 }
 // ===============================================================================
 var active = 2;
@@ -84,7 +86,7 @@ function greatViewResize() {
     setTimeout(function() {
         var measure = document.getElementsByClassName("measuringWrapper")[active];
         document.getElementsByClassName('sectionText')[active].style.height = measure.clientHeight + 'px';
-    }, 400);
+    }, 300);
 }
 
 window.addEventListener("resize", greatViewResize); // resizes the .section element in #projects
