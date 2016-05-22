@@ -92,21 +92,21 @@ p {
   line-height: 1.37em; }
 
 /*----------------------------------------------------------------------------*/
-header {
+header, div#container section {
   color: whitesmoke;
   text-align: center;
   font-size: 1.32em;
   z-index: 40; }
-  header section {
+  header section, div#container section section {
     color: whitesmoke;
     font-family: "Raleway", sans-serif; }
-  header h1 {
+  header h1, div#container section h1 {
     padding: 0.5em 0 0.2em;
     font-size: 2.5em; }
-  header p {
+  header p, div#container section p {
     padding: 5% 0.1em;
     font-style: italic; }
-  header time {
+  header time, div#container section time {
     display: block;
     height: 0;
     overflow: hidden; }
@@ -162,8 +162,12 @@ footer {
 
 div#container .container {
   padding: 1em 7%; }
+div#container section {
+  position: sticky;
+  top: 0;
+  z-index: 1000; }
 
-header {
+header, div#container section {
   background-color: forestgreen; }
 
 pre {
