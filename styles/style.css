@@ -46,7 +46,7 @@ body {
 
 .bgimg {
   background-attachment: fixed !important;
-  background-image: url(waterfall_720.jpg);
+  background-image: url(IMG_2021.JPG);
   background-size: cover !important;
   background-position: center; }
 
@@ -125,8 +125,10 @@ main {
     main #projects h2 {
       padding-bottom: 2em; }
     main #projects .section {
+      transition: 600ms 200ms;
       padding: 0 7% 1em;
-      text-align: justify; }
+      text-align: justify;
+      background-color: transparent; }
       main #projects .section .sectionHeading {
         padding: 1.5em 0;
         cursor: pointer;
@@ -137,6 +139,11 @@ main {
         width: 100%;
         line-height: 1.42em;
         overflow: hidden; }
+    main #projects .section[extended="true"] {
+      border-top: 2px solid rgba(0, 0, 0, 0.16);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.16); }
+      main #projects .section[extended="true"] .sectionHeading {
+        font-size: 180%; }
 
 #footer-size {
   background-color: transparent;

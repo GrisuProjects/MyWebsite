@@ -16,6 +16,7 @@ main {
       padding-bottom: 2em;
     }
     .section {
+      transition: 600ms 200ms;
       padding: 0 7% 1em;
       text-align: justify;
       background-color: transparent;
@@ -32,13 +33,13 @@ main {
         line-height: 1.42em;
         overflow: hidden;
       }
+    }
     .section[extended="true"] {
-      box-shadow: 2px 0 9px 0px rgba(0, 0, 0, 0.12);
+      border-top: 2px solid rgba(0, 0, 0, 0.16);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.16);
       .sectionHeading {
         font-size: 180%;
       }
-      .sectionText {}
-    }
     }
   }
 }
