@@ -1,0 +1,263 @@
+/*
+This file is part of my website.
+
+Copyright (C) 2016  Christian Kaindl
+
+This website is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This website is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this website.  If not, see <http://www.gnu.org/licenses/>.
+*/
+* {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-weight: 300;
+  z-index: 100; }
+
+body {
+  color: #212121;
+  background-color: forestgreen;
+  animation-name: animatebottom;
+  animation-duration: 0.7s;
+  font-family: sans-serif;
+  font-size: 100%;
+  font-size: 0.32cm; }
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+#footerSize, #projects, #projects *, time, a.link_area, a.link_area:active {
+  transition: 250ms; }
+
+.bgimg {
+  background-attachment: fixed !important;
+  background-image: url(waterfall_720.jpg);
+  background-size: cover !important;
+  background-position: center; }
+
+.outer {
+  display: table;
+  height: 95vh;
+  width: 100%; }
+
+.middle {
+  display: table-cell;
+  vertical-align: middle; }
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500; }
+
+a.link_area, a.link_area:active, a.link_area:visited {
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  text-decoration: underline; }
+
+a.link_area:hover {
+  border: 1px solid rgba(33, 33, 33, 0.5); }
+
+h1 {
+  font-weight: 400;
+  font-family: "Comic Neue", sans-serif; }
+
+h2, h3, h4 {
+  padding: 1em 0.4em 0.4em;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif; }
+
+p {
+  padding: 1em 0;
+  line-height: 1.37em; }
+
+/*----------------------------------------------------------------------------*/
+header, div#container section {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 1.32em;
+  z-index: 40; }
+  header section, div#container section section {
+    color: whitesmoke;
+    font-family: "Raleway", sans-serif; }
+  header h1, div#container section h1 {
+    padding: 0.5em 0 0.2em;
+    font-size: 2.5em; }
+  header p, div#container section p {
+    padding: 5% 0.1em;
+    font-style: italic; }
+  header time, div#container section time {
+    display: block;
+    height: 0;
+    overflow: hidden; }
+
+main {
+  background-color: rgba(245, 245, 245, 0.72);
+  box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3); }
+  main .container {
+    padding: 1em 7%; }
+    main .container p {
+      text-align: justify; }
+  main #projects {
+    color: whitesmoke;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+    padding-bottom: 2em; }
+    main #projects h2 {
+      padding-bottom: 2em; }
+    main #projects .section {
+      padding: 0 7% 1em;
+      text-align: justify; }
+      main #projects .section .sectionHeading {
+        padding: 1.5em 0;
+        cursor: pointer;
+        text-align: center;
+        font-size: 110%; }
+      main #projects .section .sectionText {
+        height: 0;
+        width: 100%;
+        line-height: 1.42em;
+        overflow: hidden; }
+
+#footer-size {
+  background-color: transparent;
+  display: none; }
+
+footer {
+  color: whitesmoke;
+  background-color: forestgreen;
+  text-align: center;
+  z-index: 50; }
+  footer div.inline-block-center {
+    display: inline-block; }
+  footer a {
+    color: whitesmoke;
+    text-decoration: underline;
+    font-weight: 300; }
+  footer div section {
+    padding: 1.2em;
+    display: inline-block; }
+  footer div#copy {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    font-family: 'sans-serif'; }
+
+div#container .container {
+  padding: 1em 7%; }
+div#container section {
+  position: sticky;
+  top: 0;
+  z-index: 1000; }
+
+header, div#container section {
+  background-color: forestgreen; }
+
+pre {
+  overflow: auto; }
+
+/*============================================================================*/
+@media screen and (orientation: portrait) and (min-width: 9cm) {
+  body {
+    font-size: 0.42cm; }
+
+  div#container .container {
+    padding: 1em 12%; }
+
+  main .container {
+    padding: 1em 12%; } }
+@media screen and (orientation: portrait) and (min-width: 14cm) {
+  body {
+    font-size: 0.45cm; }
+
+  main #projects {
+    padding: 2em 12%; }
+    main #projects .section {
+      border-radius: 0.3em; } }
+@media screen and (orientation: portrait) and (min-width: 21cm) {
+  body {
+    font-size: 0.49cm; } }
+@media screen and (orientation: landscape) and (min-width: 14cm) {
+  body {
+    font-size: 0.42cm; }
+
+  div#container .container {
+    padding: 1em 12%; }
+
+  main .container {
+    padding: 1em 18%; }
+  main #projects {
+    padding: 2em 12%; }
+    main #projects .section {
+      padding: 0 7% 1em;
+      border-radius: 0.3em; }
+    main #projects .sectionText {
+      line-height: 1.2em; } }
+@media screen and (orientation: landscape) and (min-width: 21cm) {
+  div#container {
+    margin: 0 auto;
+    width: 64%;
+    box-shadow: 0 0 3px 0 rgba(33, 33, 33, 0.5); }
+
+  main .container {
+    padding: 1em 21%; }
+  main #projects {
+    padding: 2em 18%; }
+    main #projects .section {
+      padding: 0 12% 1em; }
+
+  #footer-size {
+    display: block;
+    visibility: hidden; }
+
+  footer {
+    padding: 0 12%;
+    position: fixed;
+    bottom: 0;
+    width: 100%; }
+    footer div section {
+      display: inline-block;
+      border: none; }
+
+  div#container footer {
+    padding: 0;
+    left: 18%;
+    right: 18%;
+    width: auto; } }
+@media screen and (orientation: landscape) and (min-width: 28cm) {
+  body {
+    font-size: 0.49cm; }
+
+  main #projects .section {
+    padding: 0 15% 1em; } }
+@media screen and (orientation: landscape) and (min-width: 35cm) {
+  div#container {
+    width: 42%; }
+    div#container footer {
+      left: 29%;
+      right: 29%; }
+
+  main #projects {
+    padding: 2em 21%; } }
+@media screen and (orientation: landscape) and (min-width: 42cm) {
+  main .container {
+    padding: 1em 28%; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,88 @@
+@mixin font($font-family: sans-serif, $font-weight: 300) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+}
+
+* {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-weight: 300;
+  z-index: 100;
+}
+
+body {
+  color: $primary_text;
+  background-color: $primary_color;
+  animation-name: animatebottom;
+  animation-duration: 0.7s;
+  font: {
+    family: sans-serif;
+    size: 100%;
+    size: 0.32cm;}
+}
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#footerSize, #projects, #projects *, time, a.link_area {
+  transition: 250ms;
+}
+
+.bgimg {
+  background: {
+    attachment: fixed !important;
+    image: url(waterfall_720.jpg);
+    size: cover !important;
+    position: center;}
+}
+
+.outer {
+    display: table;
+    height: 95vh;
+    width: 100%;
+}
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+}
+  a.link_area, a.link_area:visited {
+    padding: 1em 2em;
+    border: 1px solid transparent;
+    border-radius: 0.3em;
+    text-decoration: underline;
+  }
+  a.link_area:hover {
+    border: 1px solid transparentize($primary_text, 0.5);
+  }
+  a.link_area:active {
+    @extend a.link_area;
+  }
+
+h1 {
+  font-weight: 400;
+  font-family: "Comic Neue", sans-serif;
+}
+h2, h3, h4{
+  padding: 1em 0.4em 0.4em;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  padding: 1em 0;
+  line-height: 1.37em;
+}

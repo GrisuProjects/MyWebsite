@@ -1,0 +1,27 @@
+#footer-size { // for the desktop version
+  background-color: transparent;
+  display: none;
+}
+footer {
+  color: $initialize_color;
+  background-color: $primary_color;
+  text-align: center;
+  z-index: 50;
+
+  div.inline-block-center{
+    display: inline-block; // for this to work the parent element has to set text-align: center
+  }
+  a {
+    color: $initialize_color;
+    text-decoration: underline;
+    font-weight: 300;
+  }
+  div section {
+    padding: 1.2em;
+    display: inline-block;
+  }
+  div#copy {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    font-family: 'sans-serif';
+  }
+}

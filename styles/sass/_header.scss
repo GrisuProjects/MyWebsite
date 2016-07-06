@@ -1,0 +1,24 @@
+header {
+  color: $initialize_color;
+  text-align: center;
+  font-size: 1.32em;
+  z-index: 40;
+
+  section {
+    color: $initialize_color;
+    font-family: "Raleway", sans-serif;
+  }
+  h1 {
+    padding: 0.5em 0 0.2em;
+    font-size: 2.5em;
+  }
+  p {
+    padding: 5% 0.1em;
+    font-style: italic;
+  }
+  time {
+    display: block;
+    height: 0; // It gets its height with JavaScript
+    overflow: hidden;
+  }
+}
