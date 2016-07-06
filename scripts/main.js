@@ -18,6 +18,32 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
 'use strict';
 
+var mainSwitch = (function(){
+  function _change (clicked){
+    var section = document.getElementsByClassName('section');
+
+    document.getElementsByClassName('section')[clicked].setAttribute('extended', 'true');
+    document.getElementsByClassName('section')[active].setAttribute('extended', 'false');
+
+    // set colors
+    document.getElementById('projects').style.backgroundColor = colors[clicked];
+    section[clicked].style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+  }
+  function init (clicked){
+    if (clicked !== active) {
+        /* change view depending on click */
+        _change(clicked);
+        // set colors
+        document.getElementById('projects').style.backgroundColor = colors[clicked];
+        document.getElementsByClassName('section')[clicked].style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+
+        active = clicked;
+    }
+  }
+
+  return {init: init};
+})();
+
 var colors = ["forestgreen", 'rgba(237, 177, 26, 1)', 'rgba(65, 119, 153, 1)'];
 
 /*function currentTime() {

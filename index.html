@@ -28,7 +28,7 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Comic+Neue:400/Raleway:300,400,500">
   </head>
 
-  <body onload="greatView(0), footerSize(), currentTime()">
+  <body onload="greatView(0), footerSize()">
     <header>
       <div class="outer">
         <div class="middle">
@@ -74,7 +74,7 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
                 Things you should have heard about
               </h2>
               <div>
-                <div class="section" onclick="greatView(0)">
+                <div class="section" onclick="mainSwitch.init(0)">
                   <h3 class="sectionHeading">
                     This Website
                   </h3>
@@ -91,7 +91,7 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
                   <!-- End .sectionText -->
                 </div>
                 <!-- End .section -->
-                <div class="section" onclick="greatView(1)">
+                <div class="section" onclick="mainSwitch.init(1)">
                   <h3 class="sectionHeading">
                     Colearning Wien
                   </h3>
@@ -109,7 +109,7 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
                   <!-- End .sectionText -->
                 </div>
                 <!-- End .section -->
-                <div class="section" onclick="greatView(2)">
+                <div class="section" onclick="mainSwitch.init(2)">
                   <h3 class="sectionHeading">
                     Other projects
                   </h3>
@@ -184,7 +184,5 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 
     <script src='scripts/main.js'></script>
   </body>
-
-</html>
 
 </html>
