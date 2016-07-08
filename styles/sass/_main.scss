@@ -11,13 +11,13 @@ main {
   #projects {
     color: $initialize_color; // The background-colors are set in the js
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
-    padding-bottom: 2em;
+    margin-bottom: 2em;
     h2 {
-      padding-bottom: 2em;
+      margin-bottom: 2em;
     }
     .section {
-      transition: 600ms 200ms;
-      padding: 0 7% 1em;
+      border-width: 2px;
+      padding: 0 7% 2em !important;
       text-align: justify;
       background-color: transparent;
 

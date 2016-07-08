@@ -19,33 +19,62 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 'use strict';
 
 var colors = ['forestgreen', 'rgba(237, 177, 26, 1)', 'rgba(65, 119, 153, 1)'];
-var mainSwitch = (function(){
-  function _change (clicked){
-    var section = document.getElementsByClassName('section');
 
-    document.getElementsByClassName('section')[active].setAttribute('extended', 'false');
-    document.getElementsByClassName('section')[clicked].setAttribute('extended', 'true');
+var mainSwitch = (function() {
+    var active = undefined;
 
-    // set colors
-    document.getElementById('projects').style.backgroundColor = colors[clicked];
-  }
+    function _change(clicked) {
+        var section = document.getElementsByClassName('section'),
+            measure = document.getElementsByClassName("measuringWrapper")[clicked];
 
-  function init (clicked){
-    if (clicked !== active) {
-        /* change view depending on click */
-        _change(clicked);
-        // set colors
-        document.getElementById('projects').style.backgroundColor = colors[clicked];
-
-        var measure = document.getElementsByClassName("measuringWrapper")[clicked];
-        document.getElementsByClassName('sectionText')[active].removeAttribute('style');
+        if (typeof(mainSwitch.active) == "number") {
+            section[mainSwitch.active].setAttribute('extended', 'false');
+            document.getElementsByClassName('sectionText')[mainSwitch.active].style.height = 0 + "px";
+        }
+        section[clicked].setAttribute('extended', 'true');
         document.getElementsByClassName('sectionText')[clicked].style.height = measure.clientHeight + 'px';
 
-        active = clicked;
+        // set color
+        document.getElementById('projects').style.backgroundColor = colors[clicked];
     }
-  }
 
-  return {init: init};
+    function init(clicked) {
+        if (clicked !== mainSwitch.active) {
+            // make things happen
+            _change(clicked);
+
+            mainSwitch.active = clicked;
+        }
+    }
+
+    return {
+        init: init,
+        active: active
+    };
+})();
+
+var adjustHeight = (function() {
+    function mainSwitch() {
+      console.log("HERE");
+        if (typeof(mainSwitch.active) == "number") {
+            var measuringWrapper = document.getElementsByClassName("measuringWrapper")[mainSwitch.active],
+                sectionText = document.getElementsByClassName('sectionText')[mainSwitch.active];
+
+            sectionText.style.height = measuringWrapper.clientHeight + 'px';
+        }
+    }
+
+    function footer() {
+      console.log("HERE TOO");
+        var growDiv = document.getElementById('footer-size'),
+            wrapper = document.querySelector('footer');
+
+        growDiv.style.height = wrapper.clientHeight + 'px';
+    }
+    return {
+        mainSwitch: mainSwitch,
+        footer: footer
+    }
 })();
 
 /*function currentTime() {
@@ -67,24 +96,6 @@ var mainSwitch = (function(){
         document.getElementsByTagName('time')[0].style.height = '2em';
     }, 1500);
 }*/
-// ===============================================================================
-function footerSize() {
-    setTimeout(function() {
-        var growDiv = document.getElementById('footer-size'),
-            wrapper = document.querySelector('footer');
 
-        growDiv.style.height = wrapper.clientHeight + 'px';
-    }, 350);
-}
-// ===============================================================================
-var active = 2;
-
-function greatViewResize() {
-    setTimeout(function() {
-        var measure = document.getElementsByClassName("measuringWrapper")[active];
-        document.getElementsByClassName('sectionText')[active].style.height = measure.clientHeight + 'px';
-    }, 300);
-}
-
-window.addEventListener("resize", greatViewResize); // resizes the .section element in #projects
-window.addEventListener("resize", footerSize); // resizes the .footer-size element
+window.addEventListener("resize", adjustHeight.mainSwitch); // resizes the .section element in #projects
+window.addEventListener("resize", adjustHeight.footer); // resizes the .footer-size element

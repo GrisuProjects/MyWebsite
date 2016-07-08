@@ -28,8 +28,17 @@ body {
   to{ bottom:0; opacity:1 }
 }
 
-#footerSize, #projects, #projects *, time, a.link_area {
+/*#footerSize, #projects, #projects *, a.link_area {
   transition: 250ms;
+}*/
+#projects {
+  transition: background-color 700ms;
+}
+#projects .section .sectionHeading {
+  transition: font-size 500ms;
+}
+#footerSize, #projects .section .sectionText {
+  transition: height 250ms;
 }
 
 .bgimg {
