@@ -55,7 +55,6 @@ var mainSwitch = (function() {
 
 var adjustHeight = (function() {
     function mainSwitch() {
-      console.log("HERE");
         if (typeof(mainSwitch.active) == "number") {
             var measuringWrapper = document.getElementsByClassName("measuringWrapper")[mainSwitch.active],
                 sectionText = document.getElementsByClassName('sectionText')[mainSwitch.active];
@@ -65,7 +64,6 @@ var adjustHeight = (function() {
     }
 
     function footer() {
-      console.log("HERE TOO");
         var growDiv = document.getElementById('footer-size'),
             wrapper = document.querySelector('footer');
 
