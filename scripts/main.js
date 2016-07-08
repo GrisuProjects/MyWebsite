@@ -96,6 +96,3 @@ var adjustHeight = (function() {
         document.getElementsByTagName('time')[0].style.height = '2em';
     }, 1500);
 }*/
-
-window.addEventListener("resize", adjustHeight.mainSwitch); // resizes the .section element in #projects
-window.addEventListener("resize", adjustHeight.footer); // resizes the .footer-size element
