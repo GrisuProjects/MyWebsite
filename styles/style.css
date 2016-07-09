@@ -47,9 +47,6 @@ body {
 #projects {
   transition: background-color 700ms; }
 
-#projects .section .sectionHeading {
-  transition: font-size 500ms; }
-
 #footerSize, #projects .section .sectionText {
   transition: height 250ms; }
 
@@ -142,7 +139,8 @@ main {
         padding: 1.5em 0;
         cursor: pointer;
         text-align: center;
-        font-size: 110%; }
+        font-size: 110%;
+        transition: none; }
       main #projects .section .sectionText {
         height: 0;
         width: 100%;
@@ -153,6 +151,8 @@ main {
       border-bottom: 2px solid rgba(0, 0, 0, 0.16); }
       main #projects .section[extended="true"] .sectionHeading {
         font-size: 180%; }
+    main #projects .section .sectionHeading[disabletransition="false"] {
+      transition: font-size 500ms; }
 
 #footer-size {
   background-color: transparent;

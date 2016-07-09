@@ -21,7 +21,8 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 var colors = ['forestgreen', 'rgba(237, 177, 26, 1)', 'rgba(65, 119, 153, 1)'];
 
 var mainSwitch = (function() {
-    var active = undefined;
+    var active = undefined,
+        isRunning = false;
 
     function _change(clicked) {
         var section = document.getElementsByClassName('section'),
@@ -32,24 +33,53 @@ var mainSwitch = (function() {
             document.getElementsByClassName('sectionText')[mainSwitch.active].style.height = 0 + "px";
         }
         section[clicked].setAttribute('extended', 'true');
-        document.getElementsByClassName('sectionText')[clicked].style.height = measure.clientHeight+ 5 + 'px';
+        document.getElementsByClassName('sectionText')[clicked].style.height = measure.clientHeight + 5 + 'px';
 
         // set color
         document.getElementById('projects').style.backgroundColor = colors[clicked];
     }
 
     function init(clicked) {
-        if (clicked !== mainSwitch.active) {
+        console.log("On click: " + mainSwitch.isRunning);
+        if (clicked !== mainSwitch.active && mainSwitch.isRunning == false) {
+            mainSwitch.isRunning = true;
+
+            var sectionHeading = document.getElementsByClassName('sectionHeading');
+
+            // enable transition for changeing items
+            if (typeof(mainSwitch.active) == 'number') {
+                sectionHeading[clicked].setAttribute('disabletransition', 'false');
+                sectionHeading[mainSwitch.active].setAttribute('disabletransition', 'false');
+
+                // make sure these above are applied properly
+                sectionHeading[clicked].offsetHeight;
+                sectionHeading[mainSwitch.active].offsetHeight;
+            }
+
             // make things happen
             _change(clicked);
 
-            mainSwitch.active = clicked;
+            // disable transitions again and make it doesn't conflict with the runnig transition
+            setTimeout(function() {
+                if (typeof(mainSwitch.active) == 'number') {
+                    sectionHeading[clicked].setAttribute('disabletransition', 'true');
+                    sectionHeading[mainSwitch.active].setAttribute('disabletransition', 'true');
+
+                    // make sure these above are applied properly
+                    sectionHeading[clicked].offsetHeight;
+                    sectionHeading[mainSwitch.active].offsetHeight;
+                }
+
+                mainSwitch.active = clicked;
+                mainSwitch.isRunning = false;
+            }, 500);
         }
     }
 
     return {
         init: init,
-        active: active
+        active: active,
+        isRunning: isRunning
     };
 })();
 

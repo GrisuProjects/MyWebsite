@@ -26,6 +26,7 @@ main {
         cursor: pointer;
         text-align: center;
         font-size: 110%;
+        transition: none;
       }
       .sectionText {
         height: 0;
@@ -40,6 +41,9 @@ main {
       .sectionHeading {
         font-size: 180%;
       }
+    }
+    .section .sectionHeading[disabletransition="false"] {
+      transition: font-size 500ms;
     }
   }
 }
