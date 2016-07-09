@@ -32,7 +32,7 @@ var mainSwitch = (function() {
             document.getElementsByClassName('sectionText')[mainSwitch.active].style.height = 0 + "px";
         }
         section[clicked].setAttribute('extended', 'true');
-        document.getElementsByClassName('sectionText')[clicked].style.height = measure.clientHeight + 'px';
+        document.getElementsByClassName('sectionText')[clicked].style.height = measure.clientHeight+ 5 + 'px';
 
         // set color
         document.getElementById('projects').style.backgroundColor = colors[clicked];
