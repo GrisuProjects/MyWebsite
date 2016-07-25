@@ -28,8 +28,8 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 body {
   color: #212121;
   background-color: forestgreen;
-  animation-name: animatebottom;
-  animation-duration: 0.7s;
+  /*animation-name: animatebottom;
+animation-duration: 0.7s;*/
   font-family: sans-serif;
   font-size: 100%;
   font-size: 0.32cm; }
@@ -47,20 +47,17 @@ body {
 #projects {
   transition: background-color 700ms; }
 
-#footerSize, #projects .section .sectionText {
+#footerSize,
+#projects .section .sectionText {
   transition: height 250ms; }
 
-.bg-img {
-  background-attachment: fixed !important;
-  background-image: url(IMG_0980-compressed.JPG);
-  background-size: cover !important;
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.14); }
+.darken {
+  background-color: rgba(0, 0, 0, 0.58); }
 
 .vertical-center {
   align-items: center;
   display: flex;
-  min-height: 95vh; }
+  min-height: 93vh; }
 
 .vertical-center > div {
   vertical-align: middle;
@@ -75,7 +72,8 @@ a {
   text-decoration: none;
   font-weight: 500; }
 
-a.link_area, a.link_area:active, a.link_area:visited {
+a.link_area, a.link_area:active,
+a.link_area:visited {
   padding: 1em 2em;
   border: 1px solid transparent;
   border-radius: 0.3em;
@@ -88,7 +86,9 @@ h1 {
   font-weight: 400;
   font-family: sans-serif; }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   padding: 1em 0.4em 0.4em;
   font-weight: 500;
   font-family: "Raleway", sans-serif; }
@@ -103,7 +103,11 @@ header, div#container section {
   text-align: center;
   font-size: 1.32em;
   z-index: 40;
-  text-shadow: 1px 1px 1px black; }
+  text-shadow: 0px 0px 4px #212121;
+  background-attachment: fixed !important;
+  background-image: url(IMG_0980-compressed.JPG);
+  background-size: cover !important;
+  background-position: center; }
   header section, div#container section section {
     color: whitesmoke;
     font-family: "Raleway", sans-serif; }
@@ -119,7 +123,7 @@ header, div#container section {
     overflow: hidden; }
 
 main {
-  background-color: rgba(245, 245, 245, 0.72);
+  background-color: rgba(0, 0, 0, 0.58);
   box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3); }
   main .container {
     padding: 1em 7%; }
@@ -128,7 +132,10 @@ main {
   main #projects {
     color: whitesmoke;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
-    z-index: 5000; }
+    background-attachment: fixed !important;
+    background-image: url(IMG_0986-compressed.JPG);
+    background-size: cover !important;
+    background-position: center; }
     main #projects h2 {
       margin-bottom: 2em; }
     main #projects .section {
@@ -170,7 +177,6 @@ footer {
     padding: 1.2em;
     display: inline-block; }
   footer div#copyright {
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
     font-family: 'sans-serif'; }
 
 div#container .container {

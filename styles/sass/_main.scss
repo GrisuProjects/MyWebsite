@@ -1,5 +1,5 @@
 main {
-  background-color: transparentize($initialize_color, 0.28);
+  background-color: transparentize(#000, 0.42);
   box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3);
   .container {
     padding: 1em 7%;
@@ -11,7 +11,11 @@ main {
   #projects {
     color: $initialize_color; // The background-colors are set in the js
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
-    z-index: 5000;
+    background: {
+    attachment: fixed !important;
+    image: url(IMG_0986-compressed.JPG);
+    size: cover !important;
+    position: center;}
     h2 {
       margin-bottom: 2em;
     }

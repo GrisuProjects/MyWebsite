@@ -40,7 +40,6 @@ var mainSwitch = (function() {
     }
 
     function init(clicked) {
-        console.log("On click: " + mainSwitch.isRunning);
         if (clicked !== mainSwitch.active && mainSwitch.isRunning == false) {
             mainSwitch.isRunning = true;
 
