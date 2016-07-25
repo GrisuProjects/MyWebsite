@@ -38,27 +38,26 @@ body {
   transition: height 250ms;
 }
 
-.bgimg {
+.bg-img {
   background: {
     attachment: fixed !important;
-    image: url(IMG_2021-compressed.JPG);
+    image: url(IMG_0980-compressed.JPG);
     size: cover !important;
-    position: center;}
+    position: center;
+    color: rgba(0, 0, 0, 0.14);}
 }
-
-.outer {
-    display: table;
-    height: 95vh;
-    width: 100%;
+.vertical-center {
+  align-items: center;
+  display: flex;
+  min-height: 95vh;
 }
-.middle {
-    display: table-cell;
-    vertical-align: middle;
+.vertical-center > div {
+  vertical-align: middle;
+  margin: 0 auto;
 }
-.inner {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+.bg-color {
+  background-color: forestgreen;
+  color: whitesmoke;
 }
 a {
   display: inline-block;

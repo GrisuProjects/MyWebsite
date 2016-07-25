@@ -47,28 +47,6 @@
         }
       }
     }
-
-    #footer-size {
-      display: block;
-      visibility: hidden;
-    }
-    footer {
-      padding: 0 12%;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-
-      div section {
-        display: inline-block;
-        border: none;
-      }
-    }
-    div#container footer { // must be handled AFTER the footer above
-      padding: 0;
-      left: 18%;
-      right: 18%;
-      width: auto;
-    }
   }
 
   @media screen and (min-width: 28cm) {
