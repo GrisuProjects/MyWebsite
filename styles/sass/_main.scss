@@ -50,4 +50,89 @@ main {
       transition: font-size 500ms;
     }
   }
+  #projectss {
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    margin-bottom: -20px; /*Hide scrollbar*/
+    background: {
+    attachment: fixed !important;
+    image: url(IMG_0986-compressed.JPG);
+    size: cover !important;
+    position: center;}
+    .presentation-item {
+      box-shadow: 0 1px 3px 0.3px #424242;
+      transition: height 400ms cubic-bezier(.22,.61,.36,1), width 400ms cubic-bezier(.22,.61,.36,1), border-radius 400ms cubic-bezier(.22,.61,.36,1);
+      flex: none;
+      overflow: hidden;
+      background-color: orange;
+      height: 35vh;
+      width: 35vh;
+      border-radius: 50%;
+      margin: 0 48px;
+      .wrapper {
+        width: 77vh;
+        height: 50vh;
+        position: absolute;
+      }
+      .logo {
+        transition: width 400ms, height 400ms, margin 400ms;
+        background: {
+        size: cover;
+        position: center;}
+        height: 35vh;
+        width: 35vh;
+      }
+      .x-button {
+        margin: 10px;
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        top: 0;
+      }
+      .small-link {
+        margin-left: 7vh;
+        z-index: 105;
+      }
+      .presentation-heading {
+        margin: 0 0 0 5vh;
+        top: -21px;
+        z-index: 100;
+      }
+      .presentation-text {
+        top: 70px;
+        position: absolute;
+        right: 30px;
+        text-align: justify;
+      }
+      .presentation-text, .presentation-heading, .small-link {
+        color: transparent;
+        width: 35vh;
+        transition: color 400ms cubic-bezier(.86,0,.07,1);
+      }
+    }
+    .presentation-item[extended="true"] {
+      width: 77vh;
+      height: 50vh;
+      border-radius: 5px;
+      .presentation-text, .presentation-heading {
+        color: #212121;
+      }
+      .small-link {
+        color: #283593;
+      }
+      .logo {
+        height: 30vh;
+        width: 30vh;
+        margin: 5vh 5vh 3vh;
+      }
+    }
+    .presentation-item:first-child {
+      margin-left: 40%;
+    }
+    .presentation-item:last-child {
+      visibility: hidden;
+    }
+  }
 }

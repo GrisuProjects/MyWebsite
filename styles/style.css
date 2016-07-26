@@ -103,7 +103,7 @@ header, div#container section {
   text-align: center;
   font-size: 1.32em;
   z-index: 40;
-  text-shadow: 0px 0px 4px #212121;
+  text-shadow: 0px 0px 5px #212121, 1px 1px 2px #212121;
   background-attachment: fixed !important;
   background-image: url(IMG_0980-compressed.JPG);
   background-size: cover !important;
@@ -161,6 +161,75 @@ main {
         font-size: 180%; }
     main #projects .section .sectionHeading[disabletransition="false"] {
       transition: font-size 500ms; }
+  main #projectss {
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    margin-bottom: -20px;
+    /*Hide scrollbar*/
+    background-attachment: fixed !important;
+    background-image: url(IMG_0986-compressed.JPG);
+    background-size: cover !important;
+    background-position: center; }
+    main #projectss .presentation-item {
+      box-shadow: 0 1px 3px 0.3px #424242;
+      transition: height 400ms cubic-bezier(0.22, 0.61, 0.36, 1), width 400ms cubic-bezier(0.22, 0.61, 0.36, 1), border-radius 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+      flex: none;
+      overflow: hidden;
+      background-color: orange;
+      height: 35vh;
+      width: 35vh;
+      border-radius: 50%;
+      margin: 0 48px; }
+      main #projectss .presentation-item .wrapper {
+        width: 77vh;
+        height: 50vh;
+        position: absolute; }
+      main #projectss .presentation-item .logo {
+        transition: width 400ms, height 400ms, margin 400ms;
+        background-size: cover;
+        background-position: center;
+        height: 35vh;
+        width: 35vh; }
+      main #projectss .presentation-item .x-button {
+        margin: 10px;
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        top: 0; }
+      main #projectss .presentation-item .small-link {
+        margin-left: 7vh;
+        z-index: 105; }
+      main #projectss .presentation-item .presentation-heading {
+        margin: 0 0 0 5vh;
+        top: -21px;
+        z-index: 100; }
+      main #projectss .presentation-item .presentation-text {
+        top: 70px;
+        position: absolute;
+        right: 30px;
+        text-align: justify; }
+      main #projectss .presentation-item .presentation-text, main #projectss .presentation-item .presentation-heading, main #projectss .presentation-item .small-link {
+        color: transparent;
+        width: 35vh;
+        transition: color 400ms cubic-bezier(0.86, 0, 0.07, 1); }
+    main #projectss .presentation-item[extended="true"] {
+      width: 77vh;
+      height: 50vh;
+      border-radius: 5px; }
+      main #projectss .presentation-item[extended="true"] .presentation-text, main #projectss .presentation-item[extended="true"] .presentation-heading {
+        color: #212121; }
+      main #projectss .presentation-item[extended="true"] .small-link {
+        color: #283593; }
+      main #projectss .presentation-item[extended="true"] .logo {
+        height: 30vh;
+        width: 30vh;
+        margin: 5vh 5vh 3vh; }
+    main #projectss .presentation-item:first-child {
+      margin-left: 40%; }
+    main #projectss .presentation-item:last-child {
+      visibility: hidden; }
 
 footer {
   color: whitesmoke;
