@@ -66,7 +66,7 @@ main {
       transition: height 400ms cubic-bezier(.22,.61,.36,1), width 400ms cubic-bezier(.22,.61,.36,1), border-radius 400ms cubic-bezier(.22,.61,.36,1);
       flex: none;
       overflow: hidden;
-      background-color: orange;
+      background-color: #ff9800;
       height: 35vh;
       width: 35vh;
       border-radius: 50%;
@@ -120,7 +120,8 @@ main {
         color: #212121;
       }
       .small-link {
-        color: #283593;
+        /*color: #283593;*/
+        color: rgba(255, 255, 255, 0.7);
       }
       .logo {
         height: 30vh;

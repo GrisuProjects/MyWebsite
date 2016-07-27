@@ -64,7 +64,7 @@ animation-duration: 0.7s;*/
   margin: 0 auto; }
 
 .bg-color {
-  background-color: forestgreen;
+  background-color: #388e3c;
   color: whitesmoke; }
 
 a {
@@ -177,7 +177,7 @@ main {
       transition: height 400ms cubic-bezier(0.22, 0.61, 0.36, 1), width 400ms cubic-bezier(0.22, 0.61, 0.36, 1), border-radius 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
       flex: none;
       overflow: hidden;
-      background-color: orange;
+      background-color: #ff9800;
       height: 35vh;
       width: 35vh;
       border-radius: 50%;
@@ -221,7 +221,8 @@ main {
       main #projectss .presentation-item[extended="true"] .presentation-text, main #projectss .presentation-item[extended="true"] .presentation-heading {
         color: #212121; }
       main #projectss .presentation-item[extended="true"] .small-link {
-        color: #283593; }
+        /*color: #283593;*/
+        color: rgba(255, 255, 255, 0.7); }
       main #projectss .presentation-item[extended="true"] .logo {
         height: 30vh;
         width: 30vh;
@@ -240,7 +241,6 @@ footer {
     display: inline-block; }
   footer a {
     color: whitesmoke;
-    text-decoration: underline;
     font-weight: 300; }
   footer div section {
     padding: 1.2em;
@@ -249,7 +249,8 @@ footer {
     font-family: 'sans-serif'; }
 
 div#container .container {
-  padding: 1em 7%; }
+  padding: 1em 7%;
+  color: whitesmoke; }
 div#container section {
   position: sticky;
   top: 0;
