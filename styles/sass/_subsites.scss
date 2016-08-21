@@ -1,14 +1,6 @@
-div#container {
-  .container {
-    padding: 1em 7%;
-    color: whitesmoke;
-  }
-  section{
-    @extend header;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+#container {
+  color: $primary_text;
+  background-color: $initialize_color;
 }
 
 pre {

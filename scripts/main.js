@@ -18,40 +18,42 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
 'use strict';
 
-var colors = [];
+function animateHeader () {
+    document.getElementById('header-content').setAttribute('content-visible', 'true');
+}
 
 var presentation = (function() {
-    var active = undefined,
-        isRunning = false;
+    var active = active || undefined,
+        isRunning = isRunning || false;
 
-    function change(clicked, active) {
-        if (clicked !== active && presentation.isRunning == false) {
+    function change(clicked) {
+        if (clicked !== active && isRunning == false) {
             var presentationItem = document.getElementsByClassName('presentation-item');
 
-            presentation.isRunning = true;
+            isRunning = true;
             //make things happen
-            if (typeof(presentation.active) == "number") {
-                presentationItem[presentation.active].setAttribute('extended', 'false');
+            if (typeof(active) == "number") {
+                presentationItem[active].setAttribute('extended', 'false');
             }
             presentationItem[clicked].setAttribute('extended', 'true');
             // wait so it doesn't conflict with the runnig transition
             setTimeout(function() {
-                presentation.active = clicked;
-                presentation.isRunning = false;
+                active = clicked;
+                isRunning = false;
             }, 500);
         }
     }
 
     function close() {
         var presentationItem = document.getElementsByClassName('presentation-item');
-        console.log("yeah");
-        console.log(presentation.active);
-        if (presentation.active != undefined) {
-            console.log("YEAH");
-            presentationItem[presentation.active].setAttribute('extended', 'false');
-            active = undefined;
-            console.log(presentation.active);
+
+        if (typeof active == "number") {
+            presentationItem[active].setAttribute('extended', 'false');
+            setTimeout(function () {
+                active = undefined;
+            }, 0); // Put it in the next event loop tick
         }
+
     }
 
     return {
@@ -61,23 +63,3 @@ var presentation = (function() {
         isRunning: isRunning
     };
 })();
-
-/*function currentTime() {
-    var w;
-
-    if (typeof(Worker) !== 'undefined') {
-        if (typeof(w) == 'undefined') { // Look if this worker is in use
-            w = new Worker('scripts/worker.js');
-        }
-        w.onmessage = function(event) {
-            document.getElementsByTagName('TIME')[0].innerHTML = event.data;
-        };
-    } else {
-        console.log("No Worker support: Cannot dislay time");
-    }
-
-    // Reveal time
-    setTimeout(function() {
-        document.getElementsByTagName('time')[0].style.height = '2em';
-    }, 1500);
-}*/

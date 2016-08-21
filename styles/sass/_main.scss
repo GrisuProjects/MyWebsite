@@ -1,72 +1,25 @@
 main {
-  background-color: transparentize(#000, 0.42);
-  box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3);
   .container {
     padding: 1em 7%;
-
-    p {
-      text-align: justify;
-    }
-  }
-  #projects {
-    color: $initialize_color; // The background-colors are set in the js
-    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
-    background: {
-    attachment: fixed !important;
-    image: url(IMG_0986-compressed.JPG);
-    size: cover !important;
-    position: center;}
-    h2 {
-      margin-bottom: 2em;
-    }
-    .section {
-      border-width: 2px;
-      padding: 0 7% 2em !important;
-      text-align: justify;
-      background-color: transparent;
-
-      .sectionHeading {
-        padding: 1.5em 0;
-        cursor: pointer;
-        text-align: center;
-        font-size: 110%;
-        transition: none;
-      }
-      .sectionText {
-        height: 0;
-        width: 100%;
-        line-height: 1.42em;
-        overflow: hidden;
-      }
-    }
-    .section[extended="true"] {
-      border-top: 2px solid rgba(0, 0, 0, 0.16);
-      border-bottom: 2px solid rgba(0, 0, 0, 0.16);
-      .sectionHeading {
-        font-size: 180%;
-      }
-    }
-    .section .sectionHeading[disabletransition="false"] {
-      transition: font-size 500ms;
-    }
   }
   #projectss {
     overflow-x: scroll;
     width: 100%;
     display: flex;
     flex-flow: row;
-    margin-bottom: -20px; /*Hide scrollbar*/
     background: {
-    attachment: fixed !important;
-    image: url(IMG_0986-compressed.JPG);
-    size: cover !important;
-    position: center;}
+      attachment: fixed !important;
+      image: url(IMG_2648_small.JPG);
+      size: cover !important;
+      position: center;}
     .presentation-item {
+      transform: translateZ(0);
+      will-change: transform;
       box-shadow: 0 1px 3px 0.3px #424242;
-      transition: height 400ms cubic-bezier(.22,.61,.36,1), width 400ms cubic-bezier(.22,.61,.36,1), border-radius 400ms cubic-bezier(.22,.61,.36,1);
+      transition: height 400ms cubic-bezier(.86,.13,.49,.93), width 400ms cubic-bezier(.86,.13,.49,.93), border-radius 400ms cubic-bezier(.86,.13,.49,.93);
       flex: none;
       overflow: hidden;
-      background-color: #ff9800;
+      background-color: #f9a72b;
       height: 35vh;
       width: 35vh;
       border-radius: 50%;
@@ -116,6 +69,7 @@ main {
       width: 77vh;
       height: 50vh;
       border-radius: 5px;
+      transition: height 400ms cubic-bezier(.22,.61,.36,1), width 400ms cubic-bezier(.22,.61,.36,1), border-radius 400ms cubic-bezier(.22,.61,.36,1);
       .presentation-text, .presentation-heading {
         color: #212121;
       }

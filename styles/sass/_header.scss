@@ -1,30 +1,39 @@
 header {
   color: $initialize_color;
-  text-align: center;
   font-size: 1.32em;
-  z-index: 40;
-  text-shadow: 0px 0px 5px #212121, 1px 1px 2px #212121;
   background: {
-  attachment: fixed !important;
-  image: url(IMG_0980-compressed.JPG);
-  size: cover !important;
-  position: center;}
+    attachment: fixed !important;
+    image: url(IMG_0986_small.JPG);
+    size: cover !important;
+    position: center;}
 
-  section {
-    color: $initialize_color;
-    font-family: "Raleway", sans-serif;
+  #border {
+    width: 2px;
+    height: 100%;
+    background-color: $initialize_color;
   }
   h1 {
     padding: 0.5em 0 0.2em;
     font-size: 2.5em;
+    transition: transform 1000ms cubic-bezier(.07,.6,0,1) 200ms;
+  }
+  section {
+    color: $initialize_color;
+    font-family: "Raleway", sans-serif;
+    transition: transform 700ms cubic-bezier(.07,.6,0,1) 1500ms;
   }
   p {
     padding: 5% 0.1em;
     font-style: italic;
+    transition: transform 1200ms cubic-bezier(.07,.6,0,1) 1000ms;
   }
-  time {
-    display: block;
-    height: 0; // It gets its height with JavaScript
-    overflow: hidden;
+}
+
+header > div {
+  overflow: hidden;
+}
+header > div[content-visible="false"] {
+  h1, section, p {
+    transform: translateX(-100%);
   }
 }

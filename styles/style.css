@@ -25,34 +25,16 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
   font-weight: 300;
   z-index: 100; }
 
+main *,
+header {
+  margin-bottom: 1.5em; }
+
 body {
   color: #212121;
-  background-color: forestgreen;
-  /*animation-name: animatebottom;
-animation-duration: 0.7s;*/
+  background-color: #4caf50;
   font-family: sans-serif;
   font-size: 100%;
   font-size: 0.32cm; }
-
-@keyframes animatebottom {
-  from {
-    bottom: -100px;
-    opacity: 0; }
-  to {
-    bottom: 0;
-    opacity: 1; } }
-/*#footerSize, #projects, #projects *, a.link_area {
-  transition: 250ms;
-}*/
-#projects {
-  transition: background-color 700ms; }
-
-#footerSize,
-#projects .section .sectionText {
-  transition: height 250ms; }
-
-.darken {
-  background-color: rgba(0, 0, 0, 0.58); }
 
 .vertical-center {
   align-items: center;
@@ -64,23 +46,13 @@ animation-duration: 0.7s;*/
   margin: 0 auto; }
 
 .bg-color {
-  background-color: #388e3c;
-  color: whitesmoke; }
+  background-color: whitesmoke;
+  color: #212121; }
 
 a {
   display: inline-block;
   text-decoration: none;
   font-weight: 500; }
-
-a.link_area, a.link_area:active,
-a.link_area:visited {
-  padding: 1em 2em;
-  border: 1px solid transparent;
-  border-radius: 0.3em;
-  text-decoration: underline; }
-
-a.link_area:hover {
-  border: 1px solid rgba(33, 33, 33, 0.5); }
 
 h1 {
   font-weight: 400;
@@ -95,152 +67,120 @@ h4 {
 
 p {
   padding: 1em 0;
-  line-height: 1.37em; }
+  line-height: 1.37em;
+  text-align: justify; }
 
 /*----------------------------------------------------------------------------*/
-header, div#container section {
+header {
   color: whitesmoke;
-  text-align: center;
   font-size: 1.32em;
-  z-index: 40;
-  text-shadow: 0px 0px 5px #212121, 1px 1px 2px #212121;
   background-attachment: fixed !important;
-  background-image: url(IMG_0980-compressed.JPG);
+  background-image: url(IMG_0986_small.JPG);
   background-size: cover !important;
   background-position: center; }
-  header section, div#container section section {
-    color: whitesmoke;
-    font-family: "Raleway", sans-serif; }
-  header h1, div#container section h1 {
+  header #border {
+    width: 2px;
+    height: 100%;
+    background-color: whitesmoke; }
+  header h1 {
     padding: 0.5em 0 0.2em;
-    font-size: 2.5em; }
-  header p, div#container section p {
-    padding: 5% 0.1em;
-    font-style: italic; }
-  header time, div#container section time {
-    display: block;
-    height: 0;
-    overflow: hidden; }
-
-main {
-  background-color: rgba(0, 0, 0, 0.58);
-  box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.3); }
-  main .container {
-    padding: 1em 7%; }
-    main .container p {
-      text-align: justify; }
-  main #projects {
+    font-size: 2.5em;
+    transition: transform 1000ms cubic-bezier(0.07, 0.6, 0, 1) 200ms; }
+  header section {
     color: whitesmoke;
-    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
-    background-attachment: fixed !important;
-    background-image: url(IMG_0986-compressed.JPG);
-    background-size: cover !important;
-    background-position: center; }
-    main #projects h2 {
-      margin-bottom: 2em; }
-    main #projects .section {
-      border-width: 2px;
-      padding: 0 7% 2em !important;
-      text-align: justify;
-      background-color: transparent; }
-      main #projects .section .sectionHeading {
-        padding: 1.5em 0;
-        cursor: pointer;
-        text-align: center;
-        font-size: 110%;
-        transition: none; }
-      main #projects .section .sectionText {
-        height: 0;
-        width: 100%;
-        line-height: 1.42em;
-        overflow: hidden; }
-    main #projects .section[extended="true"] {
-      border-top: 2px solid rgba(0, 0, 0, 0.16);
-      border-bottom: 2px solid rgba(0, 0, 0, 0.16); }
-      main #projects .section[extended="true"] .sectionHeading {
-        font-size: 180%; }
-    main #projects .section .sectionHeading[disabletransition="false"] {
-      transition: font-size 500ms; }
-  main #projectss {
-    overflow-x: scroll;
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    margin-bottom: -20px;
-    /*Hide scrollbar*/
-    background-attachment: fixed !important;
-    background-image: url(IMG_0986-compressed.JPG);
-    background-size: cover !important;
-    background-position: center; }
-    main #projectss .presentation-item {
-      box-shadow: 0 1px 3px 0.3px #424242;
-      transition: height 400ms cubic-bezier(0.22, 0.61, 0.36, 1), width 400ms cubic-bezier(0.22, 0.61, 0.36, 1), border-radius 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
-      flex: none;
-      overflow: hidden;
-      background-color: #ff9800;
-      height: 35vh;
-      width: 35vh;
-      border-radius: 50%;
-      margin: 0 48px; }
-      main #projectss .presentation-item .wrapper {
-        width: 77vh;
-        height: 50vh;
-        position: absolute; }
-      main #projectss .presentation-item .logo {
-        transition: width 400ms, height 400ms, margin 400ms;
-        background-size: cover;
-        background-position: center;
-        height: 35vh;
-        width: 35vh; }
-      main #projectss .presentation-item .x-button {
-        margin: 10px;
-        position: absolute;
-        display: inline-block;
-        right: 0;
-        top: 0; }
-      main #projectss .presentation-item .small-link {
-        margin-left: 7vh;
-        z-index: 105; }
-      main #projectss .presentation-item .presentation-heading {
-        margin: 0 0 0 5vh;
-        top: -21px;
-        z-index: 100; }
-      main #projectss .presentation-item .presentation-text {
-        top: 70px;
-        position: absolute;
-        right: 30px;
-        text-align: justify; }
-      main #projectss .presentation-item .presentation-text, main #projectss .presentation-item .presentation-heading, main #projectss .presentation-item .small-link {
-        color: transparent;
-        width: 35vh;
-        transition: color 400ms cubic-bezier(0.86, 0, 0.07, 1); }
-    main #projectss .presentation-item[extended="true"] {
+    font-family: "Raleway", sans-serif;
+    transition: transform 700ms cubic-bezier(0.07, 0.6, 0, 1) 1500ms; }
+  header p {
+    padding: 5% 0.1em;
+    font-style: italic;
+    transition: transform 1200ms cubic-bezier(0.07, 0.6, 0, 1) 1000ms; }
+
+header > div {
+  overflow: hidden; }
+
+header > div[content-visible="false"] h1, header > div[content-visible="false"] section, header > div[content-visible="false"] p {
+  transform: translateX(-100%); }
+
+main .container {
+  padding: 1em 7%; }
+main #projectss {
+  overflow-x: scroll;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  background-attachment: fixed !important;
+  background-image: url(IMG_2648_small.JPG);
+  background-size: cover !important;
+  background-position: center; }
+  main #projectss .presentation-item {
+    transform: translateZ(0);
+    will-change: transform;
+    box-shadow: 0 1px 3px 0.3px #424242;
+    transition: height 400ms cubic-bezier(0.86, 0.13, 0.49, 0.93), width 400ms cubic-bezier(0.86, 0.13, 0.49, 0.93), border-radius 400ms cubic-bezier(0.86, 0.13, 0.49, 0.93);
+    flex: none;
+    overflow: hidden;
+    background-color: #f9a72b;
+    height: 35vh;
+    width: 35vh;
+    border-radius: 50%;
+    margin: 0 48px; }
+    main #projectss .presentation-item .wrapper {
       width: 77vh;
       height: 50vh;
-      border-radius: 5px; }
-      main #projectss .presentation-item[extended="true"] .presentation-text, main #projectss .presentation-item[extended="true"] .presentation-heading {
-        color: #212121; }
-      main #projectss .presentation-item[extended="true"] .small-link {
-        /*color: #283593;*/
-        color: rgba(255, 255, 255, 0.7); }
-      main #projectss .presentation-item[extended="true"] .logo {
-        height: 30vh;
-        width: 30vh;
-        margin: 5vh 5vh 3vh; }
-    main #projectss .presentation-item:first-child {
-      margin-left: 40%; }
-    main #projectss .presentation-item:last-child {
-      visibility: hidden; }
+      position: absolute; }
+    main #projectss .presentation-item .logo {
+      transition: width 400ms, height 400ms, margin 400ms;
+      background-size: cover;
+      background-position: center;
+      height: 35vh;
+      width: 35vh; }
+    main #projectss .presentation-item .x-button {
+      margin: 10px;
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      top: 0; }
+    main #projectss .presentation-item .small-link {
+      margin-left: 7vh;
+      z-index: 105; }
+    main #projectss .presentation-item .presentation-heading {
+      margin: 0 0 0 5vh;
+      top: -21px;
+      z-index: 100; }
+    main #projectss .presentation-item .presentation-text {
+      top: 70px;
+      position: absolute;
+      right: 30px;
+      text-align: justify; }
+    main #projectss .presentation-item .presentation-text, main #projectss .presentation-item .presentation-heading, main #projectss .presentation-item .small-link {
+      color: transparent;
+      width: 35vh;
+      transition: color 400ms cubic-bezier(0.86, 0, 0.07, 1); }
+  main #projectss .presentation-item[extended="true"] {
+    width: 77vh;
+    height: 50vh;
+    border-radius: 5px;
+    transition: height 400ms cubic-bezier(0.22, 0.61, 0.36, 1), width 400ms cubic-bezier(0.22, 0.61, 0.36, 1), border-radius 400ms cubic-bezier(0.22, 0.61, 0.36, 1); }
+    main #projectss .presentation-item[extended="true"] .presentation-text, main #projectss .presentation-item[extended="true"] .presentation-heading {
+      color: #212121; }
+    main #projectss .presentation-item[extended="true"] .small-link {
+      /*color: #283593;*/
+      color: rgba(255, 255, 255, 0.7); }
+    main #projectss .presentation-item[extended="true"] .logo {
+      height: 30vh;
+      width: 30vh;
+      margin: 5vh 5vh 3vh; }
+  main #projectss .presentation-item:first-child {
+    margin-left: 40%; }
+  main #projectss .presentation-item:last-child {
+    visibility: hidden; }
 
 footer {
-  color: whitesmoke;
-  background-color: forestgreen;
-  text-align: center;
-  z-index: 50; }
+  text-align: center; }
   footer div.inline-block-center {
     display: inline-block; }
   footer a {
-    color: whitesmoke;
+    color: inherit;
     font-weight: 300; }
   footer div section {
     padding: 1.2em;
@@ -248,27 +188,23 @@ footer {
   footer div#copyright {
     font-family: 'sans-serif'; }
 
-div#container .container {
-  padding: 1em 7%;
-  color: whitesmoke; }
-div#container section {
-  position: sticky;
-  top: 0;
-  z-index: 1000; }
+#container {
+  color: #212121;
+  background-color: whitesmoke; }
 
 pre {
   overflow: auto; }
 
 /*============================================================================*/
-@media screen and (orientation: portrait) and (min-width: 9cm) {
-  body {
-    font-size: 0.42cm; }
-
-  div#container .container {
-    padding: 1em 12%; }
-
-  main .container {
-    padding: 1em 12%; } }
+@media screen and (orientation: portrait) {
+  .vertical-center {
+    min-height: 120vw; } }
+  @media screen and (orientation: portrait) and (min-width: 9cm) {
+    .vertical-center body {
+      font-size: 0.42cm; } }
+@media screen and (orientation: portrait) {
+    .vertical-center main .container {
+      padding: 1em 12%; } }
 @media screen and (orientation: portrait) and (min-width: 14cm) {
   body {
     font-size: 0.45cm; }
