@@ -48,12 +48,16 @@ var presentation = (function() {
         var presentationItem = document.getElementsByClassName('presentation-item');
 
         if (typeof active == "number") {
-            presentationItem[active].setAttribute('extended', 'false');
-            setTimeout(function () {
-                active = undefined;
-            }, 0); // Put it in the next event loop tick
+            requestAnimationFrame(function() {
+              presentationItem[active].setAttribute('extended', 'false');
+              setTimeout(function () {
+                  active = undefined;
+              }, 0); // Put it in the next event loop tick
+            });
         }
-
+    }
+    function open() {
+      
     }
 
     return {

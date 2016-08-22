@@ -11,8 +11,9 @@
     font-weight: 300;
     z-index: 100;
 }
-main *,
-header {
+header,
+main #projectss,
+main .vertical-center {
   margin-bottom: 1.5em;
 }
 body {

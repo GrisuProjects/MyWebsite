@@ -32,9 +32,10 @@ Short indroduction into my synthax.
 * Use blank lines to indicate blocks of related code
 * Use spaces as indentations, not tabs
 
+
 ### CSS/SCSS
 
-* Use two spaces for indentation
+* Use **two** spaces for indentation
 * Make spaces before `{}` and after `:`
 * Use enough lines, don't squeeze too many things in one line
   - Example
@@ -47,7 +48,7 @@ Short indroduction into my synthax.
 
 ### HTML
 
-* Use two spaces for indentation
+* Use **two** spaces for indentation
 * After large related blocks of code make an empty line
 * Use enough lines, don't squeeze too many things in one line
   - Example
@@ -55,15 +56,15 @@ Short indroduction into my synthax.
     `<p>`
     `  Some text.`
     `</p>`
-    
+
 
 ### JavaScript
 
-* Use four spaces for indentation
-* For all rules submit your file to jslint.com or look at my JS file
+* Use **four** spaces for indentation
+* For all rules submit your file to jslint.com
 
 
-# THE STRUCTURE
+# STRUCTURE
 
 Short introduction into my file rules.
 
@@ -73,23 +74,28 @@ Short introduction into my file rules.
 
 ### CSS/SCSS
 
-* The code is divided into sections for better readability
-  - There are 4 major ones
+The code is divided into sections for better readability. Espacially 4 major ones:
 
-1. General tag declarations (not section specific)
-  - like `body`, `h2`, `a`, ...
-  - NOT: `.class`, `#id`, `.class h2`, ...
+1. General tag declarations (These are all that fall not into the sections below)
+  - these come first
 
 2. header section
 3. main section
 4. footer section
 
-  Except the first section mentioned above all other sections are outsourced from the index.scss file for better readability.
-
-* More sections are mediaPortrait and mediaLandscape
-  - These are divided with a line of this : `/*=======[...]=======*/`
+One more section is the @media section for all of that stuff
 
 
 ### HTML
 
-* Divide related blocks of code (like the CSS/SCSS sections) by blank lines
+* Divide related blocks of code by blank lines
+* Stay XML comlpliant
+
+
+# Ressources
+
+Go [here](http://www.christiankaindl.at/ressources) to find a collection of
+usefull information and good sources for everyday web development. Also I keep
+a list of books that I think are really good there.
+
+Thanks for reading!

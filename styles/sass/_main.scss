@@ -1,6 +1,6 @@
 main {
   .container {
-    padding: 1em 7%;
+    padding: 1em 5%;
   }
   #projectss {
     overflow-x: scroll;
@@ -8,10 +8,12 @@ main {
     display: flex;
     flex-flow: row;
     background: {
-      attachment: fixed !important;
       image: url(IMG_2648_small.JPG);
-      size: cover !important;
       position: center;}
+    #signpost {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
     .presentation-item {
       transform: translateZ(0);
       will-change: transform;
@@ -23,71 +25,68 @@ main {
       height: 35vh;
       width: 35vh;
       border-radius: 50%;
-      margin: 0 48px;
+      margin-right: 10%;
+      cursor: pointer;
+
       .wrapper {
-        width: 77vh;
-        height: 50vh;
+        width: 90vh;
+        height: 65vh;
         position: absolute;
       }
       .logo {
-        transition: width 400ms, height 400ms, margin 400ms;
-        background: {
-        size: cover;
-        position: center;}
-        height: 35vh;
-        width: 35vh;
+        transition: transform 400ms;
+        margin: 4vh;
+        height: 27vh;
+        width: 27vh;
+        display: inline-block;
       }
       .x-button {
         margin: 10px;
         position: absolute;
-        display: inline-block;
+        height: 48px;
         right: 0;
         top: 0;
+        cursor: pointer;
       }
       .small-link {
-        margin-left: 7vh;
+        display: block;
+        margin-left: 10%;
         z-index: 105;
       }
       .presentation-heading {
-        margin: 0 0 0 5vh;
-        top: -21px;
+        margin-left: 10%;
         z-index: 100;
       }
       .presentation-text {
-        top: 70px;
-        position: absolute;
-        right: 30px;
+        width: 80%;
+        margin: 0 auto;
         text-align: justify;
       }
       .presentation-text, .presentation-heading, .small-link {
-        color: transparent;
-        width: 35vh;
-        transition: color 400ms cubic-bezier(.86,0,.07,1);
+        opacity: 0;
+        transition: opacity 400ms cubic-bezier(.86,0,.07,1);
       }
     }
     .presentation-item[extended="true"] {
-      width: 77vh;
-      height: 50vh;
+      width: 90vh;
+      height: 65vh;
       border-radius: 5px;
       transition: height 400ms cubic-bezier(.22,.61,.36,1), width 400ms cubic-bezier(.22,.61,.36,1), border-radius 400ms cubic-bezier(.22,.61,.36,1);
-      .presentation-text, .presentation-heading {
-        color: #212121;
-      }
-      .small-link {
-        /*color: #283593;*/
-        color: rgba(255, 255, 255, 0.7);
-      }
-      .logo {
-        height: 30vh;
-        width: 30vh;
-        margin: 5vh 5vh 3vh;
-      }
+      cursor: default;
+
+        .presentation-text, .presentation-heading {
+          opacity: 1;
+        }
+        .small-link {
+          opacity: 0.6;
+        }
+        .logo {
+          transform: scale(1.2) translateX(5px) translateY(5px);
+        }
     }
-    .presentation-item:first-child {
-      margin-left: 40%;
-    }
-    .presentation-item:last-child {
+    .presentation-item[hack-applied="true"] {
       visibility: hidden;
+      cursor: default;
     }
   }
 }

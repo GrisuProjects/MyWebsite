@@ -25,8 +25,9 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
   font-weight: 300;
   z-index: 100; }
 
-main *,
-header {
+header,
+main #projectss,
+main .vertical-center {
   margin-bottom: 1.5em; }
 
 body {
@@ -72,23 +73,23 @@ p {
 
 /*----------------------------------------------------------------------------*/
 header {
-  color: whitesmoke;
+  color: white;
   font-size: 1.32em;
-  background-attachment: fixed !important;
   background-image: url(IMG_0986_small.JPG);
-  background-size: cover !important;
+  background-size: cover;
   background-position: center; }
   header #border {
     width: 2px;
     height: 100%;
     background-color: whitesmoke; }
   header h1 {
-    padding: 0.5em 0 0.2em;
+    padding: 0.5em 0 0;
     font-size: 2.5em;
     transition: transform 1000ms cubic-bezier(0.07, 0.6, 0, 1) 200ms; }
   header section {
     color: whitesmoke;
     font-family: "Raleway", sans-serif;
+    font-weight: normal;
     transition: transform 700ms cubic-bezier(0.07, 0.6, 0, 1) 1500ms; }
   header p {
     padding: 5% 0.1em;
@@ -102,16 +103,17 @@ header > div[content-visible="false"] h1, header > div[content-visible="false"] 
   transform: translateX(-100%); }
 
 main .container {
-  padding: 1em 7%; }
+  padding: 1em 5%; }
 main #projectss {
   overflow-x: scroll;
   width: 100%;
   display: flex;
   flex-flow: row;
-  background-attachment: fixed !important;
   background-image: url(IMG_2648_small.JPG);
-  background-size: cover !important;
   background-position: center; }
+  main #projectss #signpost {
+    margin-left: 10%;
+    margin-right: 10%; }
   main #projectss .presentation-item {
     transform: translateZ(0);
     will-change: transform;
@@ -123,57 +125,54 @@ main #projectss {
     height: 35vh;
     width: 35vh;
     border-radius: 50%;
-    margin: 0 48px; }
+    margin-right: 10%;
+    cursor: pointer; }
     main #projectss .presentation-item .wrapper {
-      width: 77vh;
-      height: 50vh;
+      width: 90vh;
+      height: 65vh;
       position: absolute; }
     main #projectss .presentation-item .logo {
-      transition: width 400ms, height 400ms, margin 400ms;
-      background-size: cover;
-      background-position: center;
-      height: 35vh;
-      width: 35vh; }
+      transition: transform 400ms;
+      margin: 4vh;
+      height: 27vh;
+      width: 27vh;
+      display: inline-block; }
     main #projectss .presentation-item .x-button {
       margin: 10px;
       position: absolute;
-      display: inline-block;
+      height: 48px;
       right: 0;
-      top: 0; }
+      top: 0;
+      cursor: pointer; }
     main #projectss .presentation-item .small-link {
-      margin-left: 7vh;
+      display: block;
+      margin-left: 10%;
       z-index: 105; }
     main #projectss .presentation-item .presentation-heading {
-      margin: 0 0 0 5vh;
-      top: -21px;
+      margin-left: 10%;
       z-index: 100; }
     main #projectss .presentation-item .presentation-text {
-      top: 70px;
-      position: absolute;
-      right: 30px;
+      width: 80%;
+      margin: 0 auto;
       text-align: justify; }
     main #projectss .presentation-item .presentation-text, main #projectss .presentation-item .presentation-heading, main #projectss .presentation-item .small-link {
-      color: transparent;
-      width: 35vh;
-      transition: color 400ms cubic-bezier(0.86, 0, 0.07, 1); }
+      opacity: 0;
+      transition: opacity 400ms cubic-bezier(0.86, 0, 0.07, 1); }
   main #projectss .presentation-item[extended="true"] {
-    width: 77vh;
-    height: 50vh;
+    width: 90vh;
+    height: 65vh;
     border-radius: 5px;
-    transition: height 400ms cubic-bezier(0.22, 0.61, 0.36, 1), width 400ms cubic-bezier(0.22, 0.61, 0.36, 1), border-radius 400ms cubic-bezier(0.22, 0.61, 0.36, 1); }
+    transition: height 400ms cubic-bezier(0.22, 0.61, 0.36, 1), width 400ms cubic-bezier(0.22, 0.61, 0.36, 1), border-radius 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    cursor: default; }
     main #projectss .presentation-item[extended="true"] .presentation-text, main #projectss .presentation-item[extended="true"] .presentation-heading {
-      color: #212121; }
+      opacity: 1; }
     main #projectss .presentation-item[extended="true"] .small-link {
-      /*color: #283593;*/
-      color: rgba(255, 255, 255, 0.7); }
+      opacity: 0.6; }
     main #projectss .presentation-item[extended="true"] .logo {
-      height: 30vh;
-      width: 30vh;
-      margin: 5vh 5vh 3vh; }
-  main #projectss .presentation-item:first-child {
-    margin-left: 40%; }
-  main #projectss .presentation-item:last-child {
-    visibility: hidden; }
+      transform: scale(1.2) translateX(5px) translateY(5px); }
+  main #projectss .presentation-item[hack-applied="true"] {
+    visibility: hidden;
+    cursor: default; }
 
 footer {
   text-align: center; }

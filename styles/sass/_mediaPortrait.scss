@@ -1,6 +1,7 @@
 @media screen and (orientation: portrait) {
   .vertical-center {
     min-height: 120vw;
+
   @media screen and (min-width: 9cm) { // Use the same display-side-length as in _mediaLandscape
     body {
       font-size: 0.42cm;
