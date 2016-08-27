@@ -12,6 +12,7 @@ header {
     background-color: $initialize_color;
   }
   h1 {
+    font-family: "Latin Modern Mono", sans-serif;
     padding: 0.5em 0 0;
     font-size: 2.5em;
     transition: transform 1000ms cubic-bezier(.07,.6,0,1) 200ms;

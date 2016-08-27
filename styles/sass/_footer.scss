@@ -1,12 +1,12 @@
 footer {
   text-align: center;
+  font-family: "Latin Modern Mono", sans-serif;
 
   div.inline-block-center{
     display: inline-block; // for this to work the parent element has to set text-align: center
   }
   a {
     color: inherit;
-    font-weight: 300;
   }
   div section {
     padding: 1.2em;

@@ -1,0 +1,59 @@
+@media screen and (orientation: landscape) {
+  @media screen and (min-width: 14cm) {
+    div#container {  // For all subsites
+      .container {
+        padding: 1em 12%;
+      }
+    }
+
+    main {
+      .container {
+        padding: 1em 18%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 21cm) {
+    div#container {
+      width: 64%;
+    }
+
+    main {
+      .container {
+        padding: 1em 21%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 35cm){
+    div#container {
+      width: 42%;
+      footer {
+        left: 29%;
+        right: 29%;
+      }
+    }
+  }
+}
+/*============================================================================*/
+@media screen and (orientation: portrait) {
+  .vertical-center {
+    min-height: 120vw;
+  }
+  @media screen and (min-width: 9cm) {
+    main {
+      .container {
+        padding: 1em 12%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 14cm) {
+    main #projects {
+      padding: 2em 12%;
+      .section {
+        border-radius: 0.3em;
+      }
+    }
+  }
+}

@@ -18,52 +18,69 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 */
 'use strict';
 
+// TODO: Use Pomisies and Generators
+
 function animateHeader () {
     document.getElementById('header-content').setAttribute('content-visible', 'true');
 }
 
 var presentation = (function() {
-    var active = active || undefined,
+    var opened = opened || {title: undefined, number: undefined},
         isRunning = isRunning || false;
+    var previousOpened = previousOpened || undefined;
 
-    function change(clicked) {
-        if (clicked !== active && isRunning == false) {
-            var presentationItem = document.getElementsByClassName('presentation-item');
-
-            isRunning = true;
-            //make things happen
-            if (typeof(active) == "number") {
-                presentationItem[active].setAttribute('extended', 'false');
-            }
-            presentationItem[clicked].setAttribute('extended', 'true');
-            // wait so it doesn't conflict with the runnig transition
-            setTimeout(function() {
-                active = clicked;
-                isRunning = false;
-            }, 500);
-        }
-    }
+    var presentationItem = document.getElementsByClassName('presentation-item');
+    var presentationDetails = document.getElementById('presentation-item-details');
 
     function close() {
-        var presentationItem = document.getElementsByClassName('presentation-item');
-
-        if (typeof active == "number") {
+        if (typeof opened.number === "number") {
             requestAnimationFrame(function() {
-              presentationItem[active].setAttribute('extended', 'false');
-              setTimeout(function () {
-                  active = undefined;
-              }, 0); // Put it in the next event loop tick
+                presentationItem[opened.number].setAttribute('extended', 'false');
+                presentationDetails.setAttribute('in-details', 'false');
+                setTimeout(function () {
+                  //console.log(clicked);
+                    previousOpened = opened.number;
+                    opened.number = undefined;
+                }, 0); // Put it in the next event loop tick
             });
         }
     }
-    function open() {
-      
+    function open(clicked, url) {
+        // TODO: Store and Fetch things from Cache if available
+        if (clicked !== previousOpened) {
+            var http = new XMLHttpRequest();
+
+            http.onreadystatechange = check;
+            http.open('GET', url);
+            http.send();
+
+            function check() {
+                if (http.readyState === XMLHttpRequest.DONE && http.status === 200) {
+                    presentationDetails.innerHTML = http.responseText;
+                }
+            }
+        }
+        if (isRunning == false) {
+
+            isRunning = true;
+            //make things happen
+            if (typeof(opened.number) == "number") {
+                presentationItem[opened.number].setAttribute('extended', 'false');
+            }
+            presentationItem[clicked].setAttribute('extended', 'true');
+            presentationDetails.setAttribute('in-details', 'true');
+            // wait so it doesn't conflict with the runnig transition
+            setTimeout(function() {
+                opened.number = clicked;
+                isRunning = false;
+            }, 0); // Put it in the next event loop tick
+        }
     }
 
     return {
+        open: open,
         close: close,
-        switch: change,
-        active: active,
+        opened: opened.number,
         isRunning: isRunning
     };
 })();

@@ -1,6 +1,8 @@
 #container {
   color: $primary_text;
   background-color: $initialize_color;
+  box-shadow: 0 0 3px 0 transparentize($primary_text, 0.5);
+  margin: 0 auto;
 }
 
 pre {

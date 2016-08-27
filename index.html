@@ -23,9 +23,23 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Christian Kaindl</title>
+  <title>Christian Kaindl - Young web developer from Austria</title>
   <link rel="stylesheet" href="styles/style.css" />
-  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Raleway:300,400,500">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Raleway:300,400,500/Latin+Modern+Mono:400,400i">
+  <link rel="icon" href="/favicon.ico" media="screen" title="no title" charset="utf-8">
+  <meta name="Title" content="Christian Kaindl - Young web developer from Austria" />
+  <meta name="Author" content="Christian Kaindl" />
+  <meta name="Publisher" content="Christian Kaindl" />
+  <meta name="Copyright" content="Christian Kaindl" />
+  <meta name="Revisit" content="After 7 days" />
+  <meta name="Keywords" content="web development, open source" />
+  <meta name="Description" content="Website from Christian Kaindl. He is tying to get a full stack web developer and shares his projects and ideas over his website." />
+  <meta name="Abstract" content="Website from Christian Kaindl. He is tying to get a full stack web developer and shares his projects and ideas over his website." />
+  <meta name="page-topic" content="Forschung Technik" />
+  <meta name="page-topic" content="Private Homepage" />
+  <meta name="audience" content="Alle" />
+  <meta name="Robots" content="INDEX,NOFOLLOW" />
+  <meta name="Language" content="Englisch" />
 </head>
 
 <body onload="animateHeader();">
@@ -40,6 +54,8 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
     </div>
   </header>
 
+  <div class="spacer"></div>
+
   <main>
     <div class="vertical-center bg-color">
       <div class="container">
@@ -48,61 +64,33 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
         </p>
       </div>
     </div>
-    <div id="projectss" class="vertical-center">
+
+    <div class="spacer"></div>
+
+    <div id="projects" class="vertical-center">
       <div id="signpost">
         <img src="styles/logos/CLICK_THOSE.svg" alt="Signpost that says: 'Click those' and has an arrow wich points on some items on the right hand side" />
       </div>
 
-      <div class="presentation-item" onclick="presentation.switch(0);">
-        <div class="wrapper">
-          <img class="x-button" onclick="presentation.close();" src="styles/logos/ic_close_black_48px.svg" alt="Close button" />
-          <img class="logo" onclick="presentation.close();" src="styles/logos/CO_V3.svg" alt="Close button" />
-          <a class="small-link" href="http://colearning-wien.at/"> > Visit our website</a>
-          <div class="presentation-heading">
-            <h2>Colearning Wien</h2>
-          </div>
-          <div class="presentation-text">
-            Colearning Wien is an association for learning in a natural way. Its goal is to showand feel what is possible in both education and cohabit. It is an incredible goal to reach for and I am so happy to contribute to it.
-          </div>
-        </div>
+      <div class="presentation-item" name="colearning-wien" onclick="presentation.open(0, 'projects/colearning-wien.html');" href="projects/colearning-wien.html">
+        <img class="logo" src="styles/logos/CO_V3.svg" alt="Colearning Wien logo" />
       </div>
 
-      <div style="background-color: #388e3c;" class="presentation-item" onclick="presentation.switch(1);">
-        <div class="wrapper">
-          <img class="x-button" onclick="presentation.close();" src="styles/logos/ic_close_black_48px.svg" alt="Close button" />
-          <img class="logo" onclick="presentation.close();" src="styles/logos/ic_explore_black_48px.svg" alt="Close button" />
-          <a class="small-link" href="https://github.com/GrisuProjects/MyWebsite"> > View the source code</a>
-          <div class="presentation-heading">
-            <h2>The Web</h2>
-          </div>
-          <div class="presentation-text">
-            As you can see this website right now... It is from me. Yeah, great. And... it works. Kinda cool.
-          </div>
-        </div>
+      <div class="presentation-item" name="websites" style="background-color: #4caf50;" onclick="presentation.open(1, 'projects/websites.html');">
+        <img class="logo" src="styles/logos/the_web.svg" alt="Browser icon" />
       </div>
 
-      <div style="background-color: #2196f3;" class="presentation-item" onclick="presentation.switch(2)">
-        <div class="wrapper">
-          <img class="x-button" onclick="presentation.close();" src="styles/logos/ic_close_black_48px.svg" alt="Close button" />
-          <img class="logo" onclick="presentation.close();" src="styles/logos/ic_photo_camera_black_48px.svg" alt="Close button" />
-          <a class="small-link" href="https://github.com/GrisuProjects/Wallpaper"> > My wallpaper collection</a>
-          <div class="presentation-heading">
-            <h2>Wallpaper</h2>
-          </div>
-          <div class="presentation-text">
-            I have a hobby called "photo takening". It is when you have times where you accidentely carry a camera with you and then you suddenly see squares everywhere. Yes, I like doing that. Somehow I now have digital copies of these squares. And luckily I have
-            sorted out the good ones for you!
-          </div>
-        </div>
-      </div>
-      <div class="presentation-item" hack-applied="true"></div>
+      <div class="presentation-item" name="wallpaper" style="background-color: #2196f3;" onclick="presentation.open(2, 'projects/wallpaper.html')">
+        <img class="logo" src="styles/logos/ic_photo_camera_black_48px.svg" alt="Camera icon" />
       </div>
     </div>
+
+    <div class="spacer"></div>
 
     <div class="vertical-center bg-color">
       <div class="container">
         <p>
-          More things comming soon!
+          More things comming soon.
         </p>
       </div>
     </div>
@@ -115,13 +103,15 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
       -->
   </main>
 
+  <div class="spacer"></div>
+
   <footer class="vertical-center bg-color">
     <div class="inline-block-center">
       <section>
         <h3><svg style="top: 10px; right: 5px;" fill="#212121" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h24v24H0z" fill="none"/>
             <path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/>
-        </svg><a href="html/contact.html">Contact</a></h3>
+        </svg><a href="contact.html">CONTACT</a></h3>
         <!--TODO: Stop this and do a better UI and load it with AJAX-->
       </section>
 
@@ -129,17 +119,20 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
         <h3><svg style="top: 10px; right: 5px;" fill="#212121" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
             <path d="M18 17H6v-2h12v2zm0-4H6v-2h12v2zm0-4H6V7h12v2zM3 22l1.5-1.5L6 22l1.5-1.5L9 22l1.5-1.5L12 22l1.5-1.5L15 22l1.5-1.5L18 22l1.5-1.5L21 22V2l-1.5 1.5L18 2l-1.5 1.5L15 2l-1.5 1.5L12 2l-1.5 1.5L9 2 7.5 3.5 6 2 4.5 3.5 3 2v20z"/>
             <path d="M0 0h24v24H0z" fill="none"/>
-        </svg><a href="html/ressources.html">Ressources</a></h3>
+        </svg><a href="ressources.html">RESSOURCES</a></h3>
       </section>
       <section>
-        <h3><a href="https://github.com/GrisuProjects/">Projects</a></h3>
-        <!--IDEA: h3: "Projects"; onclick new view via AJAX: Text: "The cool stuff, right here at GitHub" + the actual projects-->
+        <h3><a href="https://github.com/GrisuProjects/">ALL PROJECTS</a></h3>
+        <!-- ICON: Hammer-->
+        <!-- IDEA: h3: "Projects"; onclick new view via AJAX: Text: "The cool stuff, right here at GitHub" + the actual projects-->
       </section>
     </div>
     <div id="copyright">
-      <h3>&copy; 2016 Christian Kaindl - <a style="text-decoration: underline;" href="html/license.html">See license</a></h3>
+      <h3>&copy; 2016 Christian Kaindl - <a style="text-decoration: underline;" href="license.html">See license</a></h3>
     </div>
   </footer>
+
+  <div id="presentation-item-details"></div>
 
   <script src='scripts/main.js'></script>
 </body>
