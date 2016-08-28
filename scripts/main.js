@@ -20,67 +20,91 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 
 // TODO: Use Pomisies and Generators
 
-function animateHeader () {
+function animateHeader() {
     document.getElementById('header-content').setAttribute('content-visible', 'true');
+    presentation.initialize();
 }
 
-var presentation = (function() {
-    var opened = opened || {title: undefined, number: undefined},
-        isRunning = isRunning || false;
-    var previousOpened = previousOpened || undefined;
+var Presentation = {
+    open: function() {},
+    close: function() {},
+    insert: function() {}
+};
+var ChartFlow = Object.create(Presentation);
+ChartFlow.setup = function() {
+    Object.defineProperty(this, 'isSetup', {
+        value: true,
+        writeable: false
+    });
+    this.isOpen = false;
+    this.isRunning = false;
+    this.active = -1;
+    this.rootFolder = '/projects/';
+    this.XHRDefault = '.html'; // TODO: Provide a getter and setter, so that  you get 'HTML' instead of the actual value '.html'
+    this.target = document.getElementsByClassName('presentation-item'); // Should go into Presentation object
+    this.targetChartDetails = document.getElementById('presentation-item-details');
+    this.children = {};
 
-    var presentationItem = document.getElementsByClassName('presentation-item');
-    var presentationDetails = document.getElementById('presentation-item-details');
-
-    function close() {
-        if (typeof opened.number === "number") {
-            requestAnimationFrame(function() {
-                presentationItem[opened.number].setAttribute('extended', 'false');
-                presentationDetails.setAttribute('in-details', 'false');
-                setTimeout(function () {
-                  //console.log(clicked);
-                    previousOpened = opened.number;
-                    opened.number = undefined;
-                }, 0); // Put it in the next event loop tick
-            });
-        }
-    }
-    function open(clicked, url) {
-        // TODO: Store and Fetch things from Cache if available
-        if (clicked !== previousOpened) {
-            var http = new XMLHttpRequest();
-
-            http.onreadystatechange = check;
-            http.open('GET', url);
-            http.send();
-
-            function check() {
-                if (http.readyState === XMLHttpRequest.DONE && http.status === 200) {
-                    presentationDetails.innerHTML = http.responseText;
-                }
-            }
-        }
-        if (isRunning == false) {
-
-            isRunning = true;
-            //make things happen
-            if (typeof(opened.number) == "number") {
-                presentationItem[opened.number].setAttribute('extended', 'false');
-            }
-            presentationItem[clicked].setAttribute('extended', 'true');
-            presentationDetails.setAttribute('in-details', 'true');
-            // wait so it doesn't conflict with the runnig transition
-            setTimeout(function() {
-                opened.number = clicked;
-                isRunning = false;
-            }, 0); // Put it in the next event loop tick
-        }
-    }
-
-    return {
-        open: open,
-        close: close,
-        opened: opened.number,
-        isRunning: isRunning
+    this.testOutput = function() {
+        console.log('HURRA');
     };
-})();
+};
+ChartFlow.build = function() {
+    console.log('LEL');
+};
+ChartFlow.createChild = function(name, ...attributes) {
+    var newChild = Object.create(ChartItem);
+    this.children[name] = newChild;
+    this.children[name].initialize();
+    return this.children; // IDEA: return 'true' for success and 'false' for failjure
+};
+ChartFlow.release = function() {
+
+    requestAnimationFrame(function() {
+        this.target[this.active].setAttribute('extended', 'false');
+        this.targetChartDetails.setAttribute('in-details', 'false');
+    }.bind(this));
+};
+ChartFlow.load = function(element) {
+    var url = element.getAttribute('href');
+    var http = new XMLHttpRequest();
+
+    http.onreadystatechange = function check() {
+        if (http.readyState === XMLHttpRequest.DONE && http.status === 200) {
+            this.targetChartDetails.innerHTML = http.responseText;
+        }
+    }.bind(this);
+    http.open('GET', url);
+    http.send();
+
+    if (this.isRunning == false) {
+        this.isRunning = true;
+
+        element.setAttribute('extended', 'true');
+        this.targetChartDetails.setAttribute('in-details', 'true');
+
+        setTimeout(function() {
+            this.active = element.getAttribute('position');
+            this.isRunning = false;
+        }.bind(this), 0); // Put it in the next event loop tick
+    }
+};
+
+var ChartItem = {};
+ChartItem.initialize = function() {
+    console.log('OMG :O');
+};
+ChartItem.load = function() {
+    console.log('unbelievable');
+};
+
+var chartFlow1 = Object.create(ChartFlow);
+chartFlow1.setup();
+
+// Public API
+// ChartFlow.setup()
+// ChartFlow.createChild()
+// ChartFlow.build()
+// ChartFlow.load()
+// ChartFlow.release()
+// ChartItem.load()
