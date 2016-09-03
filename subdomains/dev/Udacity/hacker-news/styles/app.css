@@ -28,9 +28,9 @@ html, body {
   color: #444;
 }
 
-html {
+/*html {
   overflow: hidden;
-}
+}*/
 
 body {
   display: -webkit-flex;

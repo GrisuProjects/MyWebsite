@@ -22,14 +22,41 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
   padding: 0;
   box-sizing: border-box;
   position: relative;
-  font-weight: 300;
-  z-index: 100; }
+  font-weight: 300; }
 
+/*html {
+    overflow: hidden;
+}*/
 body {
   color: #212121;
   background-color: #4caf50;
   font-family: sans-serif;
-  font-size: 100%; }
+  font-size: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: stretch;
+  -webkit-align-content: stretch;
+  align-content: stretch; }
+
+#main-content-wrapper {
+  /*-webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;*/
+  height: 100vh;
+  overflow-y: scroll; }
 
 .vertical-center {
   align-items: center;
@@ -163,13 +190,35 @@ main #projects {
   right: 0;
   bottom: 0;
   height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 2;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: stretch;
+  -webkit-align-content: stretch;
+  align-content: stretch; }
   #presentation-item-details .wrapper {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100vh; }
+    height: 100vh;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
     #presentation-item-details .wrapper .x-button {
       position: absolute;
       margin: 10px;
@@ -200,21 +249,19 @@ main #projects {
 #presentation-item-details[in-details="true"] {
   transition: height 500ms 400ms;
   height: 100%;
-  background-color: #4caf50;
-  z-index: 500; }
+  background-color: #4caf50; }
 
 footer {
   text-align: center;
   font-family: "Latin Modern Mono", sans-serif; }
-  footer div.inline-block-center {
-    display: inline-block; }
-  footer a {
-    color: inherit; }
-  footer div section {
+  footer .inline-block-center a {
     padding: 1.2em;
     display: inline-block; }
   footer div#copyright {
-    font-family: 'sans-serif'; }
+    font-family: 'sans-serif';
+    margin-top: 70px; }
+    footer div#copyright a {
+      text-decoration: underline; }
 
 #container {
   color: #212121;

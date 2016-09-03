@@ -3,16 +3,21 @@ footer {
   font-family: "Latin Modern Mono", sans-serif;
 
   div.inline-block-center{
-    display: inline-block; // for this to work the parent element has to set text-align: center
+    //text-align: center;
   }
   a {
-    color: inherit;
+    //color: inherit;
   }
-  div section {
+  .inline-block-center a {
     padding: 1.2em;
     display: inline-block;
   }
   div#copyright {
     font-family: 'sans-serif';
+    margin-top: 70px;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }

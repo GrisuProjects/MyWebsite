@@ -22,49 +22,106 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 
 function animateHeader() {
     document.getElementById('header-content').setAttribute('content-visible', 'true');
-    presentation.initialize();
 }
 
 var Presentation = {
     open: function() {},
     close: function() {},
-    insert: function() {}
+    insert: function(elem) {
+        this.target.appendChild(elem);
+    }
 };
 var ChartFlow = Object.create(Presentation);
-ChartFlow.setup = function() {
+ChartFlow.setup = function(target) {
     Object.defineProperty(this, 'isSetup', {
         value: true,
         writeable: false
     });
+    this.uniqueName = 'flowChart1';
     this.isOpen = false;
     this.isRunning = false;
     this.active = -1;
     this.rootFolder = '/projects/';
     this.XHRDefault = '.html'; // TODO: Provide a getter and setter, so that  you get 'HTML' instead of the actual value '.html'
-    this.target = document.getElementsByClassName('presentation-item'); // Should go into Presentation object
+    this.target = target;
+    this.targetChildren = document.getElementsByClassName('presentation-item');
     this.targetChartDetails = document.getElementById('presentation-item-details');
-    this.children = {};
+    this.onclickAction = 'chartFlow1.load(this)';
+    this.test = [];
+    this.children = {
+        childArray: []
+    };
 
-    this.testOutput = function() {
-        console.log('HURRA');
+    this.healthCheck = function() {
+        // TODO: Build feature-rich test, to check ChartFlows against
     };
 };
+
 ChartFlow.build = function() {
-    console.log('LEL');
+    for (var elem of this.test) {
+        this.target.appendChild(elem);
+    }
 };
+
+ChartFlow.lel = {
+    omg: function() {
+        console.log(this);
+    },
+    wow: 'not bad'
+};
+
+ChartFlow.skeleton = (function() {
+    var template = document.createElement('DIV');
+
+    function addTag(tag, attArr) {
+        var elem = document.createElement(tag);
+
+        for (var arr of attArr) {
+            helper(...arr);
+        }
+
+        function helper(attName, ...attValues) {
+            elem.setAttribute(attName, attValues.join(' '));
+        }
+        template.appendChild(elem);
+    }
+
+    function getTemplate() {
+        console.log(template);
+        return template.cloneNode(true);
+    }
+    return {
+        addTag: addTag,
+        getTemplate: getTemplate
+    }
+})();
+
 ChartFlow.createChild = function(name, ...attributes) {
-    var newChild = Object.create(ChartItem);
-    this.children[name] = newChild;
-    this.children[name].initialize();
-    return this.children; // IDEA: return 'true' for success and 'false' for failjure
+    console.log(newChild);
+    var newChild = this.skeleton.getTemplate();
+    console.log(newChild);
+
+    newChild.setAttribute('name', name);
+    newChild.setAttribute('href', this.rootFolder + name + this.XHRDefault);
+    newChild.setAttribute('class', attributes.join(' '));
+    newChild.setAttribute('onclick', this.onclickAction);
+    newChild.setAttribute('index', this.children.childArray.length);
+    newChild.firstChild.setAttribute('src', newChild.firstChild.getAttribute('src') + name + '.svg');
+
+    console.log(this.test);
+    this.test.push(newChild);
+    this.children.childArray.push(name);
+    //return this.children; // IDEA: return 'true' for success and 'false' for failjure
 };
+
 ChartFlow.release = function() {
 
     requestAnimationFrame(function() {
-        this.target[this.active].setAttribute('extended', 'false');
+        this.targetChildren[this.active].setAttribute('extended', 'false');
         this.targetChartDetails.setAttribute('in-details', 'false');
     }.bind(this));
 };
+
 ChartFlow.load = function(element) {
     var url = element.getAttribute('href');
     var http = new XMLHttpRequest();
@@ -84,27 +141,40 @@ ChartFlow.load = function(element) {
         this.targetChartDetails.setAttribute('in-details', 'true');
 
         setTimeout(function() {
-            this.active = element.getAttribute('position');
+            this.active = element.getAttribute('index');
             this.isRunning = false;
         }.bind(this), 0); // Put it in the next event loop tick
     }
 };
 
-var ChartItem = {};
-ChartItem.initialize = function() {
-    console.log('OMG :O');
-};
-ChartItem.load = function() {
-    console.log('unbelievable');
+ChartFlow.update = function() {
+    this.insert(this.test[0]);
+}
+
+var ChartItem = {
+    load: function() {
+        console.log('unbelievable');
+    }
 };
 
 var chartFlow1 = Object.create(ChartFlow);
-chartFlow1.setup();
+chartFlow1.setup(document.getElementById('projects'));
+chartFlow1.skeleton.addTag('img', [
+    ['class', 'logo'],
+    ['src', '/styles/logos/'],
+    ['alt', 'description']
+]);
+chartFlow1.createChild('colearning-wien', 'presentation-item');
+chartFlow1.createChild('wallpaper', 'presentation-item');
+chartFlow1.createChild('websites', 'presentation-item');
 
-// Public API
-// ChartFlow.setup()
-// ChartFlow.createChild()
-// ChartFlow.build()
-// ChartFlow.load()
-// ChartFlow.release()
-// ChartItem.load()
+chartFlow1.build();
+
+/** Public API (draft)
+ * ChartFlow.setup()
+ * ChartFlow.createChild()
+ * ChartFlow.build()
+ * ChartFlow.load()
+ * ChartFlow.release()
+ * ChartItem.load()
+ */
