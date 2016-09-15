@@ -28,7 +28,7 @@ var Presentation = {
     open: function() {},
     close: function() {},
     insert: function(elem) {
-        this.target.appendChild(elem);
+        this.targetElement.appendChild(elem);
     }
 };
 var ChartFlow = Object.create(Presentation);
@@ -40,10 +40,11 @@ ChartFlow.setup = function(target) {
     this.uniqueName = 'flowChart1';
     this.isOpen = false;
     this.isRunning = false;
+    this.position = 0;
     this.active = -1;
     this.rootFolder = '/projects/';
     this.XHRDefault = '.html'; // TODO: Provide a getter and setter, so that  you get 'HTML' instead of the actual value '.html'
-    this.target = target;
+    this.targetElement = target;
     this.targetChildren = document.getElementsByClassName('presentation-item');
     this.targetChartDetails = document.getElementById('presentation-item-details');
     this.onclickAction = 'chartFlow1.load(this)';
@@ -55,14 +56,64 @@ ChartFlow.setup = function(target) {
     this.healthCheck = function() {
         // TODO: Build feature-rich test, to check ChartFlows against
     };
-};
 
-ChartFlow.build = function() {
-    for (var elem of this.test) {
-        this.target.appendChild(elem);
+    // Get current Elements present in the markup
+    var elem = this.targetElement.childNodes;
+    for (let i in elem) {
+        let name;
+        // Add those to the Presentation logic
+        //TODO: USE WEAKMAP!
+        if ((i.hasAttribute === 'function') && (i.hasAttribute('class') !== false) && (i.getAttribute('class') === 'presentation-item')) {
+            name = i.getAttribute('name');
+            this.createChild(name);
+        }
     }
 };
 
+ChartFlow.build = function() {
+
+    for (var elem of this.test) {
+        this.targetElement.appendChild(elem);
+    }
+    // Put some controls on
+    var text;
+    var buttonRight = document.createElement('DIV');
+    buttonRight.setAttribute('class', 'presentation-control right');
+    buttonRight.appendChild(document.createTextNode("RIGHT"));
+    var buttonLeft = document.createElement('DIV');
+    buttonLeft.setAttribute('class', 'presentation-control left');
+    buttonLeft.appendChild(document.createTextNode("LEFT"));
+
+    var pres = document.getElementsByClassName('presentation')[0];
+    pres.appendChild(buttonLeft);
+    pres.appendChild(buttonRight);
+
+    buttonRight.addEventListener('click', function() {
+        this.position -= 400;
+        this.targetElement.setAttribute('style', 'transform: translateX(' + this.position + 'px)');
+    }.bind(this));
+
+    buttonLeft.addEventListener('click', function() {
+        this.position += 400;
+        this.targetElement.style['transform'] = 'translateX(' + this.position + 'px)';
+    }.bind(this));
+};
+ChartFlow.control = function(e, type = 'LEFT') {
+    console.log(this);
+    var num = num || 100;
+    switch (type) {
+        case 'RIGHT':
+
+            break;
+        case 'LEFT':
+            console.log(this.parentElement);
+            document.getElementById('projects').setAttribute('style', 'transform: translateX(' + num + 'px)');
+            num += 100;
+            break;
+        default:
+
+    }
+};
 ChartFlow.lel = {
     omg: function() {
         console.log(this);
@@ -87,7 +138,6 @@ ChartFlow.skeleton = (function() {
     }
 
     function getTemplate() {
-        console.log(template);
         return template.cloneNode(true);
     }
     return {
@@ -97,18 +147,15 @@ ChartFlow.skeleton = (function() {
 })();
 
 ChartFlow.createChild = function(name, ...attributes) {
-    console.log(newChild);
     var newChild = this.skeleton.getTemplate();
-    console.log(newChild);
 
     newChild.setAttribute('name', name);
     newChild.setAttribute('href', this.rootFolder + name + this.XHRDefault);
-    newChild.setAttribute('class', attributes.join(' '));
+    //newChild.setAttribute('class', attributes.join(' '));
     newChild.setAttribute('onclick', this.onclickAction);
     newChild.setAttribute('index', this.children.childArray.length);
     newChild.firstChild.setAttribute('src', newChild.firstChild.getAttribute('src') + name + '.svg');
 
-    console.log(this.test);
     this.test.push(newChild);
     this.children.childArray.push(name);
     //return this.children; // IDEA: return 'true' for success and 'false' for failjure
@@ -158,17 +205,17 @@ var ChartItem = {
 };
 
 var chartFlow1 = Object.create(ChartFlow);
-chartFlow1.setup(document.getElementById('projects'));
+//chartFlow1.setup(document.getElementById('projects'));
 chartFlow1.skeleton.addTag('img', [
     ['class', 'logo'],
     ['src', '/styles/logos/'],
     ['alt', 'description']
 ]);
-chartFlow1.createChild('colearning-wien', 'presentation-item');
+/*chartFlow1.createChild('colearning-wien', 'presentation-item');
 chartFlow1.createChild('wallpaper', 'presentation-item');
-chartFlow1.createChild('websites', 'presentation-item');
+chartFlow1.createChild('websites', 'presentation-item');*/
 
-chartFlow1.build();
+//chartFlow1.build();
 
 /** Public API (draft)
  * ChartFlow.setup()

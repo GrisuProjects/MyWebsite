@@ -7,9 +7,9 @@
     font-weight: 300;
     //z-index: 100;
 }
-/*html {
+html {
     overflow: hidden;
-}*/
+}
 body {
     color: $primary_text;
     background-color: $primary_color;
@@ -42,7 +42,9 @@ body {
       -ms-flex: 1;
           flex: 1;*/
   height: 100vh;
+  overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .vertical-center {
     align-items: center;

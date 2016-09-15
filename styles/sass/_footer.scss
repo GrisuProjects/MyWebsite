@@ -2,11 +2,12 @@ footer {
   text-align: center;
   font-family: "Latin Modern Mono", sans-serif;
 
-  div.inline-block-center{
-    //text-align: center;
+  .temporary-icon-hack {
+    transform: translateY(14px) translateX(-5px);
+    color: #212121;
   }
-  a {
-    //color: inherit;
+  .inline-block-center {
+    text-align: left;
   }
   .inline-block-center a {
     padding: 1.2em;

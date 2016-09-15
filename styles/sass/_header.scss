@@ -1,40 +1,52 @@
 header {
   color: white;
-  font-size: 1.32em;
+  font-size: 1.5em;
   background: {
-    image: url(IMG_0986_small.JPG);
+    image: url(IMG_2963.JPG);
     size: cover;
     position: center;}
 
   #border {
-    width: 2px;
+    position: absolute;
+    width: 4px;
     height: 100%;
+    overflow: hidden;
     background-color: $initialize_color;
+    transition: transform 900ms cubic-bezier(.29,.09,.02,.99);
   }
   h1 {
     font-family: "Latin Modern Mono", sans-serif;
     padding: 0.5em 0 0;
     font-size: 2.5em;
-    transition: transform 1000ms cubic-bezier(.07,.6,0,1) 200ms;
+    transition: transform 1000ms cubic-bezier(.07,.6,0,1) 500ms;
   }
   section {
     color: $initialize_color;
     font-family: "Raleway", sans-serif;
     font-weight: normal;
-    transition: transform 700ms cubic-bezier(.07,.6,0,1) 1500ms;
+    transition: transform 700ms cubic-bezier(.07,.6,0,1) 1200ms;
   }
   p {
     padding: 5% 0.1em;
     font-style: italic;
-    transition: transform 1200ms cubic-bezier(.07,.6,0,1) 1000ms;
+    transition: transform 1200ms cubic-bezier(.07,.6,0,1) 900ms;
+  }
+  h1,
+  section,
+  p {
+    transform: translateX(30px);
   }
 }
 
 header > div {
   overflow: hidden;
+  padding-right: 30px;
 }
 header > div[content-visible="false"] {
   h1, section, p {
     transform: translateX(-100%);
+  }
+  #border {
+    transform: translateY(-100%);
   }
 }
