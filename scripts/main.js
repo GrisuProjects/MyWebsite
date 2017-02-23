@@ -21,7 +21,7 @@ along with this website.  If not, see <http://www.gnu.org/licenses/>.
 // TODO: Use Pomisies and Generators
 
 function animateHeader() {
-    document.getElementById('header-content').setAttribute('content-visible', 'true');
+    console.log("HOE");
 }
 
 var Presentation = {
